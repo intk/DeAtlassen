@@ -1,11 +1,14 @@
+var map;
+
 var app = {
 	tiles: "images/tiles",
-	blank_path: this.tiles + '/blank.png',
+	blank_path: 'images/tiles' + '/blank.png',
 	map: null,
+	markers: [],
 
-	map_init: function() {
+	initMap: function() {
 		var self = this;
-		var moonTypeOptions = {
+		var deatlassenOptions = {
 		  getTileUrl: function(coord, zoom) {
 		    if (coord.x > -1 && coord.y > -1) {
 		      var path = self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + '.png';
@@ -16,30 +19,82 @@ var app = {
 		  },
 		  tileSize: new google.maps.Size(256, 256),
 		  maxZoom: 5,
-		  minZoom: 2,
+		  minZoom: 3,
 		  name: 'Map'
 		};
 
-		var moonMapType = new google.maps.ImageMapType(moonTypeOptions);
+		var deatlassenMapType = new google.maps.ImageMapType(deatlassenOptions);
 
 		var myLatlng = new google.maps.LatLng(0, 0);
   		var mapOptions = {
     		center: myLatlng,
-    		zoom: 2,
+    		zoom: 3,
 		    streetViewControl: false,
 		    mapTypeControlOptions: {
-      			mapTypeIds: ['moon']
+      			mapTypeIds: ['deatlassen']
     		}
   		};
 
-  		this.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  		this.map.mapTypes.set('moon', moonMapType);
-  		this.map.setMapTypeId('moon');
+  		self.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  		self.map.mapTypes.set('deatlassen', deatlassenMapType);
+  		self.map.setMapTypeId('deatlassen');
+	},
+
+	/* Markers handling functions */
+
+	addMarker: function(position) {
+		var marker = new google.maps.Marker({
+  			position: position,
+  			map: self.map,
+  			visible: true
+  		});
+	},
+
+	getMarkers: function(show) {
+		$.getJSON("static/markers.json", function(data) {
+			console.log(data);
+		});
+
+		if (show) {
+			this.showMarkers();
+		}
+	},
+
+	deleteMarkers: function() {
+		this.hideMarkers();
+		this.markers.length = 0;
+		this.markers = [];
+	},
+
+	/* Markers helper functions */
+	showMarkers: function() {
+		for (var i = 0; i < this.markers.length; i++) {
+			this.markers[i].setMap(this.map);
+		};
+	},
+
+	hideMarkers: function() {
+		for (var i = 0; i < this.markers.length; i++) {
+			this.markers[i].setMap(null);
+		};
+	},
+
+	refreshMarkers: function(show) {
+		this.deleteMarkers();
+		this.getMarkers(show);
 	}
 }
 
 
 $(document).ready(function() {
 	$(document).foundation();
-	app.map_init();
+
+	console.log(typeof(google));
+	if (typeof(google) != 'undefined') {
+		app.initMap();
+		app.getMarkers();
+	} else {
+		$("#map-canvas").html("Network disconnected.");
+	}
+
 });
