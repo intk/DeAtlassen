@@ -89,10 +89,9 @@ var app = {
 $(document).ready(function() {
 	$(document).foundation();
 
-	console.log(typeof(google));
 	if (typeof(google) != 'undefined') {
 		app.initMap();
-		app.getMarkers();
+		//app.getMarkers();
 	} else {
 		$("#map-canvas").html("Network disconnected.");
 	}
