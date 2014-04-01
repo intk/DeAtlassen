@@ -13,7 +13,7 @@ var app = {
 		  	if (!self.validateLimit(coord,zoom)) {
 		  		return null
 		  	}
-		   	return self.temp_tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + '.png';
+		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + '.png';
 		  },
 		  tileSize: new google.maps.Size(256, 256),
 		  maxZoom: 5,
@@ -96,7 +96,7 @@ var app = {
 
 $(document).ready(function() {
 	$(document).foundation();
-	
+
 	if (typeof(google) != 'undefined') {
 		app.initMap();
 		//app.getMarkers();
