@@ -99,7 +99,7 @@ $(document).ready(function() {
 
 	if (typeof(google) != 'undefined') {
 		app.initMap();
-		//app.getMarkers();
+		app.getMarkers(false);
 	} else {
 		$("#map-canvas").html("Network disconnected.");
 	}
