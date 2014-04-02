@@ -94,7 +94,7 @@ var app = {
 }
 
 
-$(document).ready(function() {i
+$(document).ready(function() {
 	$(document).foundation();
 
 	if (typeof(google) != 'undefined') {
