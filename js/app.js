@@ -94,12 +94,12 @@ var app = {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function() {i
 	$(document).foundation();
 
 	if (typeof(google) != 'undefined') {
 		app.initMap();
-		app.getMarkers(false);
+		//app.getMarkers(false);
 	} else {
 		$("#map-canvas").html("Network disconnected.");
 	}
