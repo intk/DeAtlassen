@@ -28,6 +28,7 @@ var app = {
     		center: center,
     		zoom: 3,
 		    streetViewControl: false,
+		    mapTypeControl: false,
 		    mapTypeControlOptions: {
       			mapTypeIds: ['deatlassen']
     		}
