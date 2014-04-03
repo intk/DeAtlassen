@@ -23,7 +23,7 @@ var app = {
 
 		var deatlassenMapType = new google.maps.ImageMapType(deatlassenOptions);
 
-		var center = new google.maps.LatLng(65.80277639340224, -0.703125);
+		var center = new google.maps.LatLng(63.626744644753124, -1.40625);
   		var mapOptions = {
     		center: center,
     		zoom: 3,
