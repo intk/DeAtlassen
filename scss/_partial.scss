@@ -15,6 +15,7 @@
 
 #image-wrapper {
 	position: absolute;
+	display: none;
 	height: 100%;
 	top: 0px;
 	left: 0px;
@@ -59,12 +60,41 @@
 	font-family: times;
 }
 
-#logo {
+#faux-map {
 	position:absolute;
-	top: 0px;
-	left: 40px;
-	/*width: 125px;*/
-	height: 150px;
+	display: none;
+	bottom: 50px;
+	left:50px;
+	width: 100px;
+	height: 100px;
 	background-color: green;
 }
+
+#main-logo {
+	position: absolute;
+	top:0px;
+	right: 150px;
+	height: 150px;
+	width: 100px;
+	background-color: orange;
+}
+
+#main-menu {
+	position:absolute;
+	bottom: 100px;
+	right: 150px;
+	width: 255px;
+	height: 50px;
+	background-color: rgba(235, 234, 230, 1.0000);
+}
+
+#main-menu div {
+	height: 100%;
+}
+
+#main-menu div.a {
+	width: 1000px;
+}
+
+
 

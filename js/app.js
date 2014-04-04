@@ -135,7 +135,7 @@ $(document).ready(function() {
 		app.addMarker(31.80289258670676, 37.6171875);
 		app.addMarker(41.508577297439324, 75.76171875);
 		app.addMarker(8.407168163601074, 19.86328125);
-		app.addMarker(57.136239319177434, -14.0625)
+		app.addMarker(57.136239319177434, -14.0625);
 		// Show markers
 		app.showMarkers();
 		
