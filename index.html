@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INTK de-atalssen prototype</title>
+    <meta name="description" content="De-Atlassen">
+
+    <title>De-atlassen</title>
+    
     <!-- CSS at the top -->
     <link rel="stylesheet" href="css/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -19,9 +22,39 @@
     </script>
   </head>
   <body>
-    <div class="large-12 medium-12 small-12 columns" id="map-canvas" style="height:100%;">
-    </div>
 
+      <div id="map-canvas" class="fullWidth"></div>
+
+      <div id="content">
+        <div class="row fullWidth" id="image-wrapper" style="display:none;">
+          <img src="" id="content-image"></img>
+        </div>
+
+        <div class="large-16 medium-12 columns" id="left"></div>
+        <div class="large-4 medium-8 columns" id="description"> 
+          <div id="description-content">
+            <h1>De Atlassen</h1>
+            <p>
+            <small>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            </small>
+            </p>
+            <p>
+              <small>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              </small>
+            </p>
+          </div>
+          <div id="close-description"></div>
+          <div id="logo" class="large-8 medium-6 small-5"></div>
+        </div>
+      </div>
+      
+  
     <!-- JavaScript at the bottom -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>

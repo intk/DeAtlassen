@@ -1,3 +1,70 @@
+.fullWidth {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: initial;
+}
+
 #map-canvas img {
 	max-width: none;
 }
+
+#map-canvas {
+	height: 100%;
+}
+
+#image-wrapper {
+	position: absolute;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+#description {
+	position:absolute;
+	top:0px;
+    right:0px;
+  	padding:40px;
+	color:white;
+    background-image: none;
+    height: 100%;
+    background-color:rgba(59, 55, 51, 0.92)
+}
+
+#left {
+	background-color: none;
+    background-image: none;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+#close-description {
+	position:absolute;
+	top:20px;
+	right: 35px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	background-image: url('../images/cross.png');
+}
+
+#description-content {
+	margin-top: 165px;
+	background-color: none;
+	line-height: 1.4;
+}
+
+#description-content p {
+	font-family: times;
+}
+
+#logo {
+	position:absolute;
+	top: 0px;
+	left: 40px;
+	/*width: 125px;*/
+	height: 150px;
+	background-color: green;
+}
+
