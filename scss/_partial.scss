@@ -29,7 +29,7 @@
 	color:white;
     background-image: none;
     height: 100%;
-    background-color:rgba(59, 55, 51, 0.92)
+    background-color:rgba(59, 55, 51, 0.95)
 }
 
 #left {
@@ -81,6 +81,7 @@
 
 #main-menu {
 	position:absolute;
+	display: none;
 	bottom: 100px;
 	right: 150px;
 	width: 255px;
@@ -94,6 +95,10 @@
 
 #main-menu div.a {
 	width: 1000px;
+}
+
+#more-information {
+	cursor: pointer;
 }
 
 

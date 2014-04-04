@@ -105,6 +105,10 @@ var app = {
 	triggerEvents: function() {
 		$(this.content_image).on("load", this.loadImageEvent);
 		$(this.close_description).click(this.closeDescription);
+		$("#more-information").click(function() {
+			$("#main-menu").fadeOut();
+			$("#description").fadeIn();
+		});
 	},
 
 	loadImageEvent: function() {
@@ -114,6 +118,7 @@ var app = {
 
 	closeDescription: function() {
 		$("#description").fadeOut();
+		$("#main-menu").fadeIn();
 	}
 }
 
