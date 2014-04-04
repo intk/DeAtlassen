@@ -62,6 +62,7 @@
 
 #faux-map {
 	position:absolute;
+	cursor: pointer;
 	display: none;
 	bottom: 50px;
 	left:50px;
@@ -86,7 +87,10 @@
 	right: 150px;
 	width: 255px;
 	height: 50px;
-	background-color: rgba(235, 234, 230, 1.0000);
+	border:1px solid;
+	border-radius: 5px;
+	border-color: rgba(212, 213, 209, 1.0000);
+	background-color: rgba(236, 235, 231, 1.0000);
 }
 
 #main-menu div {

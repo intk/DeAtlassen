@@ -81,6 +81,11 @@ var app = {
 			title: 'Marker #1'
 		});
 
+		google.maps.event.addListener(marker, 'click', function() {
+			$("#main-menu").hide();
+			$("#content-image").attr('src','static/b1.png');
+		});
+
 		this.markers.push(marker);
 	},
 
@@ -105,15 +110,29 @@ var app = {
 	triggerEvents: function() {
 		$(this.content_image).on("load", this.loadImageEvent);
 		$(this.close_description).click(this.closeDescription);
-		$("#more-information").click(function() {
-			$("#main-menu").fadeOut();
-			$("#description").fadeIn();
-		});
+		$("#more-information").click(this.moreInformationEvent);
+		$("#faux-map").click(this.fauxMapEvent);
+	},
+
+	fauxMapEvent: function() {
+		$("#content-image").attr("src","");
+		$("#description").show();
+		$("#main-menu").hide();
+		$("#image-wrapper").fadeOut();
+		$("#map-canvas").fadeIn();
+		$("#faux-map").hide();
+	},
+
+	moreInformationEvent: function () {
+		$("#main-menu").fadeOut();
+		$("#description").fadeIn();
 	},
 
 	loadImageEvent: function() {
-		$("#map-canvas").hide();
-		$("#image-wrapper").show();
+		$("#map-canvas").fadeOut();
+		$("#image-wrapper").fadeIn();
+		$("#faux-map").show();
+		$("#description").fadeIn();
 	},
 
 	closeDescription: function() {
@@ -141,8 +160,10 @@ $(document).ready(function() {
 		app.addMarker(41.508577297439324, 75.76171875);
 		app.addMarker(8.407168163601074, 19.86328125);
 		app.addMarker(57.136239319177434, -14.0625);
+		
 		// Show markers
 		app.showMarkers();
+		
 		
 	} else {
 		$("#map-canvas").html("Network disconnected.");
