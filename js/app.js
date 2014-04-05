@@ -1,5 +1,3 @@
-var map;
-
 var app = {
 	tiles: "images/tiles",
 	temp_tiles: "images/new",
@@ -31,7 +29,7 @@ var app = {
     		zoom: 3,
     		zoomControl: true,
     		zoomControlOptions: {
-    			style: google.maps.ZoomControlStyle.LARGE
+    			style: google.maps.ZoomControlStyle.DEFAULT
     		},
 		    streetViewControl: false,
 		    mapTypeControl: false,
@@ -163,7 +161,18 @@ $(document).ready(function() {
 		
 		// Show markers
 		app.showMarkers();
+
+		// Testing
+		var bounds = new google.maps.LatLngBounds();
 		
+		bounds.extend(new google.maps.LatLng(78.9039293885709, -63.984375));
+		bounds.extend(new google.maps.LatLng(81.8300417529174, 68.466796875));
+		bounds.extend(new google.maps.LatLng(16.46769474828897, -3.515625));
+		app.map.fitBounds(bounds);
+		
+		//app.map.setCenter(bounds.getCenter());
+		app.map.panToBounds(bounds);
+			
 		
 	} else {
 		$("#map-canvas").html("Network disconnected.");
