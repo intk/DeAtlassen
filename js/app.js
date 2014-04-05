@@ -23,7 +23,7 @@ var app = {
 
 		var deatlassenMapType = new google.maps.ImageMapType(deatlassenOptions);
 
-		var center = new google.maps.LatLng(63.78248603116466, 4.04296875);
+		var center = new google.maps.LatLng(77.47079605592884, 2.2412109375);
   		var mapOptions = {
     		center: center,
     		zoom: 3,
@@ -165,9 +165,9 @@ $(document).ready(function() {
 		// Testing
 		var bounds = new google.maps.LatLngBounds();
 		
-		bounds.extend(new google.maps.LatLng(78.9039293885709, -63.984375));
+		bounds.extend(new google.maps.LatLng(76.9039293885709, -63.984375));
 		bounds.extend(new google.maps.LatLng(81.8300417529174, 68.466796875));
-		bounds.extend(new google.maps.LatLng(16.46769474828897, -3.515625));
+		bounds.extend(new google.maps.LatLng(10.06769474828897, -3.515625));
 		app.map.fitBounds(bounds);
 		
 		//app.map.setCenter(bounds.getCenter());
