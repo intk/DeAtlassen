@@ -74,7 +74,11 @@ var app = {
 
 		this.bounds.extend(new google.maps.LatLng(76.9039293885709, -63.984375));
 		this.bounds.extend(new google.maps.LatLng(81.8300417529174, 68.466796875));
-		this.bounds.extend(new google.maps.LatLng(10.26769474828897, -3.515625));
+		if ($("body").height() > 800) {
+			this.bounds.extend(new google.maps.LatLng(-16.26769474828897, -3.515625));
+		} else {
+			this.bounds.extend(new google.maps.LatLng(10.26769474828897, -3.515625));
+		}
 		this.map.fitBounds(this.bounds);
 		
 		//app.map.setCenter(bounds.getCenter());
