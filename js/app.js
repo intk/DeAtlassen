@@ -42,7 +42,6 @@ var app = {
   		self.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   		self.map.mapTypes.set('deatlassen', deatlassenMapType);
   		self.map.setMapTypeId('deatlassen');
-  		this.hackAmsterdamBounds();
 	},
 
 	/* CONTEXT Handler */
@@ -172,9 +171,9 @@ var app = {
 	},
 
 	moreInformationEvent: function () {
-		$("#main-menu").removeClass('show-for-large');
+		$("#main-menu").removeClass('show-for-large-up');
 		$("#main-menu").fadeOut();
-		$("#language-menu").removeClass('show-for-large');
+		$("#language-menu").removeClass('show-for-large-up');
 		$("#language-menu").fadeOut();
 		$("#main-logo").removeClass('show-for-medium-up');
 		$("#main-logo").hide();
@@ -199,9 +198,9 @@ var app = {
 
 	closeDescription: function() {
 		$("#description").fadeOut();
-		$("#main-menu").addClass('show-for-large');
+		$("#main-menu").addClass('show-for-large-up');
 		$("#main-menu").fadeIn();
-		$("#language-menu").addClass('show-for-large');
+		$("#language-menu").addClass('show-for-large-up');
 		$("#language-menu").fadeIn();
 		$("#main-logo").addClass('show-for-medium-up');
 		$("#main-logo").show();

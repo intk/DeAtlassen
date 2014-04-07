@@ -5,7 +5,7 @@ $(document).ready(function() {
 	if (typeof(google) != 'undefined') {
 		// INIT Google Maps features
 		app.initMap();
-		//app.hackAmsterdamBounds();
+		app.hackAmsterdamBounds();
 
 		// Trigger events
 		app.triggerEvents();
