@@ -161,7 +161,7 @@ var app = {
 	},
 
 	fauxMapEvent: function() {	
-		window.location.href = "../../index.html"
+		window.location.href = "/"
 	},
 
 	moreInformationEvent: function () {
