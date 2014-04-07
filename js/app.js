@@ -116,7 +116,8 @@ var app = {
 
 		var marker = new google.maps.Marker({
 			position: position,
-			title: 'Marker #1'
+			title: 'Marker #1',
+			icon: "static/pin-map.png"
 		});
 		var self = this;
 		google.maps.event.addListener(marker, 'click', function() {
