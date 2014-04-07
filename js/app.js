@@ -153,7 +153,7 @@ var app = {
           lat: 43.8028187190472, 
           lng: 75.3662109375, 
           title: 'Wester Kerck',
-          url: 'nl/wester-kerck/'
+          url: '/nl/wester-kerck/'
         }); 
 	},
 
