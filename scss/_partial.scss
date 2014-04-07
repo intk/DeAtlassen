@@ -10,7 +10,9 @@
 }
 
 .lg-format {
-	line-height:38px;
+	margin:auto;
+	margin-top: 14px;
+	text-align:center;
 }
 
 .fullWidth {
@@ -105,30 +107,30 @@
 
 #main-logo {
 	position: absolute;
-	top:0px;
+	top:-3px;
 	right: 85px;
-	height: 150px;
+	height: 145px;
 	width: 100px;
-	background-color: purple;
+	background-image: url("../static/museumlogo.png");
 }
 
 #description-logo {
 	position: absolute;
 	display: none;
-	top: 0px;
+	top: -2px;
 	left: 45px;
 	height: 145px;
 	width: 100px;
-	background-color: purple;
+	background-image: url("../static/museumlogo.png");;
 }
 
 #small-logo {
 	position: absolute;
-	top: 0px;
+	top: -3px;
 	left: 45px;
-	height: 150px;
+	height: 145px;
 	width: 100px;
-	background-color: green;
+	background-image: url("../static/museumlogo.png");;
 }
 
 #language-menu {
