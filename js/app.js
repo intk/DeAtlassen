@@ -116,8 +116,11 @@ var app = {
 		});
 		var self = this;
 		google.maps.event.addListener(marker, 'click', function() {
+			$("#main-logo").attr('class', '');
 			$("#main-logo").hide();
 			$("#main-menu").hide();
+			$("#language-menu").hide();
+			$("#map-canvas").removeClass('fullWidth');
 			$("#content-image").attr('src','static/b1.png');
 		});
 
@@ -146,22 +149,32 @@ var app = {
 		$(this.content_image).on("load", this.loadImageEvent);
 		$(this.close_description).click(this.closeDescription);
 		$("#more-information").click(this.moreInformationEvent);
+		$("#small-info").click(this.smallMoreInfoEvent);
 		$("#faux-map").click(this.fauxMapEvent);
 	},
 
 	fauxMapEvent: function() {
 		$("#content-image").attr("src","");
 		$("#description").show();
+		$("#main-logo").removeClass('show-for-medium-up');
+		$("#main-logo").hide();
 		$("#main-menu").hide();
+		$("#language-menu").hide();
 		$("#image-wrapper").fadeOut();
+		$("#map-canvas").addClass('show-for-medium-up');
 		$("#map-canvas").fadeIn();
 		$("#faux-map").hide();
 	},
 
 	moreInformationEvent: function () {
+		$("#main-menu").removeClass('show-for-large');
 		$("#main-menu").fadeOut();
-		$("#main-logo").attr('class', '');
+		$("#language-menu").removeClass('show-for-large');
+		$("#language-menu").fadeOut();
+		$("#main-logo").removeClass('show-for-medium-up');
 		$("#main-logo").hide();
+		$("#small-info").hide();
+		$("#small-info").removeClass('show-for-medium-down');
 		$("#description").fadeIn();
 	},
 
@@ -173,11 +186,22 @@ var app = {
 		$("#description").fadeIn();
 	},
 
+	smallMoreInfoEvent: function() {
+		$("#small-info").hide();
+		$("#small-info").removeClass('show-for-medium-down');
+		$("#description").fadeIn();
+	},
+
 	closeDescription: function() {
 		$("#description").fadeOut();
+		$("#main-menu").addClass('show-for-large');
 		$("#main-menu").fadeIn();
-		$("#main-logo").attr('class', 'show-for-medium-up');
+		$("#language-menu").addClass('show-for-large');
+		$("#language-menu").fadeIn();
+		$("#main-logo").addClass('show-for-medium-up');
 		$("#main-logo").show();
+		$("#small-info").addClass('show-for-medium-down');
+		$("#small-info").fadeIn();
 	}
 }
 

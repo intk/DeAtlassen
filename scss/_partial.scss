@@ -1,8 +1,16 @@
+.no-padding {
+	padding:0px;
+}
+
+.lg-format {
+	line-height:38px;
+}
+
 .fullWidth {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: initial;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
 }
 
 #map-canvas img {
@@ -22,10 +30,11 @@
 }
 
 #description {
+	display: none;
 	position:absolute;
 	top:0px;
     right:0px;
-  	padding:40px;
+  	padding:45px;
 	color:white;
     background-image: none;
     height: 100%;
@@ -43,21 +52,36 @@
 #close-description {
 	position:absolute;
 	top:20px;
-	right: 35px;
-	width: 20px;
-	height: 20px;
+	right: 25px;
+	width: 30px;
+	height: 30px;
 	cursor: pointer;
-	background-image: url('../static/cross.png');
+}
+
+#close-container {
+	position:relative;
+}
+
+#close-container img {
+	position: absolute;
+	left:50%;
+	top:50%;
+	width: 25px;
+	height: 25px;
+	background: url('../static/icon-assets.png') -70px -40px;
+	margin-left: -12.5px;
+	margin-top: 6px;
 }
 
 #description-content {
-	margin-top: 165px;
+	margin-top: 110px;
 	background-color: none;
 	line-height: 1.4;
+	height: 450px;
+	overflow: auto;
 }
 
 #description-content p {
-	font-family: times;
 }
 
 #faux-map {
@@ -65,7 +89,7 @@
 	cursor: pointer;
 	display: none;
 	bottom: 50px;
-	left:50px;
+	left: 50px;
 	width: 100px;
 	height: 100px;
 	background-color: green;
@@ -73,9 +97,8 @@
 
 #main-logo {
 	position: absolute;
-	display: none;
 	top:0px;
-	right: 11%;
+	right: 85px;
 	height: 150px;
 	width: 100px;
 	background-color: purple;
@@ -84,42 +107,296 @@
 #description-logo {
 	position: absolute;
 	display: none;
-	top:0px;
-	left: 40px;
-	height: 150px;
+	top: 0px;
+	left: 45px;
+	height: 145px;
 	width: 100px;
 	background-color: purple;
 }
 
 #small-logo {
 	position: absolute;
-	top:0px;
-	left: 10%;
+	top: 0px;
+	left: 45px;
 	height: 150px;
 	width: 100px;
 	background-color: green;
 }
 
-#main-menu {
+#language-menu {
 	position:absolute;
-	display: none;
-	bottom: 100px;
-	right: 150px;
-	width: 255px;
-	height: 50px;
+	bottom: 50px;
+	right: 300px;
+	width: 100px;
+	height: 40px;
 	border:1px solid;
-	border-radius: 5px;
-	border-color: rgba(212, 213, 209, 1.0000);
-	background-color: rgba(236, 235, 231, 1.0000);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-color: rgba(205, 206, 202, 1.0000);
+	background-color: rgba(239, 239, 236, 1.0000);
+}
+
+#language-menu div {
+	font-size: 12px;
+	height: 100%;
+}
+
+#language-menu #nl:hover {
+	background-color: rgba(255, 255, 255, 1.0000);
+	cursor: pointer;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-top-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px; 
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+#language-menu #en:hover {
+	background-color: rgba(255, 255, 255, 1.0000);
+	cursor: pointer;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;  
+    -moz-border-top-right-radius: 4px;
+	-moz-border-bottom-right-radius: 4px; 
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+#main-menu {
+	padding: 0px;
+	position:absolute;
+	overflow: hidden;
+	/*display: none;*/
+	bottom: 50px;
+	right: 85px;
+	width: 205px;
+	height: 40px;
+	border:1px solid;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-radius: 4px;
+	border-color: rgba(205, 206, 202, 1.0000);
+	background-color: rgba(239, 239, 236, 1.0000);
 }
 
 #main-menu div {
 	height: 100%;
 }
 
-#more-information {
+#main-menu #share:hover {
+	background-color: rgba(255, 255, 255, 1.0000);
+	cursor: pointer;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-top-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px; 
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+#main-menu #share {
+	position: relative;
+}
+
+#main-menu #share img {
+	position: absolute;
+	left:50%;
+	top:50%;
+	width: 20px;
+	height: 20px;
+	background: url('../static/icon-assets.png') -53px -2px;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+
+#main-menu #download {
+	position: relative;
+}
+
+#main-menu #download img {
+	position: absolute;
+	left:50%;
+	top:50%;
+	width: 20px;
+	height: 20px;
+	background: url('../static/icon-assets.png') -82px -3px;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+
+#main-menu #download:hover {
+	background-color: rgba(255, 255, 255, 1.0000);
 	cursor: pointer;
 }
 
+#main-menu #more-information {
+	position: relative;
+}
+
+#main-menu #more-information:hover {
+	background-color: rgba(255, 255, 255, 1.0000);
+	cursor: pointer;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;  
+    -moz-border-top-right-radius: 4px;
+	-moz-border-bottom-right-radius: 4px; 
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-left: 1px solid;
+	border-color: rgba(212, 213, 209, 1.0000);
+}
+
+#more-information {
+	padding: 0px;
+	cursor: pointer;
+}
+
+#languages {
+	position: absolute;
+	bottom: 35px;
+	left: 14%;
+	width: 33%;
+	height: 40px;
+	background-color: rgba(52, 47, 46, 1.0000);
+	border:0px solid;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-radius: 4px;
+	border-color: rgba(72, 68, 67, 1.0000);
+}
+
+#languages div {
+	font-size: 12px;
+	height: 100%;
+}
+
+#languages #nl:hover {
+	background-color: rgba(20, 19, 18, 1.0000);
+	cursor: pointer;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-top-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px; 
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+#languages #en:hover {
+	background-color: rgba(20, 19, 18, 1.0000);
+	cursor: pointer;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;  
+    -moz-border-top-right-radius: 4px;
+	-moz-border-bottom-right-radius: 4px; 
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+#content-menu {
+	padding: 0px;
+	position: absolute;
+	bottom: 35px;
+	right: 15%;
+	width: 33%;
+	height: 40px;
+	background-color: rgba(52, 47, 46, 1.0000);
+	border:0px solid;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-radius: 4px;
+	border-color: rgba(72, 68, 67, 1.0000);
+}
+
+#content-menu div {
+	height: 100%;
+}
+
+#content-menu #share:hover {
+	background-color: rgba(20, 19, 18, 1.0000);
+	cursor: pointer;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-top-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px; 
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+#content-menu #download:hover {
+	background-color: rgba(20, 19, 18, 1.0000);
+	cursor: pointer;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;  
+    -moz-border-top-right-radius: 4px;
+	-moz-border-bottom-right-radius: 4px; 
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+#content-menu #share {
+	position: relative;
+}
+
+#content-menu #share img {
+	position: absolute;
+	left:50%;
+	top:50%;
+	width: 20px;
+	height: 19px;
+	background: url('../static/icon-assets.png') 47px -3px;
+	margin-left: -9.5px;
+	margin-top: -9.5px;
+}
+
+#content-menu #download {
+	position: relative;
+}
+
+#content-menu #download img {
+	position: absolute;
+	left:50%;
+	top:50%;
+	width: 20px;
+	height: 20px;
+	background: url('../static/icon-assets.png') 20px -3px;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+
+#description-menus {
+	
+}
+
+#small-info {
+	position: absolute;
+	cursor: pointer;
+	bottom: 50px;
+	right: 50px;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(239, 239, 236, 1.0000);
+	border:1px solid;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-color: rgba(205, 206, 202, 1.0000);
+}
+
+#small-info:hover {
+	background-color: white;
+}
+
+#small-info img {
+	position: absolute;
+	left:50%;
+	top:50%;
+	width: 20px;
+	height: 20px;
+	background: url('../static/icon-assets.png') 73px 0px;
+	margin-left: -10px;
+	margin-top: -10px;
+}
 
 
