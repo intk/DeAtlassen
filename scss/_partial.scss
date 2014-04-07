@@ -48,14 +48,37 @@
 
 #image-wrapper {
 	position: absolute;
-	display: none;
 	height: 100%;
 	top: 0px;
 	left: 0px;
 }
 
-#description {
+#image-wrapper img {
+	width: 100%;
+	height: 100%;
+}
+
+/*#image-wrapper img.wide {
+	max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+#image-wrapper img.tall {
+	max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}*/
+
+.page-details[id="image-wrapper"] {
+	display: block;
+} 
+
+.page-map[id="image-wrapper"] {
 	display: none;
+}
+
+.page-details[id="description"] {
 	position:absolute;
 	top:0px;
     right:0px;
@@ -64,7 +87,18 @@
     background-image: none;
     height: 100%;
     background-color:rgba(59, 55, 51, 0.95);
-    /*font-family: museo;*/
+}
+
+.page-map[id="description"] {
+	display: none;
+	position:absolute;
+	top:0px;
+    right:0px;
+  	padding:45px;
+	color:white;
+    background-image: none; 
+    height: 100%;
+    background-color:rgba(59, 55, 51, 0.95);
 }
 
 #left {
@@ -114,18 +148,36 @@
 #description-content p {
 }
 
+
 #faux-map {
 	position:absolute;
 	cursor: pointer;
-	display: none;
 	bottom: 50px;
 	left: 50px;
-	width: 100px;
-	height: 100px;
-	background-color: green;
+	width: 126px;
+	height: 126px;
 }
 
-#main-logo {
+#faux-map img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.page-map[id="faux-map"] {
+	display: none;
+}
+
+.page-details[id="main-logo"] {
+	position: absolute;
+	display: none;
+	top:-3px;
+	right: 85px;
+	height: 145px;
+	width: 100px;
+	background-image: url("../static/museumlogo.png");
+}
+
+.page-map[id="main-logo"] {
 	position: absolute;
 	top:-3px;
 	right: 85px;
@@ -153,7 +205,22 @@
 	background-image: url("../static/museumlogo.png");;
 }
 
-#language-menu {
+.page-details[id="language-menu"] {
+	position:absolute;
+	display: none;
+	bottom: 50px;
+	right: 300px;
+	width: 100px;
+	height: 40px;
+	border:0px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-color: #dfe0dd;
+	background-color: #e0e0de;
+}
+
+.page-map[id="language-menu"] {
 	position:absolute;
 	bottom: 50px;
 	right: 300px;
@@ -221,7 +288,25 @@
 	border-bottom-right-radius: 4px;
 }
 
-#main-menu {
+.page-details[id="main-menu"] {
+	padding: 0px;
+	position:absolute;
+	overflow: hidden;
+	display: none;
+	/*display: none;*/
+	bottom: 50px;
+	right: 85px;
+	width: 205px;
+	height: 40px;
+	border:1px solid;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-radius: 4px;
+	border-color: #dfe0dd;
+	background-color: rgba(255, 255, 255, 0.90);
+}
+
+.page-map[id="main-menu"] {
 	padding: 0px;
 	position:absolute;
 	overflow: hidden;
@@ -301,8 +386,6 @@
 	-moz-border-bottom-right-radius: 4px; 
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
-	border-left: 1px solid;
-	border-color: rgba(212, 213, 209, 1.0000);
 }
 
 #more-information {
@@ -450,8 +533,9 @@
 	
 }
 
-#small-info {
+.page-details[id="small-info"] {
 	position: absolute;
+	display: none;
 	cursor: pointer;
 	bottom: 50px;
 	right: 50px;
@@ -464,6 +548,24 @@
     -moz-border-radius: 4px;  
 	border-color: rgba(205, 206, 202, 1.0000);
 }
+
+
+.page-map[id="small-info"] {
+	position: absolute;
+	cursor: pointer;
+	display: none;	
+	bottom: 50px;
+	right: 50px;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(239, 239, 236, 1.0000);
+	border:1px solid;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-color: rgba(205, 206, 202, 1.0000);
+}
+
 
 #small-info:hover {
 	background-color: white;

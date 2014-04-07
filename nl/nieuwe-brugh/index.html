@@ -8,8 +8,8 @@
     <title>De-atlassen</title>
     
     <!-- CSS at the top -->
-    <link rel="stylesheet" href="css/app.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="../../css/app.css" />
+    <script src="../../bower_components/modernizr/modernizr.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,24 +26,24 @@
       <div id="map-canvas" class="fullWidth"></div>
 
       <div id="content" class="row fullWidth">
-        <div class="row fullWidth page-map" id="image-wrapper">
-          <img src="" id="content-image"></img>
+        <div class="row fullWidth page-details" id="image-wrapper">
+          <img src="main.jpg" id="content-image"></img>
         </div>
 
         <div class="large-16 medium-14 columns" id="left"></div>
-          <div id="main-menu" class="show-for-large-up page-map">
+          <div id="main-menu" class="page-details">
               <div class="large-4 columns no-padding" id="share" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
-              <img src="static/trans.gif"></img>
+              <img src="../../static/trans.gif"></img>
               </div>
               
               <div class="large-4 columns no-padding" id="download" style="border-right:1px solid; border-color:#dfe0dd;">
-              <img src="static/trans.gif"></img>
+              <img src="../../static/trans.gif"></img>
               </div>
 
               <div class="large-12 columns no-padding" id="more-information"><div class="lg-format">more</div>
               </div>
           </div><!-- main-menu -->
-          <div id="language-menu" class="show-for-large-up page-map">
+          <div id="language-menu" class="page-details">
               <div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
               <div class="lg-format">NL</div>
               </div>
@@ -51,7 +51,7 @@
               EN</div>
               </div>
           </div><!-- language-menu -->
-        <div class="large-4 medium-20 small-20 columns page-map" id="description"> 
+        <div class="large-4 medium-20 small-20 columns page-details" id="description"> 
           <div id="description-title">
             <h1>HSM Straet View</h1>
           </div>
@@ -83,35 +83,76 @@
               </div>
               <div id="content-menu" class="large-9 columns">
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
-                  <img src="static/trans.gif"></img>
+                  <img src="../../static/trans.gif"></img>
                 </div>
                 <div class="large-10 columns no-padding" id="download" style="border-left:1px solid; border-color:#4c4443">
-                  <img src="static/trans.gif"></img>
+                  <img src="../../static/trans.gif"></img>
                 </div>
               </div>
           </div>
 
           <div id="close-description">
             <div id="close-container" class="no-padding">
-              <img src="static/trans.gif"></img>
+              <img src="../../static/trans.gif"></img>
             </div>
           </div>
           <div id="description-logo" class="show-for-medium-up"></div>
         </div>
 
-        <div id="faux-map" class="page-map">
+        <div id="faux-map">
+          <img src="mini-map.png"></img>
         </div>
-        <div id="small-info" class="show-for-medium-down no-padding page-map">
-          <img src="static/trans.gif"></img>
+        <div id="small-info" class="no-padding page-details">
+          <img src="../../static/trans.gif"></img>
         </div>
-        <div id="main-logo" class="show-for-medium-up page-map"></div>
+        <div id="main-logo" class="page-details"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
       </div>
-      
+
     <!-- JavaScript at the bottom -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+      // INIT Front-end framework
+      $(document).foundation();
+
+      /*$("#image-wrapper").find('img').each(function(){
+        var imgClass = (this.width/this.height > 1) ? 'tall' : 'wide';
+        $(this).addClass(imgClass);
+      });*/
+
+      if (typeof(google) != 'undefined') {
+        // INIT Google Maps features
+        app.initMap({
+          tilesPath: "../../images/tiles",
+          pinPath: "../../static/pin-map.png",
+          blankPath: "../../static/blank.png",
+          position: ''
+        });
+        
+        app.hackAmsterdamBounds();
+
+        // Trigger events
+        app.triggerEvents();
+
+        //app.getMarkers(false);
+        // Fake markers
+        app.addMarker(41.64007838467894, -52.91015625);
+        app.addMarker(41.11246878918085, -74.35546875);
+        app.addMarker(31.80289258670676, 37.6171875);
+        app.addMarker(41.508577297439324, 75.76171875);
+        app.addMarker(8.407168163601074, 19.86328125);
+        app.addMarker(57.136239319177434, -14.0625);
+        
+        // Show markers
+        app.showMarkers();
+
+      } else {
+        $("#map-canvas").html("Network disconnected.");
+      }
+    });
+    </script>
   </body>
 </html>

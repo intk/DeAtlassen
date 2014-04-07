@@ -1,18 +1,23 @@
 var app = {
 	tiles: "images/tiles",
-	temp_tiles: "images/new",
 	content_image: "#content-image",
 	close_description: "#close-description",
+	pinPath: null,
+	blankPath: null,
 	bounds: null,
-	map: null,
 	markers: [],
 
-	initMap: function() {
+	initMap: function(options) {
 		var self = this;
+
+		this.tiles = options.tilesPath;
+		this.pinPath = options.pinPath;
+		this.blankPath = options.blankPath;
+
 		var deatlassenOptions = {
 		  getTileUrl: function(coord, zoom) {
 		  	if (!self.validateLimit(coord,zoom)) {
-		  		return "static/blank.png";
+		  		return self.blankPath;
 		  	}
 		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + '.png';
 		  },
@@ -111,22 +116,19 @@ var app = {
 	},
 
 	/* Markers helper functions */
-	addMarker: function(lat, lng) {
-		var position = new google.maps.LatLng(lat, lng);
-
+	addMarker: function(options) {
+		var self =  this;
+		var position = new google.maps.LatLng(options.lat, options.lng);
+		console.log(self.pinPath);
 		var marker = new google.maps.Marker({
 			position: position,
-			title: 'Marker #1',
-			icon: "static/pin-map.png"
+			title: options.title,
+			icon: self.pinPath
 		});
+
 		var self = this;
 		google.maps.event.addListener(marker, 'click', function() {
-			$("#main-logo").attr('class', '');
-			$("#main-logo").hide();
-			$("#main-menu").hide();
-			$("#language-menu").hide();
-			$("#map-canvas").removeClass('fullWidth');
-			$("#content-image").attr('src','static/b1.png');
+			window.location.href = options.url;
 		});
 
 		this.markers.push(marker);
@@ -158,17 +160,8 @@ var app = {
 		$("#faux-map").click(this.fauxMapEvent);
 	},
 
-	fauxMapEvent: function() {
-		$("#content-image").attr("src","");
-		$("#description").show();
-		$("#main-logo").removeClass('show-for-medium-up');
-		$("#main-logo").hide();
-		$("#main-menu").hide();
-		$("#language-menu").hide();
-		$("#image-wrapper").fadeOut();
-		$("#map-canvas").addClass('show-for-medium-up');
-		$("#map-canvas").fadeIn();
-		$("#faux-map").hide();
+	fauxMapEvent: function() {	
+		window.location.href = "../../index.html"
 	},
 
 	moreInformationEvent: function () {
@@ -176,10 +169,10 @@ var app = {
 		$("#main-menu").fadeOut();
 		$("#language-menu").removeClass('show-for-large-up');
 		$("#language-menu").fadeOut();
-		$("#main-logo").removeClass('show-for-medium-up');
+		if ($("#main-logo").hasClass('show-for-medium-up')) {
+			$("#main-logo").removeClass('show-for-medium-up');
+		}
 		$("#main-logo").hide();
-		$("#small-info").hide();
-		$("#small-info").removeClass('show-for-medium-down');
 		$("#description").fadeIn();
 	},
 
@@ -191,7 +184,13 @@ var app = {
 		$("#description").fadeIn();
 	},
 
-	smallMoreInfoEvent: function() {
+	smallMoreInfoEvent: function() {		
+		if ($("#main-logo").hasClass('show-for-medium-up')) {
+			$("#main-logo").removeClass('show-for-medium-up');
+			$("#main-logo").hide();
+		} else {
+			$("#main-logo").addClass('show-for-medium-up');
+		}
 		$("#small-info").hide();
 		$("#small-info").removeClass('show-for-medium-down');
 		$("#description").fadeIn();
@@ -203,7 +202,9 @@ var app = {
 		$("#main-menu").fadeIn();
 		$("#language-menu").addClass('show-for-large-up');
 		$("#language-menu").fadeIn();
-		$("#main-logo").addClass('show-for-medium-up');
+		if (!$("#main-logo").hasClass("show-for-medium-up")) {
+			$("#main-logo").addClass('show-for-medium-up');
+		}
 		$("#main-logo").show();
 		$("#small-info").addClass('show-for-medium-down');
 		$("#small-info").fadeIn();
