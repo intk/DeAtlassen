@@ -99,14 +99,62 @@ var app = {
 	},
 
 	/* Markers handling functions */
-	getMarkers: function(show) {
-		$.getJSON("static/markers.json", function(data) {
-			console.log(data);
-		});
+	addMarkers: function() {
+		this.addMarker({
+          lat: 10.228437266155943, 
+          lng: -22.7197265625, 
+          title: 'Monkelbaens Toorn',
+          url: '/nl/monkelbaens-toorn/'
+        });
 
-		if (show) {
-			this.showMarkers();
-		}
+        this.addMarker({
+          lat: 33.54139466898275, 
+          lng: -7.470703125, 
+          title: 'Zuyder Kerck',
+          url: '/nl/zuyder-kerck/'
+        }); 
+
+        this.addMarker({
+          lat: 31.728167146023935, 
+          lng: 4.5263671875, 
+          title: 'Oost Indisch Huys',
+          url: '/nl/t-oost-indisch-huys/'
+        });
+
+        this.addMarker({
+          lat: -11.480024648555816, 
+          lng: 30.3662109375, 
+          title: 'Nieuwe Brugh',
+          url: '/nl/nieuwe-brugh/'
+        });  
+
+        this.addMarker({
+          lat: 35.782170703266075, 
+          lng: 43.06640625, 
+          title: 'Stadt Huys',
+          url: '/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/'
+        }); 
+
+        this.addMarker({
+          lat: -11.092165893501988, 
+          lng: 74.267578125, 
+          title: 'West Indisch Huys',
+          url: '/nl/west-indisch-huys/'
+        }); 
+
+        this.addMarker({
+          lat: 7.623886853120036,
+          lng: 93.427734375, 
+          title: 'Noorder Kerck',
+          url: '/nl/noorder-kerck/'
+        }); 
+
+        this.addMarker({
+          lat: 43.8028187190472, 
+          lng: 75.3662109375, 
+          title: 'Wester Kerck',
+          url: 'nl/wester-kerck/'
+        }); 
 	},
 
 	deleteMarkers: function() {
@@ -161,7 +209,11 @@ var app = {
 	},
 
 	fauxMapEvent: function() {	
-		window.location.href = "/"
+		$("#content-image").attr("src","");
+		$("#content-image").hide();
+		$("#faux-map").hide();
+		$("#map-canvas").show();
+		google.maps.event.trigger(app.map, 'resize');
 	},
 
 	moreInformationEvent: function () {

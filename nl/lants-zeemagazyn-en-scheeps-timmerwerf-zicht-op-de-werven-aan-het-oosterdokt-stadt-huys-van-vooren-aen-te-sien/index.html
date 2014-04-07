@@ -23,7 +23,7 @@
   </head>
   <body>
 
-      <div id="map-canvas" class="fullWidth"></div>
+      <div id="map-canvas" class="fullWidth page-details"></div>
 
       <div id="content" class="row fullWidth">
         <div class="row fullWidth page-details" id="image-wrapper">
@@ -138,14 +138,8 @@
         app.triggerEvents();
 
         //app.getMarkers(false);
-        // Fake markers
-        app.addMarker(41.64007838467894, -52.91015625);
-        app.addMarker(41.11246878918085, -74.35546875);
-        app.addMarker(31.80289258670676, 37.6171875);
-        app.addMarker(41.508577297439324, 75.76171875);
-        app.addMarker(8.407168163601074, 19.86328125);
-        app.addMarker(57.136239319177434, -14.0625);
-        
+        // Markers
+        app.addMarkers();
         // Show markers
         app.showMarkers();
 

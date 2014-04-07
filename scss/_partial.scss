@@ -38,6 +38,10 @@
     max-width: initial;
 }
 
+.page-details[id="map-canvas"] {
+	display: none;
+}
+
 #map-canvas img {
 	max-width: none;
 }
