@@ -5,6 +5,22 @@
   src: url(../static/fonts/MuseoSans_500.otf);
 }
 
+#description h1 {
+	font-size: rem-calc(22);
+}
+
+#description small {
+	font-size: rem-calc(11.5);
+}
+
+#description p {
+	margin-top: 30px;
+}
+
+#description-text {
+	margin-top: 20px;
+}
+
 .no-padding {
 	padding:0px;
 }
@@ -83,8 +99,12 @@
 	margin-top: 6px;
 }
 
+#description-title {
+	margin-top: 135px;
+	background: none;
+	line-height: 1.4;
+}
 #description-content {
-	margin-top: 110px;
 	background-color: none;
 	line-height: 1.4;
 	height: 450px;
@@ -139,17 +159,20 @@
 	right: 300px;
 	width: 100px;
 	height: 40px;
-	border:1px solid;
+	border:0px;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;  
     -moz-border-radius: 4px;  
-	border-color: rgba(205, 206, 202, 1.0000);
-	background-color: rgba(239, 239, 236, 1.0000);
+	border-color: #dfe0dd;
+	background-color: #e0e0de;
 }
 
 #language-menu div {
+	position: relative;
 	font-size: 12px;
 	height: 100%;
+	color:#999999;
+	text-shadow: 1px 1px #ffffff;
 }
 
 #language-menu #nl:hover {
@@ -172,6 +195,30 @@
 	-moz-border-bottom-right-radius: 4px; 
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
+
+
+}
+
+#language-menu .lg-selected[id="nl"] {
+	background-color: rgba(255, 255, 255, 0.90);
+	cursor: pointer;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-top-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px; 
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+#language-menu .lg-selected[id="en"] {
+	background-color: rgba(255, 255, 255, 0.90);
+	cursor: pointer;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;  
+    -moz-border-top-right-radius: 4px;
+	-moz-border-bottom-right-radius: 4px; 
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
 }
 
 #main-menu {
@@ -187,8 +234,8 @@
 	-webkit-border-radius: 4px;  
     -moz-border-radius: 4px;  
 	border-radius: 4px;
-	border-color: rgba(205, 206, 202, 1.0000);
-	background-color: rgba(239, 239, 236, 1.0000);
+	border-color: #dfe0dd;
+	background-color: rgba(255, 255, 255, 0.90);
 }
 
 #main-menu div {
@@ -269,21 +316,23 @@
 	left: 14%;
 	width: 33%;
 	height: 40px;
-	background-color: rgba(52, 47, 46, 1.0000);
+	background-color: #2e2928;
 	border:0px solid;
 	-webkit-border-radius: 4px;  
     -moz-border-radius: 4px;  
 	border-radius: 4px;
-	border-color: rgba(72, 68, 67, 1.0000);
+	border-color: #2e2928;
 }
 
 #languages div {
 	font-size: 12px;
 	height: 100%;
+	color:#4c4443;
+	text-shadow:-1px -1px black;
 }
 
 #languages #nl:hover {
-	background-color: rgba(20, 19, 18, 1.0000);
+	background-color: #151312;
 	cursor: pointer;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;  
@@ -294,7 +343,29 @@
 }
 
 #languages #en:hover {
-	background-color: rgba(20, 19, 18, 1.0000);
+	background-color: #151312;
+	cursor: pointer;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;  
+    -moz-border-top-right-radius: 4px;
+	-moz-border-bottom-right-radius: 4px; 
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+#languages .lg-selected[id="nl"] {
+	background-color: #151312;
+	cursor: pointer;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-top-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px; 
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+#languages .lg-selected[id="en"] {
+	background-color: #151312;
 	cursor: pointer;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
@@ -311,12 +382,12 @@
 	right: 15%;
 	width: 33%;
 	height: 40px;
-	background-color: rgba(52, 47, 46, 1.0000);
+	background-color: #2e2928;
 	border:0px solid;
 	-webkit-border-radius: 4px;  
     -moz-border-radius: 4px;  
 	border-radius: 4px;
-	border-color: rgba(72, 68, 67, 1.0000);
+	border-color: #2e2928;
 }
 
 #content-menu div {
@@ -324,7 +395,7 @@
 }
 
 #content-menu #share:hover {
-	background-color: rgba(20, 19, 18, 1.0000);
+	background-color: #151312;
 	cursor: pointer;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;  
@@ -335,7 +406,7 @@
 }
 
 #content-menu #download:hover {
-	background-color: rgba(20, 19, 18, 1.0000);
+	background-color: #151312;
 	cursor: pointer;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
