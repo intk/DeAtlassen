@@ -42,6 +42,7 @@ var app = {
   		self.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   		self.map.mapTypes.set('deatlassen', deatlassenMapType);
   		self.map.setMapTypeId('deatlassen');
+  		this.hackAmsterdamBounds();
 	},
 
 	/* CONTEXT Handler */
