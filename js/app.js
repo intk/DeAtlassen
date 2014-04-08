@@ -216,6 +216,7 @@ var app = {
 	fauxMapEvent: function() {	
 		$("#content-image").attr("src","");
 		$("#content-image").hide();
+		$("#image-wrapper").hide();
 		$("#left").hide();
 		$("#faux-map").hide();
 		$("#map-canvas").show();
