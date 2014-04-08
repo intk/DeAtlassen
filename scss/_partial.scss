@@ -90,7 +90,7 @@
 	color:white;
     background-image: none;
     height: 100%;
-    background-color:rgba(59, 55, 51, 0.95);
+    background-color:rgba(59, 55, 51, 1.000);
 }
 
 .page-map[id="description"] {
@@ -111,6 +111,7 @@
     position:absolute;
     top:0px;
     left:0px;
+    height: 100%;
 }
 
 #close-description {
