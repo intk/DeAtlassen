@@ -212,6 +212,7 @@ var app = {
 		$("#content-image").attr("src","");
 		$("#content-image").hide();
 		$("#faux-map").hide();
+		$("#left").hide();
 		$("#map-canvas").show();
 		google.maps.event.trigger(app.map, 'resize');
 	},
