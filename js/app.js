@@ -206,6 +206,11 @@ var app = {
 		$("#more-information").click(this.moreInformationEvent);
 		$("#small-info").click(this.smallMoreInfoEvent);
 		$("#faux-map").click(this.fauxMapEvent);
+		$("#main-menu #share").click(this.shareButton);
+	},
+
+	shareButton: function() {
+		$("#media-sharing").fadeToggle();
 	},
 
 	fauxMapEvent: function() {	
@@ -230,7 +235,7 @@ var app = {
 	},
 
 	loadImageEvent: function() {
-		$("#map-canvas").fadeOut();
+		$("#map-canvas").hide();
 		$("#main-logo").hide();
 		$("#image-wrapper").fadeIn();
 		$("#faux-map").show();

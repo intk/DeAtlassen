@@ -1,10 +1,14 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
+  <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="De-Atlassen">
 
+    <meta property="og:image" content="http://de-atlassen.intk.com/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/main.jpg"/>
+    <meta property="og:title" content="De-Atlassen"/>
+    <meta property="og:url" content="http://de-atlassen.intk.com/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/"/>
+    
     <title>De-atlassen</title>
     
     <!-- CSS at the top -->
@@ -27,10 +31,10 @@
 
       <div id="content" class="row fullWidth">
         <div class="row fullWidth page-details" id="image-wrapper">
-          <img src="main.jpg" id="content-image"></img>
+        <img src="main.jpg" id="content-image"></img>
         </div>
 
-        <div class="large-16 medium-14 columns" id="left"></div>
+        <div id="left" class="large-16 columns"></div>
           <div id="main-menu" class="page-details">
               <div class="large-4 columns no-padding" id="share" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
               <img src="../../static/trans.gif"></img>
@@ -40,7 +44,7 @@
               <img src="../../static/trans.gif"></img>
               </div>
 
-              <div class="large-12 columns no-padding" id="more-information"><div class="lg-format">more</div>
+              <div class="large-12 columns no-padding" id="more-information"><div class="large-3 columns" id="info-icon"><img src="../../static/info.png"></img></div><div class="large-15 columns"><div id="info-text"><em>Meer informatie</em></div></div></div>
               </div>
           </div><!-- main-menu -->
           <div id="language-menu" class="page-details">
@@ -51,6 +55,18 @@
               EN</div>
               </div>
           </div><!-- language-menu -->
+          <div id="media-sharing">
+            <div class="large-20 columns" id="title">
+              <div><span>Deze map delen</span></div>
+            </div>
+            <div class="large-20 columns" id="facebook">
+
+              <div><img src="../../static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/nl/wester-kerck/" target="_blank">Facebook</a></span></div>
+            </div>
+            <div class="large-20 columns" id="twitter">
+              <div><img src="../../static/twitter.png"></img><span>Twitter</span></div>
+            </div>
+        </div> <!-- media sharing -->
         <div class="large-4 medium-20 small-20 columns page-details" id="description"> 
           <div id="description-title">
             <h1>HSM Straet View</h1>
@@ -75,7 +91,7 @@
             </div>
             
           </div>
-          <div id="description-menus" class="show-for-large-up">
+          <!--<div id="description-menus" class="page-details">
               <div id="languages">
                 <div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div>
               
@@ -89,7 +105,7 @@
                   <img src="../../static/trans.gif"></img>
                 </div>
               </div>
-          </div>
+          </div>-->
 
           <div id="close-description">
             <div id="close-container" class="no-padding">
@@ -107,6 +123,7 @@
         </div>
         <div id="main-logo" class="page-details"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
+        
       </div>
 
     <!-- JavaScript at the bottom -->
