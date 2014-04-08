@@ -211,8 +211,9 @@ var app = {
 	fauxMapEvent: function() {	
 		$("#content-image").attr("src","");
 		$("#content-image").hide();
+		$("#description").css('background-color','rgba(59, 55, 51, 0.95);');
+		$("#left").fadeOut();
 		$("#faux-map").hide();
-		$("#left").hide();
 		$("#map-canvas").show();
 		google.maps.event.trigger(app.map, 'resize');
 	},
