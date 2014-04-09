@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 		//app.getMarkers(false);
 		// Fake markers
-		app.addMarkers();
+		app.addMarkers('nl');
 		
 		// Show markers
 		app.showMarkers();

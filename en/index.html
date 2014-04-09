@@ -21,8 +21,8 @@
     <title>De-atlassen</title>
     
     <!-- CSS at the top -->
-    <link rel="stylesheet" href="css/app.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="/css/app.css" />
+    <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -46,34 +46,34 @@
         <div class="large-16 medium-14 columns" id="left"></div>
           <div id="main-menu" class="show-for-large-up page-map">
               <div class="large-4 columns" id="share" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
-              <img src="static/trans.gif"></img>
+              <img src="/static/trans.gif"></img>
               </div>
               
               <div class="large-4 columns" id="download" style="border-right:1px solid; border-color:#dfe0dd;">
-              <img src="static/trans.gif"></img>
+              <img src="/static/trans.gif"></img>
               </div>
 
-              <div class="large-12 columns" id="more-information"><div class="large-3 columns" id="info-icon"><img src="static/info.png"></img></div><div class="large-15 columns"><div id="info-text"><em>Meer informatie</em></div></div>
+              <div class="large-12 columns" id="more-information"><div class="large-3 columns" id="info-icon"><img src="/static/info.png"></img></div><div class="large-15 columns"><div id="info-text"><em>More information</em></div></div>
               </div>
           </div><!-- main-menu -->
           <div id="language-menu" class="show-for-large-up page-map">
-              <div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
-              <div class="lg-format">NL</div>
+              <div class="large-10 columns no-padding lg-not-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
+              <div class="lg-format"><a href="/">NL</a></div>
               </div>
-              <div class="large-10 columns no-padding lg-not-selected" id="en"><div class="lg-format">
-              <a href="/en/">EN</a></div>
+              <div class="large-10 columns no-padding lg-selected" id="en"><div class="lg-format">
+              EN</div>
               </div>
           </div><!-- language-menu -->
           <div id="media-sharing">
             <div class="large-20 columns" id="title">
-              <div><span>Deze map delen</span></div>
+              <div><span>Share</span></div>
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
+              <div><img src="/static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="static/twitter.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/twitter.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
         <div class="large-4 medium-20 small-20 columns page-map" id="description"> 
@@ -108,17 +108,17 @@
               </div>
               <div id="content-menu" class="large-9 columns">
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
-                  <img src="static/trans.gif"></img>
+                  <img src="/static/trans.gif"></img>
                 </div>
                 <div class="large-10 columns no-padding" id="download" style="border-left:1px solid; border-color:#4c4443">
-                  <img src="static/trans.gif"></img>
+                  <img src="/static/trans.gif"></img>
                 </div>
               </div>
           </div>
 
           <div id="close-description">
             <div id="close-container" class="no-padding">
-              <img src="static/trans.gif"></img>
+              <img src="/static/trans.gif"></img>
             </div>
           </div>
           <div id="description-logo" class="show-for-medium-up"></div>
@@ -127,7 +127,7 @@
         <div id="faux-map" class="page-map">
         </div>
         <div id="small-info" class="show-for-medium-down no-padding page-map">
-          <img src="static/trans.gif"></img>
+          <img src="/static/trans.gif"></img>
         </div>
         <div id="main-logo" class="show-for-medium-up page-map"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
@@ -135,9 +135,39 @@
       </div>
       
     <!-- JavaScript at the bottom -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+        $(document).ready(function() {
+          // INIT Front-end framework
+          $(document).foundation();
+          
+          if (typeof(google) != 'undefined') {
+            // INIT Google Maps features
+            app.initMap({
+              tilesPath: "/images/tiles",
+              pinPath: "/static/pin-map.png",
+              blankPath: "/static/blank.png",
+              positon: ""
+            });
+
+            app.hackAmsterdamBounds();
+
+            // Trigger events
+            app.triggerEvents();
+
+            //app.getMarkers(false);
+            // Fake markers
+            app.addMarkers("en");
+            
+            // Show markers
+            app.showMarkers();
+
+          } else {
+            $("#map-canvas").html("Network disconnected.");
+          }
+      });
+    </script>
+    </body>
 </html>
