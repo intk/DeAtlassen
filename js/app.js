@@ -111,8 +111,8 @@ var app = {
 	/* Markers handling functions */
 	addMarkers: function() {
 		this.addMarker({
-          lat: 10.228437266155943, 
-          lng: -22.7197265625, 
+          lat: 9.579084335882534,
+          lng: -22.32421875, 
           title: 'Monkelbaens Toorn',
           url: '/nl/monkelbaens-toorn/'
         });
