@@ -5,6 +5,11 @@
   src: url(../static/fonts/MuseoSans_500.otf);
 }
 
+
+body {
+	overflow: hidden;
+}
+
 #description h1 {
 	font-size: rem-calc(22);
 }
@@ -68,6 +73,10 @@
 	top:0px;
 	left:0px;
 	width: 100%;
+}
+
+#content-image {
+	overflow: hidden;
 }
 
 .page-details[id="image-wrapper"] {
