@@ -5,6 +5,7 @@ var app = {
 	pinPath: null,
 	blankPath: null,
 	bounds: null,
+	detailsLocation: null,
 	markers: [],
 
 	initMap: function(options) {
@@ -13,6 +14,7 @@ var app = {
 		this.tiles = options.tilesPath;
 		this.pinPath = options.pinPath;
 		this.blankPath = options.blankPath;
+		this.detailsLocation = options.detailsLocation;
 
 		var deatlassenOptions = {
 		  getTileUrl: function(coord, zoom) {
@@ -96,6 +98,14 @@ var app = {
 		} else {
 			return false
 		}
+	},
+
+	setMapBounds: function(options) {
+		var location = new google.maps.LatLng(options.lat, options.lng);
+		this.bounds = new google.maps.LatLngBounds();
+		
+		this.bounds.extend(location);
+		this.map.fitBounds(this.bounds);
 	},
 
 	/* Markers handling functions */
@@ -221,6 +231,9 @@ var app = {
 		$("#faux-map").hide();
 		$("#map-canvas").show();
 		google.maps.event.trigger(app.map, 'resize');
+		if (app.detailsLocation != null) {
+			app.setMapBounds(app.detailsLocation);
+		}
 	},
 
 	moreInformationEvent: function () {
