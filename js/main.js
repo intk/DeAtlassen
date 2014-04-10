@@ -5,7 +5,7 @@ $(document).ready(function() {
 	if (typeof(google) != 'undefined') {
 		// INIT Google Maps features
 		app.initMap({
-			tilesPath: "images/tiles",
+			tilesPath: "images/jpg",
 			pinPath: "static/pin-map.png",
 			blankPath: "static/blank.png",
 			positon: ""

@@ -1,5 +1,5 @@
 var app = {
-	tiles: "images/tiles",
+	tiles: "/images/jpg",
 	content_image: "#content-image",
 	close_description: "#close-description",
 	pinPath: null,
@@ -11,7 +11,7 @@ var app = {
 	initMap: function(options) {
 		var self = this;
 
-		this.tiles = options.tilesPath;
+		//this.tiles = options.tilesPath;
 		this.pinPath = options.pinPath;
 		this.blankPath = options.blankPath;
 		this.detailsLocation = options.detailsLocation;
@@ -21,7 +21,7 @@ var app = {
 		  	if (!self.validateLimit(coord,zoom)) {
 		  		return self.blankPath;
 		  	}
-		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + '.png';
+		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + '.jpg';
 		  },
 		  tileSize: new google.maps.Size(256, 256),
 		  maxZoom: 5,

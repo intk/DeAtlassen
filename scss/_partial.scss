@@ -128,8 +128,8 @@ body {
 }
 
 .page-map[id="description"] {
-	display: none;
 	position:absolute;
+	display: none;
 	top:0px;
     right:0px;
   	padding:45px;
@@ -249,6 +249,7 @@ body {
 	display: none;
 	bottom: 50px;
 	right: 300px;
+	margin-right: 10px;
 	width: 100px;
 	height: 40px;
 	border:0px;
@@ -263,6 +264,7 @@ body {
 	position:absolute;
 	bottom: 50px;
 	right: 300px;
+	margin-right: 10px;
 	width: 100px;
 	height: 40px;
 	border:0px;
@@ -460,7 +462,7 @@ body {
 	position: absolute;
 	bottom: 35px;
 	left: 14%;
-	width: 33%;
+	width: 100px;
 	height: 40px;
 	background-color: #2e2928;
 	border:0px solid;
@@ -533,7 +535,7 @@ body {
 	position: absolute;
 	bottom: 35px;
 	right: 15%;
-	width: 33%;
+	width: 100px;
 	height: 40px;
 	background-color: #2e2928;
 	border:0px solid;
