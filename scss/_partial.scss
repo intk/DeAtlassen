@@ -167,7 +167,8 @@ body {
 	top:50%;
 	width: 25px;
 	height: 25px;
-	background: url('../static/icon-assets.png') -70px -40px;
+	background: url('../static/Close@2x.png');
+	background-size: 25px 25px;
 	margin-left: -12.5px;
 	margin-top: 6px;
 }
@@ -406,7 +407,8 @@ body {
 	top:50%;
 	width: 20px;
 	height: 20px;
-	background: url('../static/icon-assets.png') -53px -2px;
+	background: url('../static/Share@2x.png');
+	background-size: 20px 20px;
 	margin-left: -10px;
 	margin-top: -10px;
 }
@@ -421,7 +423,8 @@ body {
 	top:50%;
 	width: 20px;
 	height: 20px;
-	background: url('../static/icon-assets.png') -82px -3px;
+	background: url('../static/Download@2x.png');
+	background-size: 20px 20px;
 	margin-left: -10px;
 	margin-top: -10px;
 }
@@ -585,10 +588,11 @@ body {
 	left:50%;
 	top:50%;
 	width: 20px;
-	height: 19px;
-	background: url('../static/icon-assets.png') 47px -3px;
+	height: 22px;
+	background: url('../static/Share-dark@2x.png');
+	background-size: 20px 22px;
 	margin-left: -9.5px;
-	margin-top: -9.5px;
+	margin-top: -12px;
 }
 
 #content-menu #download {
@@ -600,10 +604,11 @@ body {
 	left:50%;
 	top:50%;
 	width: 20px;
-	height: 20px;
-	background: url('../static/icon-assets.png') 20px -3px;
+	height: 22px;
+	background: url('../static/Download-dark@2x.png');
+	background-size: 20px 22px;
 	margin-left: -10px;
-	margin-top: -10px;
+	margin-top: -12px;
 }
 
 #description-menus {
