@@ -213,7 +213,9 @@ body {
 	right: 85px;
 	height: 145px;
 	width: 100px;
-	background-image: url("../static/museumlogo.png");
+	background-image: url("../static/logo@2x.png");
+	background-size: 100px 145px;
+
 }
 
 .page-map[id="main-logo"] {
@@ -222,7 +224,8 @@ body {
 	right: 85px;
 	height: 145px;
 	width: 100px;
-	background-image: url("../static/museumlogo.png");
+	background-image: url("../static/logo@2x.png");
+	background-size: 100px 145px;
 }
 
 #description-logo {
@@ -232,7 +235,8 @@ body {
 	left: 45px;
 	height: 145px;
 	width: 100px;
-	background-image: url("../static/museumlogo.png");;
+	background-image: url("../static/logo@2x.png");
+	background-size: 100px 145px;
 }
 
 #small-logo {
@@ -241,7 +245,8 @@ body {
 	left: 45px;
 	height: 145px;
 	width: 100px;
-	background-image: url("../static/museumlogo.png");;
+	background-image: url("../static/logo@2x.png");
+	background-size: 100px 145px;
 }
 
 .page-details[id="language-menu"] {
