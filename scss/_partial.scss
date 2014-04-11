@@ -2,8 +2,15 @@
 @font-face
 {
   font-family: museo;
-  src: url(../static/fonts/MuseoSans_500.otf);
+  src: url(/static/fonts/MuseoSans_500.otf);
 }
+
+@font-face
+{
+  font-family: museo_italic;
+  src: url(/static/fonts/MuseoSans_500_italic.otf);
+}
+
 
 body {
 	overflow: hidden;
@@ -211,7 +218,7 @@ body {
 	position: absolute;
 	display: none;
 	top:-3px;
-	right: 85px;
+	right: 6%;
 	height: 145px;
 	width: 100px;
 	background-image: url("../static/logo@2x.png");
@@ -222,7 +229,7 @@ body {
 .page-map[id="main-logo"] {
 	position: absolute;
 	top:-3px;
-	right: 85px;
+	right: 6%;
 	height: 145px;
 	width: 100px;
 	background-image: url("../static/logo@2x.png");
@@ -462,6 +469,7 @@ body {
 }
 
 #more-information #info-text {
+	font-family: museo_italic;
 	margin-top:15px;
 	margin-left:-8px;
 }
@@ -620,7 +628,7 @@ body {
 	display: none;
 	cursor: pointer;
 	bottom: 50px;
-	right: 50px;
+	right: 6%;
 	width: 40px;
 	height: 40px;
 	background-color: rgba(239, 239, 236, 1.0000);
@@ -637,7 +645,7 @@ body {
 	cursor: pointer;
 	display: none;	
 	bottom: 50px;
-	right: 50px;
+	right: 6%;
 	width: 40px;
 	height: 40px;
 	background-color: rgba(239, 239, 236, 1.0000);
@@ -769,6 +777,15 @@ body {
 	#description {
 		width: 300px;
 	}
+}
+
+#loading-animation {
+	position: absolute;
+	top: calc(50% - 22px);
+	left: calc(50% - 22px);
+	width: 45px;
+	height: 45px;
+	background:none;
 }
 
 

@@ -255,6 +255,7 @@ var app = {
 	},
 
 	loadImageEvent: function() {
+		$("#loader").hide();
 		$("#map-canvas").hide();
 		$("#main-logo").hide();
 		$("#image-wrapper").fadeIn();
