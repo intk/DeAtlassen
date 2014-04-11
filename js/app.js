@@ -249,6 +249,7 @@ var app = {
 		if ($("#main-logo").hasClass('show-for-medium-up')) {
 			$("#main-logo").removeClass('show-for-medium-up');
 		}
+		$("#media-sharing").hide();
 		$("#main-logo").hide();
 		$("#description").fadeIn();
 	},
