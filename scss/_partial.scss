@@ -244,10 +244,10 @@ body {
 	position: absolute;
 	top: -3px;
 	left: 45px;
-	height: 145px;
-	width: 100px;
+	height: 72px;
+	width: 50px;
 	background-image: url("../static/logo@2x.png");
-	background-size: 100px 145px;
+	background-size: 50px 72px;
 }
 
 .page-details[id="language-menu"] {
@@ -764,5 +764,13 @@ body {
 #media-sharing #twitter, #media-sharing #facebook {
 	cursor: pointer;
 }
+
+@media only screen and (min-width:64.063em) {
+	#description {
+		width: 300px;
+	}
+}
+
+
 
 
