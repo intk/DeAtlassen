@@ -355,7 +355,7 @@ body {
 
 .page-details[id="main-menu"] {
 	padding: 0px;
-	position:absolute;
+	position: absolute;
 	overflow: hidden;
 	display: none;
 	/*display: none;*/
@@ -363,7 +363,7 @@ body {
 	right: 85px;
 	width: 205px;
 	height: 40px;
-	border:1px solid;
+	border: 1px solid;
 	-webkit-border-radius: 4px;  
     -moz-border-radius: 4px;  
 	border-radius: 4px;
@@ -404,6 +404,18 @@ body {
 	border-bottom-left-radius: 4px;
 }
 
+#main-menu #select-map:hover {
+	background-color: rgba(255, 255, 255, 1.0000);
+	cursor: pointer;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-top-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px; 
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+
 #main-menu #share {
 	position: relative;
 }
@@ -415,6 +427,18 @@ body {
 	width: 20px;
 	height: 20px;
 	background: url('../static/Share@2x.png');
+	background-size: 20px 20px;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+
+#main-menu #select-map img {
+	position: absolute;
+	left:50%;
+	top:50%;
+	width: 20px;
+	height: 20px;
+	background: url('../static/Map@2x.png');
 	background-size: 20px 20px;
 	margin-left: -10px;
 	margin-top: -10px;
@@ -788,6 +812,33 @@ body {
 	background:none;
 }
 
+#menu-wrapper {
+	position: absolute;
+	overflow: hidden;
+	bottom: 50px;
+	right: 85px;
+	width: 300px;
+	height: 40px;
+	border:1px solid;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-radius: 4px;
+	border-color: #dfe0dd;
+	background-color: rgba(255, 255, 255, 0.90);
+}
 
+#menu-content {
+	position:relative;
+}
+
+#map-select {
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100px;
+	bottom: 30px;
+	background: green;
+	height: 100%;
+}
 
 

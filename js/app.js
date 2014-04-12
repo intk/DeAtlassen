@@ -90,7 +90,7 @@ var app = {
 		if ($("body").height() > 800) {
 			this.bounds.extend(new google.maps.LatLng(-16.26769474828897, -3.515625));
 		} else {
-			this.bounds.extend(new google.maps.LatLng(14.86769474828897, -3.515625));
+			this.bounds.extend(new google.maps.LatLng(15.90069474828897, -3.515625));
 			/*this.addMarker({
 				lat: 15.26769474828897,
 				lng: -3.515625
