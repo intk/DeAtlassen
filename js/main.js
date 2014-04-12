@@ -11,8 +11,22 @@ $(document).ready(function() {
 			positon: ""
 		});
 
-		app.hackAmsterdamBounds();
-
+		var cookie = $.cookie("deatlassen");
+		if (cookie != null) {
+			var data = JSON.parse(cookie);
+			var center = data.center;
+			var zoom = data.zoom;
+			console.log("updateFromCookie");
+			app.updateFromCookie({
+				center: center,
+				zoom: zoom
+			});
+			$.removeCookie("deatlassen");
+		} else {
+			console.log("No cookie");
+			app.hackAmsterdamBounds();
+		}
+		
 		// Trigger events
 		app.triggerEvents();
 

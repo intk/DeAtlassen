@@ -118,9 +118,11 @@ warships are docked,' as many as seventy at a time.
           <div id="description-logo" class="show-for-medium-up"></div>
         </div>
 
+        <a href="/en/">
         <div id="faux-map">
           <img src="mini-map.png"></img>
-        </div>
+        </div></a>
+        
         <div id="small-info" class="no-padding page-details">
           <img src="/static/trans.gif"></img>
         </div>
@@ -133,6 +135,7 @@ warships are docked,' as many as seventy at a time.
 
     <!-- JavaScript at the bottom -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
     <script src="/js/app.js"></script>
     <script>
@@ -157,6 +160,7 @@ warships are docked,' as many as seventy at a time.
           }
         });
         
+
         app.hackAmsterdamBounds();
 
         // Trigger events

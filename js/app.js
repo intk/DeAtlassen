@@ -75,6 +75,13 @@ var app = {
 
 	/* Map Bounds handler */
 
+	updateFromCookie: function(options) {
+		var center = options.center;
+		var latLng = new google.maps.LatLng(center.lat, center.lng);
+		app.map.setCenter(latLng);
+		app.map.setZoom(options.zoom);
+	},
+
 	hackAmsterdamBounds: function() {
 		this.bounds = new google.maps.LatLngBounds();
 
@@ -83,7 +90,11 @@ var app = {
 		if ($("body").height() > 800) {
 			this.bounds.extend(new google.maps.LatLng(-16.26769474828897, -3.515625));
 		} else {
-			this.bounds.extend(new google.maps.LatLng(10.26769474828897, -3.515625));
+			this.bounds.extend(new google.maps.LatLng(14.86769474828897, -3.515625));
+			this.addMarker({
+				lat: 15.26769474828897,
+				lng: -3.515625
+			});
 		}
 		this.map.fitBounds(this.bounds);
 		
@@ -192,6 +203,8 @@ var app = {
 		var self = this;
 		google.maps.event.addListener(marker, 'click', function() {
 			window.location.href = options.url;
+			var center = app.map.getCenter();
+			$.cookie("deatlassen", JSON.stringify({"center":{"lat":center.lat(), "lng":center.lng()}, "zoom":app.map.getZoom()}))
 		});
 
 		this.markers.push(marker);
@@ -220,7 +233,7 @@ var app = {
 		$(this.close_description).click(this.closeDescription);
 		$("#more-information").click(this.moreInformationEvent);
 		$("#small-info").click(this.smallMoreInfoEvent);
-		$("#faux-map").click(this.fauxMapEvent);
+		//$("#faux-map").click(this.fauxMapEvent);
 		$("#main-menu #share").click(this.shareButton);
 	},
 
