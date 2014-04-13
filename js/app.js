@@ -210,6 +210,20 @@ var app = {
           title: 'Wester Kerck',
           url: '/'+language+'/wester-kerck/'
         }); 
+
+        this.addMarker({
+          lat: -13.325484885597936, 
+          lng: -64.4677734375, 
+          title: 'een-ander-gesicht-van-t-landts-magazyn-vanuit-het-westen-gezien',
+          url: '/'+language+'/een-ander-gesicht-van-t-landts-magazyn-vanuit-het-westen-gezien/'
+        }); 
+
+        this.addMarker({
+          lat: 14.647368383896632, 
+          lng: 3.2958984375, 
+          title: 'de-waegh',
+          url: '/'+language+'/de-waegh/'
+        });
 	},
 
 	deleteMarkers: function() {

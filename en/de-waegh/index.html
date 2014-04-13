@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="De-Atlassen">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:title" content="De-Atlassen De Waegh"/>
+    <meta property="og:description" content="De-Atlassen De Waegh"/>
+    <meta property="og:url" content="http://de-atlassen.intk.com/en/de-waegh/"/>
+    <meta property="og:image" content="http://de-atlassen.intk.com/en/de-waegh/main.jpg"/>
+    
+    
+    <title>De-atlassen</title>
+    
+    <!-- CSS at the top -->
+    <link rel="stylesheet" href="/css/app.css" />
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20409126-2', 'de-atlassen.intk.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+
+      <div id="map-canvas" class="fullWidth page-details"></div>
+
+      <div id="content" class="row fullWidth">
+        <div class="row fullWidth page-details" id="image-wrapper">
+        <img src="main.jpg" id="content-image"></img>
+        </div>
+
+        <div id="left" class="large-16 columns"></div>
+          <div id="main-menu" class="page-details">
+              <div class="large-6 columns" id="select-map" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
+              <img src="/static/trans.gif"></img>
+              </div>
+
+              <div class="large-6 columns" id="share" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
+                <img src="/static/trans.gif"></img>
+              </div>
+              
+              <div class="large-6 columns" id="download" style="">
+              <img src="/static/trans.gif"></img>
+              </div>
+          </div><!-- main-menu -->
+          
+          <div id="more-info-2" class="page-details" style="width:130px;right:76px;">
+            <div class="row" style="height:100%; padding:0px; margin:0px;">
+              <div class="large-5 columns" id="info-icon-2">
+                <img src="/static/info.png"/>
+              </div>
+              <div class="large-15 columns" style="height:100%;margin: 0px;padding: 0px; margin-top:17px; font-size:11px;" id="info-text">
+                More information
+              </div>
+            </div>
+          </div><!-- more-info -->
+
+          <div id="download-options">
+            <a href="/"><div class="large-20 columns" id="title">
+              <div><span>Amsterdam</span></div>
+            </div></a>
+            <a href="/europe/"><div class="large-20 columns" id="europe">
+              <div><span>Europe</span></div>
+            </div></a>
+            <a href="/world/"><div class="large-20 columns" id="world">
+              <div><span>World</span></div>
+            </div></a>
+        </div><!-- map-options -->
+
+        <div id="download-map">
+            <div class="large-20 columns" id="title">
+              <div><span>Download map</span></div>
+            </div>
+            <a href="/static/full-hd/De_Waegh.jpg" download="De_Waegh.jpg" title="De_Waegh"><div class="large-20 columns" id="download-details">
+              <div class="row" style="height:100%;padding:0px; margin:0px;"><div class="large-6 columns" id="download-icon"><img src="/static/Download@2x.png"/></div><div class="large-14 columns" id="download-size"><span class="dl">Download</span> <br> <span class="map-size">(528KB)</span></div></div>
+            </div></a>
+        </div><!-- download-options -->
+
+          <div id="language-menu" class="page-details">
+              <a href="/nl/de-waegh/"><div class="large-10 columns no-padding lg-not-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
+              <div class="lg-format">NL</div>
+              </div></a>
+              <div class="large-10 columns no-padding lg-selected" id="en"><div class="lg-format">
+              EN</div>
+              </div>
+          </div><!-- language-menu -->
+          <div id="media-sharing">
+            <div class="large-20 columns" id="title">
+              <div><span>Share</span></div>
+            </div>
+            <div class="large-20 columns" id="facebook">
+
+              <div><img src="/static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/en/de-waegh/" target="_blank">Facebook</a></span></div>
+            </div>
+            <div class="large-20 columns" id="twitter">
+              <div><img src="/static/twitter.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/en/de-waegh/" target="_blank">Twitter</a></span></div>
+            </div>
+        </div> <!-- media sharing -->
+
+         <div id="media-sharing-2">
+            <div class="large-20 columns" id="title">
+              <div><span>Deze map delen</span></div>
+            </div>
+            <div class="large-20 columns" id="facebook">
+
+              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/de-waegh/" target="_blank">Facebook</a></span></div>
+            </div>
+            <div class="large-20 columns" id="twitter">
+              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/de-waegh/" target="_blank">Twitter</a></span></div>
+            </div>
+        </div> <!-- media sharing -->
+        
+        <div class="large-4 medium-20 small-20 columns page-details" id="description"> 
+          <div id="description-title">
+            <h1>De Waegh</h1>
+          </div>
+          <div id="description-content">
+            <div id="description-text">
+            
+            <small>The Waag building on Nieuwmarkt square was built as a city gate in the fifteenth century. In the 
+
+seventeenth century the building served a number of functions, including as a weigh house, where 
+
+trade goods were weighed under the supervision of the city authorities. The smiths, painters, 
+
+masons, and surgeons all had their guildhalls here, each with a private entrance, which even today 
+
+can be recognized by the guild emblems above the doors. The surgeons also had an anatomical 
+
+theatre for teaching purposes. It can be seen in Rembrandt's painting <em>The Anatomy Lesson of Dr 
+
+Nicolaes Tulp.</em></small>
+            </p>
+            </div>
+            
+          </div>
+          <div id="description-menus" class="show-for-large-up">
+              <div id="languages">
+                <div class="large-10 columns no-padding" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div>
+              
+                <a href="/en/"><div class="large-10 columns no-padding lg-selected" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
+              </div></a>
+              <div id="content-menu" class="large-9 columns">
+                <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
+                  <img src="/static/trans.gif"></img>
+                </div>
+                <div class="large-10 columns no-padding" id="download" style="border-left:1px solid; border-color:#4c4443">
+                  <img src="/static/trans.gif"></img>
+                </div>
+              </div>
+          </div>
+
+          <div id="close-description">
+            <div id="close-container" class="no-padding">
+              <img src="/static/trans.gif"></img>
+            </div>
+          </div>
+          <div id="description-logo" class="show-for-medium-up"></div>
+        </div>
+
+        <a href="/en/">
+        <div id="faux-map">
+          <img src="mini-map@2x.png"></img>
+        </div></a>
+
+        <div id="small-info" class="no-padding page-details">
+          <img src="/static/trans.gif"></img>
+        </div>
+        <div id="main-logo" class="page-details"></div>
+        <div id="small-logo" class="show-for-small hide-for-large"></div>
+        <div id="loading-animation">
+          <img src="/static/loader.gif" id="loader"/>
+        </div>
+      </div>
+
+    <!-- JavaScript at the bottom -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+      // INIT Front-end framework
+      $(document).foundation();
+
+    });
+    </script>
+  </body>
+</html>
