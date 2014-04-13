@@ -255,8 +255,30 @@ var app = {
 		$("#main-menu #share").click(this.shareButton);
 		$("#content-menu #share").click(this.shareDescriptionButton);
 		
-		$("#select-map").click(function () {
+		$("#main-menu #download").click(function () {
+			$("#media-sharing-2").removeClass("show-for-large");
 			$("#media-sharing-2").hide();
+			$("#media-sharing").removeClass("show-for-large");
+			$("#media-sharing").hide();
+			$("#download-options").removeClass("show-for-large");
+			$("#download-options").hide();
+
+			if (!$("#download-map").is(":visible")) {
+				$("#download-map").fadeIn();
+				$("#download-map").addClass("show-for-large");
+				
+			} else {
+				$("#download-map").fadeOut();
+				$("#download-map").removeClass("show-for-large");
+			}
+		});
+
+		$("#select-map").click(function () {
+			$("#download-map").removeClass("show-for-large");
+			$("#download-map").hide();
+			$("#media-sharing-2").removeClass("show-for-large");
+			$("#media-sharing-2").hide();
+			$("#media-sharing").removeClass("show-for-large");
 			$("#media-sharing").hide();
 
 			if (!$("#download-options").is(":visible")) {
@@ -266,13 +288,16 @@ var app = {
 			} else {
 				$("#download-options").fadeOut();
 				$("#download-options").removeClass("show-for-large");
-				
 			}
 		});
 	},
 
 	shareDescriptionButton: function () {
+		$("#download-map").removeClass("show-for-large");
+		$("#download-map").hide();
+		$("#media-sharing").removeClass("show-for-large");
 		$("#media-sharing").hide();
+		$("#download-options").removeClass("show-for-large");
 		$("#download-options").hide();
 		if (!$("#media-sharing-2").is(":visible")) {
 			$("#media-sharing-2").fadeIn();
@@ -286,8 +311,13 @@ var app = {
 	},
 
 	shareButton: function() {
-		$("#media-sharing-2").hide();
+		$("#download-map").removeClass("show-for-large");
+		$("#download-map").hide();
+		$("#media-sharing-2").removeClass("show-for-large");
+		$("#media-sharing").hide();
+		$("#download-options").removeClass("show-for-large");
 		$("#download-options").hide();
+		
 		if (!$("#media-sharing").is(":visible")) {
 			$("#media-sharing").fadeIn();
 			$("#media-sharing").addClass("show-for-large");
@@ -325,8 +355,12 @@ var app = {
 			$("#main-logo").removeClass('show-for-medium-up');
 		}
 
+		$("#download-options").removeClass("show-for-large");
 		$("#download-options").hide();
+		$("#media-sharing").removeClass("show-for-large");
 		$("#media-sharing").hide();
+		$("#download-map").removeClass("show-for-large");
+		$("#download-map").hide();
 		$("#main-logo").hide();
 		$("#description").fadeIn(900);
 
