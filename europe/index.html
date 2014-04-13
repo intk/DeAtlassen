@@ -180,12 +180,14 @@
         </div>
         <div id="main-logo" class="show-for-medium-up page-map"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
+        <div id="madness"></div>
         <!--<div id="new-zoom-position"></div>-->
       </div>  
       
     <!-- JavaScript at the bottom -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/bower_components/jqueryui/ui/minified/jquery-ui.min.js"></script>
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
     <script src="/js/app.js"></script>
      <script>
@@ -212,6 +214,26 @@
         $("#map-canvas").html("Network disconnected.");
       }
     });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $("#madness").draggable(
+    {
+        stop: function(event, ui) {
+
+          // Show dropped position.
+          var Stoppos = $(this).position();
+          console.log("x = "+Stoppos.left);
+          console.log("x = "+Stoppos.top);
+          
+          console.log($(document.elementFromPoint(Stoppos.left-8, Stoppos.top-16)));
+          console.log(Stoppos); 
+
+          $("#madness").hide();
+          $(document.elementFromPoint(Stoppos.left+8, (Stoppos.top+16))).trigger('click');
+        }
+    });
+  });
     </script>
   </body>
 </html>
