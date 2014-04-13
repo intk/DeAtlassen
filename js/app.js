@@ -30,6 +30,18 @@ var app = {
 		  	if (!self.validateLimit(coord,zoom)) {
 		  		return self.blankPath;
 		  	}
+		  	if (zoom == 3 && coord.y == 7) {
+		  		return self.blankPath;
+		  	}
+
+		  	if (zoom == 4 && coord.y > 13) {
+		  		return self.blankPath;
+		  	}
+
+		  	if (zoom == 5 && coord.y > 27) {
+		  		return self.blankPath;
+		  	}
+		  	
 		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + extension;
 		  },
 		  tileSize: new google.maps.Size(256, 256),
