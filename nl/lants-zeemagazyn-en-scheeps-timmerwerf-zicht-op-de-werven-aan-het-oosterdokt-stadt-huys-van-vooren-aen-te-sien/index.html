@@ -8,14 +8,14 @@
     <!-- Facebook meta tags -->
     <meta property="og:title" content="De-Atlassen"/>
     <meta property="og:description" content="De-Atlassen"/>
-    <meta property="og:url" content="http://de-atlassen.intk.com/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/"/>
-    <meta property="og:image" content="http://de-atlassen.intk.com/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/main.jpg"/>
+    <meta property="og:url" content="http://de-atlassen.intk.com/en/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/"/>
+    <meta property="og:image" content="http://de-atlassen.intk.com/en/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/main.jpg"/>
     
     <title>De-atlassen</title>
     
     <!-- CSS at the top -->
-    <link rel="stylesheet" href="../../css/app.css" />
-    <script src="../../bower_components/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="/css/app.css" />
+    <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -40,12 +40,11 @@
       <div id="map-canvas" class="fullWidth page-details"></div>
 
       <div id="content" class="row fullWidth">
-        <div class="row fullWidth page-details" id="image-wrapper">
         
 
         <div id="left" class="large-16 columns"></div>
-
-           <div id="main-menu" class="page-details">
+          
+          <div id="main-menu" class="page-details">
               <div class="large-6 columns" id="select-map" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
               <img src="/static/trans.gif"></img>
               </div>
@@ -59,27 +58,27 @@
               </div></a>
           </div><!-- main-menu -->
           
-          <div id="more-info-2" class="page-details">
+          <div id="more-info-2" class="page-details" style="width:130px;right:76px;">
             <div class="row" style="height:100%; padding:0px; margin:0px;">
               <div class="large-5 columns" id="info-icon-2">
                 <img src="/static/info.png"/>
               </div>
-              <div class="large-15 columns" id="info-text">
-                Meer informatie
+              <div class="large-15 columns" style="height:100%;margin: 0px;padding: 0px; margin-top:17px; font-size:11px;" id="info-text">
+                More information
               </div>
             </div>
           </div><!-- more-info -->
 
           <div id="download-options">
             <a href="/"><div class="large-20 columns" id="title">
-              <div><span>Bekijk andere Atlassen</span></div>
+              <div><span>Amsterdam</span></div>
             </div></a>
             <a href="/europe/"><div class="large-20 columns" id="europe">
-              <div><span>Europa</span></div>
+              <div><span>Europe</span></div>
             </div></a>
             <a href="/world/"><div class="large-20 columns" id="world">
-              <div><span>De Wereld</span></div>
-            </div>
+              <div><span>World</span></div>
+            </div></a>
         </div><!-- map-options -->
 
         <div id="download-map">
@@ -88,39 +87,40 @@
             </div>
             <a href="/static/full-hd/Lants_Zee-Magazyn-en-scheeps-timmerwerf.jpg" download="Lants_Zee-Magazyn-en-scheeps-timmerwerf.jpg" title="Lants_Zee-Magazyn-en-scheeps-timmerwerf"><div class="large-20 columns" id="download-details">
               <div class="row" style="height:100%;padding:0px; margin:0px;"><div class="large-6 columns" id="download-icon"><img src="/static/Download@2x.png"/></div><div class="large-14 columns" id="download-size"><span class="dl">Download</span> <br> <span class="map-size">(2.5MB)</span></div></div>
-            </div></a>
+            </div>
         </div><!-- download-options -->
 
           <div id="language-menu" class="page-details">
-              <div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
+              <a href="/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/"><div class="large-10 columns no-padding lg-not-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
               <div class="lg-format">NL</div>
-              </div>
-              <a href="/en/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/"><div class="large-10 columns no-padding lg-not-selected" id="en"><div class="lg-format">
-              EN</div>
               </div></a>
+              <div class="large-10 columns no-padding lg-selected" id="en"><div class="lg-format">
+              EN</div>
+              </div>
           </div><!-- language-menu -->
           <div id="media-sharing">
             <div class="large-20 columns" id="title">
-              <div><span>Deze map delen</span></div>
+              <div><span>Share</span></div>
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="../../static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/" target="_blank">Facebook</a></span></div>
+              <div><img src="../../static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/en/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="../../static/twitter.png"></img><span><a href="http://de-atlassen.intk.com/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/twitter.png"></img><span><a href="http://de-atlassen.intk.com/en/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
+
          <div id="media-sharing-2">
             <div class="large-20 columns" id="title">
-              <div><span>Deze map delen</span></div>
+              <div><span>Share</span></div>
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/" target="_blank">Facebook</a></span></div>
+              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/en/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/en/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
 
@@ -134,17 +134,19 @@ Oosterdok</h1>
             <div id="description-text">
             
             <small>
-             De Admiraliteit van Amsterdam kreeg van het stadsbestuur op 12 augustus 1655 – in ruil voor de 
+            On 12 August 1655, the Amsterdam city council gave the Admiralty of Amsterdam the
 
-terreinen die ze tot dan toe bezetten – de gehele westelijke strook van het eiland Kattenburg voor 
+entire western part of the island of Kattenburg so that it could build a carpenter's yard and the 
 
-het aanleggen van een timmerwerf en de bouw van het Zeemagazijn.
+Zeemagazijn building. In exchange, the Admiralty gave the city council all the other land it 
 
-<em>‘Ten Noorden van dit huis heeft men de Admiraliteyts scheepstimmer-werven en by de zelve 
+possessed.
 
-de maste-makeryen, smits-winkels en voorts alles wat tot het scheeps-timmeren van noden en 
+'To the north of this building are the Admiralty's ship carpentry yards and nearby are the 
 
-eenighzins dienstigh is.’</em> Op de werf liggen schepen in verschillende bouwstadia.
+mastmakers, smithies, and everything else which is necessary and useful for shipbuilding.' Ships 
+
+in various stages of construction are in the yard.
             </small>
             </p>
             </div>
@@ -152,15 +154,14 @@ eenighzins dienstigh is.’</em> Op de werf liggen schepen in verschillende bouw
           </div>
           <div id="description-menus" class="show-for-large-up">
               <div id="languages">
-                <div class="large-10 columns no-padding" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div>
+                <a href="/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/"><div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div></a>
               
-                <a href="/en/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/"><div class="large-10 columns no-padding lg-selected" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
-              </div></a>
+                <div class="large-10 columns no-padding " id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
+              </div>
               <div id="content-menu" class="large-9 columns">
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
                   <img src="/static/trans.gif"></img>
                 </div>
-
                 <a href="/static/full-hd/Lants_Zee-Magazyn-en-scheeps-timmerwerf.jpg" download="Lants_Zee-Magazyn-en-scheeps-timmerwerf.jpg" title="Lants_Zee-Magazyn-en-scheeps-timmerwerf">
                 <div class="large-10 columns no-padding" id="download" style="border-left:1px solid; border-color:#4c4443">
                   <img src="/static/trans.gif"></img>
@@ -170,19 +171,19 @@ eenighzins dienstigh is.’</em> Op de werf liggen schepen in verschillende bouw
 
           <div id="close-description">
             <div id="close-container" class="no-padding">
-              <img src="../../static/trans.gif"></img>
+              <img src="/static/trans.gif"></img>
             </div>
           </div>
           <div id="description-logo" class="show-for-medium-up"></div>
         </div>
 
-        <a href="/">
+        <a href="/en/">
         <div id="faux-map">
           <img src="mini-map@2x.png"></img>
         </div></a>
 
         <div id="small-info" class="no-padding page-details">
-          <img src="../../static/trans.gif"></img>
+          <img src="/static/trans.gif"></img>
         </div>
         <div id="main-logo" class="page-details"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
@@ -192,9 +193,9 @@ eenighzins dienstigh is.’</em> Op de werf liggen schepen in verschillende bouw
       </div>
 
     <!-- JavaScript at the bottom -->
-    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../../bower_components/foundation/js/foundation.min.js"></script>
-    <script src="../../js/app.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
     <script>
       $(document).ready(function() {
       // INIT Front-end framework
@@ -208,9 +209,9 @@ eenighzins dienstigh is.’</em> Op de werf liggen schepen in verschillende bouw
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "../../images/tiles",
-          pinPath: "../../static/pin-map.png",
-          blankPath: "../../static/blank.png",
+          tilesPath: "/images/tiles",
+          pinPath: "/static/pin-map.png",
+          blankPath: "/static/blank.png",
           position: '',
           detailsLocation: {
             lat: 35.782170703266075, 
@@ -225,10 +226,9 @@ eenighzins dienstigh is.’</em> Op de werf liggen schepen in verschillende bouw
 
         //app.getMarkers(false);
         // Markers
-        app.addMarkers();
+        app.addMarkers('en');
         // Show markers
         app.showMarkers();
-
         $("#div1").css('background-image', "url('/nl/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/main.jpg')");
 
       } else {
