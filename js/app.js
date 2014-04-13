@@ -57,10 +57,11 @@ var app = {
     		center: center,
     		zoom: 3,
     		zoomControl: true,
+
     		zoomControlOptions: {
     			style: google.maps.ZoomControlStyle.DEFAULT
     		},
-		    streetViewControl: false,
+		    streetViewControl: true,
 		    mapTypeControl: false,
 		    mapTypeControlOptions: {
       			mapTypeIds: ['deatlassen']
@@ -240,7 +241,8 @@ var app = {
 		var marker = new google.maps.Marker({
 			position: position,
 			title: options.title,
-			icon: self.pinPath
+			icon: self.pinPath,
+			optimized: false
 		});
 
 		var self = this;
@@ -249,6 +251,10 @@ var app = {
 			var center = app.map.getCenter();
 			$.cookie("deatlassen", JSON.stringify({"center":{"lat":center.lat(), "lng":center.lng()}, "zoom":app.map.getZoom()}))
 		});
+
+		/*google.maps.event.addListener(marker, 'mouseover', function() {
+			alert("over!");
+		});*/
 
 		this.markers.push(marker);
 	},
@@ -282,75 +288,75 @@ var app = {
 		$("#content-menu #share").click(this.shareDescriptionButton);
 		
 		$("#main-menu #download").click(function () {
-			$("#media-sharing-2").removeClass("show-for-large");
+			$("#media-sharing-2").removeClass("show-for-large-up");
 			$("#media-sharing-2").hide();
-			$("#media-sharing").removeClass("show-for-large");
+			$("#media-sharing").removeClass("show-for-large-up");
 			$("#media-sharing").hide();
-			$("#download-options").removeClass("show-for-large");
+			$("#download-options").removeClass("show-for-large-up");
 			$("#download-options").hide();
 
 			if (!$("#download-map").is(":visible")) {
 				$("#download-map").fadeIn();
-				$("#download-map").addClass("show-for-large");
+				$("#download-map").addClass("show-for-large-up");
 				
 			} else {
 				$("#download-map").fadeOut();
-				$("#download-map").removeClass("show-for-large");
+				$("#download-map").removeClass("show-for-large-up");
 			}
 		});
 
 		$("#select-map").click(function () {
-			$("#download-map").removeClass("show-for-large");
+			$("#download-map").removeClass("show-for-large-up");
 			$("#download-map").hide();
-			$("#media-sharing-2").removeClass("show-for-large");
+			$("#media-sharing-2").removeClass("show-for-large-up");
 			$("#media-sharing-2").hide();
-			$("#media-sharing").removeClass("show-for-large");
+			$("#media-sharing").removeClass("show-for-large-up");
 			$("#media-sharing").hide();
 
 			if (!$("#download-options").is(":visible")) {
 				$("#download-options").fadeIn();
-				$("#download-options").addClass("show-for-large");
+				$("#download-options").addClass("show-for-large-up");
 				
 			} else {
 				$("#download-options").fadeOut();
-				$("#download-options").removeClass("show-for-large");
+				$("#download-options").removeClass("show-for-large-up");
 			}
 		});
 	},
 
 	shareDescriptionButton: function () {
-		$("#download-map").removeClass("show-for-large");
+		$("#download-map").removeClass("show-for-large-up");
 		$("#download-map").hide();
-		$("#media-sharing").removeClass("show-for-large");
+		$("#media-sharing").removeClass("show-for-large-up");
 		$("#media-sharing").hide();
-		$("#download-options").removeClass("show-for-large");
+		$("#download-options").removeClass("show-for-large-up");
 		$("#download-options").hide();
 		if (!$("#media-sharing-2").is(":visible")) {
 			$("#media-sharing-2").fadeIn();
-			$("#media-sharing-2").addClass("show-for-large");
+			$("#media-sharing-2").addClass("show-for-large-up");
 			
 		} else {
 			$("#media-sharing-2").fadeOut();
-			$("#media-sharing-2").removeClass("show-for-large");
+			$("#media-sharing-2").removeClass("show-for-large-up");
 			
 		}
 	},
 
 	shareButton: function() {
-		$("#download-map").removeClass("show-for-large");
+		$("#download-map").removeClass("show-for-large-up");
 		$("#download-map").hide();
-		$("#media-sharing-2").removeClass("show-for-large");
+		$("#media-sharing-2").removeClass("show-for-large-up");
 		$("#media-sharing").hide();
-		$("#download-options").removeClass("show-for-large");
+		$("#download-options").removeClass("show-for-large-up");
 		$("#download-options").hide();
 		
 		if (!$("#media-sharing").is(":visible")) {
 			$("#media-sharing").fadeIn();
-			$("#media-sharing").addClass("show-for-large");
+			$("#media-sharing").addClass("show-for-large-up");
 			
 		} else {
 			$("#media-sharing").fadeOut();
-			$("#media-sharing").removeClass("show-for-large");	
+			$("#media-sharing").removeClass("show-for-large-up");	
 		}
 	},
 
@@ -379,11 +385,11 @@ var app = {
 			$("#main-logo").removeClass('show-for-medium-up');
 		}
 
-		$("#download-options").removeClass("show-for-large");
+		$("#download-options").removeClass("show-for-large-up");
 		$("#download-options").hide();
-		$("#media-sharing").removeClass("show-for-large");
+		$("#media-sharing").removeClass("show-for-large-up");
 		$("#media-sharing").hide();
-		$("#download-map").removeClass("show-for-large");
+		$("#download-map").removeClass("show-for-large-up");
 		$("#download-map").hide();
 		$("#main-logo").hide();
 		$("#description").fadeIn(800);
@@ -397,7 +403,7 @@ var app = {
 		$("#image-wrapper").fadeIn();
 		$("#faux-map").show();
 		$("#description").fadeIn();
-		$("#content-image").addClass("show-for-large");
+		$("#content-image").addClass("show-for-large-up");
 	},
 
 	smallMoreInfoEvent: function() {		
@@ -413,7 +419,7 @@ var app = {
 	},
 
 	closeDescription: function() {
-		$("#media-sharing-2").removeClass("show-for-large");
+		$("#media-sharing-2").removeClass("show-for-large-up");
 		$("#media-sharing-2").hide();
 		$("#description").fadeOut();
 		$("#main-menu").addClass('show-for-large-up');

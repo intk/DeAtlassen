@@ -1364,3 +1364,12 @@ body {
 #loader {
 	display: hide;
 }
+
+#madness {
+	position: absolute;
+	top: 100px;
+	left: 89px;
+	width: 16px;
+	height: 32px;
+	background: url("/static/pegman.png");
+}

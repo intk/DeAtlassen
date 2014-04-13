@@ -179,6 +179,7 @@
         </div>
         <div id="main-logo" class="show-for-medium-up page-map"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
+        <div id="madness"></div>
       </div>  
       
     <!-- JavaScript at the bottom -->
@@ -188,5 +189,23 @@
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+    $("#madness").draggable(
+    {
+        stop: function(event, ui) {
+
+          // Show dropped position.
+          var Stoppos = $(this).position();
+          console.log("x = "+Stoppos.left);
+          console.log("x = "+Stoppos.top);
+          
+          console.log($(document.elementFromPoint(Stoppos.left-8, Stoppos.top-16)));
+          console.log(Stoppos); 
+
+          $("#madness").hide();
+          $(document.elementFromPoint(Stoppos.left+8, (Stoppos.top+16))).trigger('click');
+        }
+    });
+    </script>
   </body>
 </html>
