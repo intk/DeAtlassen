@@ -355,6 +355,7 @@ var app = {
 	},
 
 	closeDescription: function() {
+		$("#media-sharing-2").removeClass("show-for-large");
 		$("#media-sharing-2").hide();
 		$("#description").fadeOut();
 		$("#main-menu").addClass('show-for-large-up');
