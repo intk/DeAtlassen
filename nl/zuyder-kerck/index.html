@@ -30,12 +30,19 @@
   </head>
   <body>
 
+        <div id="wrapper">
+          <div id="div1">
+            <div id="center">
+              
+            </div>
+        </div>
+
+
+
       <div id="map-canvas" class="fullWidth page-details"></div>
 
       <div id="content" class="row fullWidth">
-        <div class="row fullWidth page-details" id="image-wrapper">
-        <img src="main.jpg" id="content-image"></img>
-        </div>
+  
 
         <div id="left" class="large-16 columns"></div>
           <div id="main-menu" class="page-details">
@@ -111,10 +118,10 @@
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
+              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/nl/zuyder-kerck/" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/nl/zuyder-kerck/" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
 
@@ -172,7 +179,7 @@ is er in 1621 begraven; zijn grafsteen is nog aanwezig.</small>
         <div id="main-logo" class="page-details"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
         <div id="loading-animation">
-          <img src="/static/loader.gif" id="loader"/>
+          <!--<img src="/static/loader.gif" id="loader"/>-->
         </div>
       </div>
 
@@ -193,14 +200,16 @@ is er in 1621 begraven; zijn grafsteen is nog aanwezig.</small>
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "../../images/tiles",
-          pinPath: "../../static/pin-map.png",
-          blankPath: "../../static/blank.png",
+          map_type: "amsterdam",
+          tilesPath: "/images/jpg",
+          pinPath: "/static/pin-map.png",
+          blankPath: "/static/blank.png",
           position: '',
           detailsLocation: {
             lat: 33.54139466898275,
             lng: -7.470703125
-          }
+          },
+          tiles_extension: ".jpg"
         });
 
         // Trigger events
@@ -212,6 +221,8 @@ is er in 1621 begraven; zijn grafsteen is nog aanwezig.</small>
 
         // Show markers
         app.showMarkers();
+
+        $("#div1").css('background-image', "url('/nl/zuyder-kerck/main.jpg')");
 
       } else {
         $("#map-canvas").html("Network disconnected.");

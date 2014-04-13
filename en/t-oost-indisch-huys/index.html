@@ -29,12 +29,17 @@
   </head>
   <body>
 
+    <div id="wrapper">
+          <div id="div1">
+            <div id="center">
+              
+            </div>
+        </div>
+
       <div id="map-canvas" class="fullWidth page-details"></div>
 
       <div id="content" class="row fullWidth">
-        <div class="row fullWidth page-details" id="image-wrapper">
-        <img src="main.jpg" id="content-image"></img>
-        </div>
+        
 
         <div id="left" class="large-16 columns"></div>
           
@@ -111,10 +116,10 @@
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
+              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/en/t-oost-indisch-huys/" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/en/t-oost-indisch-huys/" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
 
@@ -148,10 +153,10 @@ courtyard.
           </div>
           <div id="description-menus" class="show-for-large-up">
               <div id="languages">
-                <div class="large-10 columns no-padding" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div>
+                <a href="/en/t-oost-indisch-huys/"><div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div></a>
               
-                <a href="/en/"><div class="large-10 columns no-padding lg-selected" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
-              </div></a>
+                <div class="large-10 columns no-padding" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
+              </div>
               <div id="content-menu" class="large-9 columns">
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
                   <img src="/static/trans.gif"></img>
@@ -181,7 +186,7 @@ courtyard.
         <div id="main-logo" class="page-details"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
         <div id="loading-animation">
-          <img src="/static/loader.gif" id="loader"/>
+          <!--<img src="/static/loader.gif" id="loader"/>-->
         </div>
       </div>
 
@@ -222,6 +227,8 @@ courtyard.
         app.addMarkers('en');
         // Show markers
         app.showMarkers();
+
+         $("#div1").css('background-image', "url('/nl/t-oost-indisch-huys/main.jpg')");
 
       } else {
         $("#map-canvas").html("Network disconnected.");

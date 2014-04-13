@@ -29,12 +29,17 @@
   </head>
   <body>
 
+  <div id="wrapper">
+          <div id="div1">
+            <div id="center">
+              
+            </div>
+        </div>
+
       <div id="map-canvas" class="fullWidth page-details"></div>
 
       <div id="content" class="row fullWidth">
-        <div class="row fullWidth page-details" id="image-wrapper">
-        <img src="main.jpg" id="content-image"></img>
-        </div>
+        
 
         <div id="left" class="large-16 columns"></div>
            <div id="main-menu" class="page-details">
@@ -144,10 +149,11 @@ warships are docked,' as many as seventy at a time.
           </div>
           <div id="description-menus" class="show-for-large-up">
               <div id="languages">
-                <div class="large-10 columns no-padding" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div>
               
-                <a href="/en/"><div class="large-10 columns no-padding lg-selected" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
-              </div></a>
+               <a href="/nl/een-ander-gesicht-van-t-landts-magazyn-vanuit-het-westen-gezien/"><div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div></a>
+              
+                <div class="large-10 columns no-padding " id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
+              </div>
               <div id="content-menu" class="large-9 columns">
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
                   <img src="/static/trans.gif"></img>
@@ -199,26 +205,31 @@ warships are docked,' as many as seventy at a time.
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "/images/tiles",
+          map_type: "amsterdam",
+          tilesPath: "/images/jpg",
           pinPath: "/static/pin-map.png",
           blankPath: "/static/blank.png",
           position: '',
-          detailsLocation {
-
-          }
+          detailsLocation: {
+            lat: -13.325484885597936, 
+            lng: -64.4677734375
+          },
+          tiles_extension: ".jpg"
         });
         
-
-        app.hackAmsterdamBounds();
+        //app.hackAmsterdamBounds();
 
         // Trigger events
+        console.log("Trigger events");
         app.triggerEvents();
 
         //app.getMarkers(false);
         // Markers
-        app.addMarkers('en');
+        //app.addMarkers();
         // Show markers
-        app.showMarkers();
+        //app.showMarkers();
+
+        $("#div1").css('background-image', "url('/nl/een-ander-gesicht-van-t-landts-magazyn-vanuit-het-westen-gezien/main.jpg')");
 
       } else {
         $("#map-canvas").html("Network disconnected.");

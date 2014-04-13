@@ -41,7 +41,7 @@ var app = {
 		  	if (zoom == 5 && coord.y > 27) {
 		  		return self.blankPath;
 		  	}
-		  	
+
 		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + extension;
 		  },
 		  tileSize: new google.maps.Size(256, 256),
@@ -371,9 +371,7 @@ var app = {
 		$("#main-menu").removeClass('show-for-large-up');
 		$("#more-info-2").removeClass('show-for-large-up');
 		$("#language-menu").removeClass('show-for-large-up');
-
-
-		$("#more-info-2").fadeOut(600)
+		$("#more-info-2").fadeOut(600);
 		$("#main-menu").fadeOut(600);
 		$("#language-menu").fadeOut(600);
 
@@ -388,7 +386,7 @@ var app = {
 		$("#download-map").removeClass("show-for-large");
 		$("#download-map").hide();
 		$("#main-logo").hide();
-		$("#description").fadeIn(900);
+		$("#description").fadeIn(800);
 
 	},
 

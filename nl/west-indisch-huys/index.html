@@ -29,12 +29,17 @@
   </head>
   <body>
 
+        <div id="wrapper">
+          <div id="div1">
+            <div id="center">
+              
+            </div>
+        </div>
+
       <div id="map-canvas" class="fullWidth page-details"></div>
 
       <div id="content" class="row fullWidth">
-        <div class="row fullWidth page-details" id="image-wrapper">
-        <img src="main.jpg" id="content-image"></img>
-        </div>
+        
 
         <div id="left" class="large-16 columns"></div>
           <div id="main-menu" class="page-details">
@@ -110,10 +115,10 @@
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
+              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/nl/west-indisch-huys/" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/nl/west-indisch-huys/" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
         <div class="large-4 medium-20 small-20 columns page-details" id="description"> 
@@ -217,6 +222,8 @@ huidige New York), opgeslagen en geperst.
         app.addMarkers();
         // Show markers
         app.showMarkers();
+
+        $("#div1").css('background-image', "url('/nl/west-indisch-huys/main.jpg')");
 
       } else {
         $("#map-canvas").html("Network disconnected.");

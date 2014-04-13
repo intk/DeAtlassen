@@ -30,12 +30,17 @@
   </head>
   <body>
 
+  <div id="wrapper">
+          <div id="div1">
+            <div id="center">
+              
+            </div>
+        </div>
+
       <div id="map-canvas" class="fullWidth page-details"></div>
 
       <div id="content" class="row fullWidth">
-        <div class="row fullWidth page-details" id="image-wrapper">
-        <img src="main.jpg" id="content-image"></img>
-        </div>
+        
 
         <div id="left" class="large-16 columns"></div>
           <div id="main-menu" class="page-details">
@@ -144,10 +149,10 @@ Nicolaes Tulp.</em></small>
           </div>
           <div id="description-menus" class="show-for-large-up">
               <div id="languages">
-                <div class="large-10 columns no-padding" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div>
+                <a href="/nl/de-waegh/"><div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div></a>
               
-                <a href="/en/"><div class="large-10 columns no-padding lg-selected" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
-              </div></a>
+                <div class="large-10 columns no-padding " id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
+              </div>
               <div id="content-menu" class="large-9 columns">
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
                   <img src="/static/trans.gif"></img>
@@ -177,7 +182,7 @@ Nicolaes Tulp.</em></small>
         <div id="main-logo" class="page-details"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
         <div id="loading-animation">
-          <img src="/static/loader.gif" id="loader"/>
+          <!--<img src="/static/loader.gif" id="loader"/>-->
         </div>
       </div>
 
@@ -190,6 +195,43 @@ Nicolaes Tulp.</em></small>
       // INIT Front-end framework
       $(document).foundation();
 
+      /*$("#image-wrapper").find('img').each(function(){
+        var imgClass = (this.width/this.height > 1) ? 'tall' : 'wide';
+        $(this).addClass(imgClass);
+      });*/
+
+      if (typeof(google) != 'undefined') {
+        // INIT Google Maps features
+        app.initMap({
+          map_type: "amsterdam",
+          tilesPath: "/images/jpg",
+          pinPath: "/static/pin-map.png",
+          blankPath: "/static/blank.png",
+          position: '',
+          detailsLocation: {
+            lat: -13.325484885597936, 
+            lng: -64.4677734375
+          },
+          tiles_extension: ".jpg"
+        });
+        
+        //app.hackAmsterdamBounds();
+
+        // Trigger events
+        console.log("Trigger events");
+        app.triggerEvents();
+
+        //app.getMarkers(false);
+        // Markers
+        //app.addMarkers();
+        // Show markers
+        //app.showMarkers();
+
+        $("#div1").css('background-image', "url('/nl/de-waegh/main.jpg')");
+
+      } else {
+        $("#map-canvas").html("Network disconnected.");
+      }
     });
     </script>
   </body>

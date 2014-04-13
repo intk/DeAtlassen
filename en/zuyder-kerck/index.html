@@ -29,13 +29,17 @@
     </script>
   </head>
   <body>
+  <div id="wrapper">
+          <div id="div1">
+            <div id="center">
+              
+            </div>
+        </div>
 
       <div id="map-canvas" class="fullWidth page-details"></div>
 
       <div id="content" class="row fullWidth">
-        <div class="row fullWidth page-details" id="image-wrapper">
-        <img src="main.jpg" id="content-image"></img>
-        </div>
+        
 
         <div id="left" class="large-16 columns"></div>
           <div id="main-menu" class="page-details">
@@ -117,7 +121,7 @@
               <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
-        
+
         <div class="large-4 medium-20 small-20 columns page-details" id="description"> 
           <div id="description-title">
             <h1>Zuyder Kerck</h1>
@@ -144,10 +148,10 @@ The first stone was laid in 1603 by Mayor Bikker's son. De Keyser himself was bu
           </div>
           <div id="description-menus" class="show-for-large-up">
               <div id="languages">
-                <div class="large-10 columns no-padding" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div>
+                <a href="/en/zuyder-kerck/"><div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div></a>
               
-                <a href="/en/"><div class="large-10 columns no-padding lg-selected" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
-              </div></a>
+                <div class="large-10 columns no-padding" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
+              </div>
               <div id="content-menu" class="large-9 columns">
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
                   <img src="/static/trans.gif"></img>
@@ -177,7 +181,7 @@ The first stone was laid in 1603 by Mayor Bikker's son. De Keyser himself was bu
         <div id="main-logo" class="page-details"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
         <div id="loading-animation">
-          <img src="/static/loader.gif" id="loader"/>
+          <!--<img src="/static/loader.gif" id="loader"/>-->
         </div>
       </div>
 
@@ -217,6 +221,8 @@ The first stone was laid in 1603 by Mayor Bikker's son. De Keyser himself was bu
 
         // Show markers
         app.showMarkers();
+
+        $("#div1").css('background-image', "url('/nl/zuyder-kerck/main.jpg')");
 
       } else {
         $("#map-canvas").html("Network disconnected.");
