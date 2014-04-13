@@ -5,10 +5,12 @@ $(document).ready(function() {
 	if (typeof(google) != 'undefined') {
 		// INIT Google Maps features
 		app.initMap({
-			tilesPath: "images/jpg",
-			pinPath: "static/pin-map.png",
-			blankPath: "static/blank.png",
-			positon: ""
+			map_type: "amsterdam",
+			tilesPath: "/images/jpg",
+			pinPath: "/static/pin-map.png",
+			blankPath: "/static/blank.png",
+			positon: "",
+			tiles_extension: ".jpg"
 		});
 
 		var cookie = $.cookie("deatlassen");

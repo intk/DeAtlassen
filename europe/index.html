@@ -1,0 +1,208 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="De-Atlassen"/>
+
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://de-atlassen.intk.com/">
+    <meta name="twitter:title" content="De-Atlassen">
+    <meta name="twitter:description" content="De-Atlassen">
+    <meta name="twitter:image" content="http://de-atlassen.intk.com/static/fb-main-world.png">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:title" content="De-Atlassen"/>
+    <meta property="og:description" content="De-Atlasen"/>
+    <meta property="og:url" content="http://de-atlassen.intk.com/"/>
+    <meta property="og:image" content="http://de-atlassen.intk.com/static/fb-main-world.jpg"/>
+
+    <title>De-atlassen</title>
+    
+    <!-- CSS at the top -->
+    <link rel="stylesheet" href="/css/app.css" />
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20409126-2', 'de-atlassen.intk.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+
+      <div id="map-canvas" class="fullWidth"></div>
+
+      <div id="content" class="row fullWidth">
+        <!--<div class="row fullWidth page-map" id="image-wrapper">
+          <img src="" id="content-image"></img>
+        </div>-->
+
+        <div class="large-16 medium-14 columns" id="left"></div>
+            <div id="main-menu" class="show-for-large-up page-map">
+              <div class="large-6 columns" id="select-map" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
+              <img src="/static/trans.gif"></img>
+              </div>
+
+              <div class="large-6 columns" id="share" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
+                <img src="/static/trans.gif"></img>
+              </div>
+              
+              <a href="/static/full-hd/Europe.jpg" download="Europe.jpg" title="Europe"><div class="large-6 columns" id="download" style="">
+              <img src="/static/trans.gif"></img>
+              </div></a>
+          </div><!-- main-menu -->
+          
+          <div id="more-info-2" class="show-for-large-up page-map">
+            <div class="row" style="height:100%; padding:0px; margin:0px;">
+              <div class="large-5 columns" id="info-icon-2">
+                <img src="/static/info.png"/>
+              </div>
+              <div class="large-15 columns" style="height:100%;margin: 0px;padding: 0px; margin-top:17px; font-size:11px;" id="info-text">
+                Meer informatie
+              </div>
+            </div>
+          </div><!-- more-info -->
+
+          <div id="download-options">
+            <a href="/"><div class="large-20 columns" id="title">
+              <div><span>Bekijk andere Atlassen</span></div>
+            </div></a>
+            <a href="/europe/"><div class="large-20 columns" id="europe">
+              <div><span>Europa</span></div>
+            </div></a>
+            <a href="/world/"><div class="large-20 columns" id="world">
+              <div><span>De Wereld</span></div>
+            </div></a>
+        </div><!-- map-options -->
+          
+          <div id="language-menu" class="show-for-large-up page-map">
+              <div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
+              <div class="lg-format">NL</div>
+              </div>
+              <a href="/en/"><div class="large-10 columns no-padding lg-not-selected" id="en"><div class="lg-format">
+              EN</div>
+              </div></a>
+          </div><!-- language-menu -->
+
+
+          <div id="media-sharing">
+            <div class="large-20 columns" id="title">
+              <div><span>Deze map delen</span></div>
+            </div>
+            <div class="large-20 columns" id="facebook">
+
+              <div><img src="/static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
+            </div>
+            <div class="large-20 columns" id="twitter">
+              <div><img src="/static/twitter.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+            </div>
+        </div> <!-- media sharing -->
+
+        <div id="media-sharing-2">
+            <div class="large-20 columns" id="title">
+              <div><span>Deze map delen</span></div>
+            </div>
+            <div class="large-20 columns" id="facebook">
+
+              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
+            </div>
+            <div class="large-20 columns" id="twitter">
+              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+            </div>
+        </div> <!-- media sharing -->
+        
+
+        <div class="medium-20 small-20 columns page-map" id="description"> 
+          <div id="description-title">
+            <h1>HSM Straet View</h1>
+          </div>
+          <div id="description-content">
+            <div id="description-text">
+            <small>
+              Hiernaast zie je de kaart die de beroemde cartograaf Joan Blaeu in 1649 van Amsterdam maakte.
+            </small>
+            <p>
+              <small>
+              We hebben ‘Straet View’ aan deze kaart toegevoegd zodat je ook straatbeelden kunt bekijken van het Amsterdam uit die tijd. Sleep het mannetje naar een marker op de kaart en kijk naar een prent of ets die een 17e eeuwse tijdgenoot van Blaeu van die plek maakte.
+              </small>
+            </p>
+            <p>
+              <small>
+              Ben je benieuwd naar nog meer hoogtepunten uit het werk van beroemde kaartenmakers zoals Mercator en Blaeu? Bezoek dan nu de Atlassen tentoonstelling in het Scheepvaartmuseum in Amsterdam.
+              </small>
+            </p>
+            </div>
+            
+          </div>
+          <div id="description-menus" class="show-for-large-up">
+              <div id="languages">
+                <div class="large-10 columns no-padding" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div>
+              
+                <a href="/en/"><div class="large-10 columns no-padding lg-selected" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
+              </div></a>
+              <div id="content-menu" class="large-9 columns">
+                <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
+                  <img src="/static/trans.gif"></img>
+                </div>
+                <div class="large-10 columns no-padding" id="download" style="border-left:1px solid; border-color:#4c4443">
+                  <img src="/static/trans.gif"></img>
+                </div>
+              </div>
+          </div>
+
+          <div id="close-description">
+            <div id="close-container" class="no-padding">
+              <img src="/static/trans.gif"></img>
+            </div>
+          </div>
+          <div id="description-logo" class="show-for-medium-up"></div>
+        </div>
+
+        <div id="faux-map" class="page-map">
+        </div>
+        <div id="small-info" class="show-for-medium-down no-padding page-map">
+          <img src="/static/trans.gif"></img>
+        </div>
+        <div id="main-logo" class="show-for-medium-up page-map"></div>
+        <div id="small-logo" class="show-for-small hide-for-large"></div>
+        <!--<div id="new-zoom-position"></div>-->
+      </div>  
+      
+    <!-- JavaScript at the bottom -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+     <script>
+      $(document).ready(function() {
+      // INIT Front-end framework
+      $(document).foundation();
+
+      if (typeof(google) != 'undefined') {
+        // INIT Google Maps features
+        app.initMap({
+          map_type: "europe",
+          tilesPath: "/images/europe",
+          pinPath: "/static/pin-map.png",
+          blankPath: "/static/blank.png",
+          position: '',
+          tiles_extension: ".png"
+        });
+
+        // Trigger events
+        app.triggerEvents();
+        app.map.setCenter(new google.maps.LatLng(60.59775635343057, 1.1865234375));
+
+      } else {
+        $("#map-canvas").html("Network disconnected.");
+      }
+    });
+    </script>
+  </body>
+</html>

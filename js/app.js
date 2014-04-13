@@ -15,16 +15,25 @@ var app = {
 		this.pinPath = options.pinPath;
 		this.blankPath = options.blankPath;
 		this.detailsLocation = options.detailsLocation;
+		this.tiles = options.tilesPath;
+
+		var extension = options.tiles_extension;
+
+		var maxZoom = 5;
+		var type = options.map_type;
+		if (type == "world") {
+			maxZoom = 4;
+		}
 
 		var deatlassenOptions = {
 		  getTileUrl: function(coord, zoom) {
 		  	if (!self.validateLimit(coord,zoom)) {
 		  		return self.blankPath;
 		  	}
-		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + '.jpg';
+		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + extension;
 		  },
 		  tileSize: new google.maps.Size(256, 256),
-		  maxZoom: 5,
+		  maxZoom: maxZoom,
 		  minZoom: 3,
 		  name: 'De-Atlassen'
 		};
@@ -49,6 +58,14 @@ var app = {
   		self.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   		self.map.mapTypes.set('deatlassen', deatlassenMapType);
   		self.map.setMapTypeId('deatlassen');
+  		
+  		var wrapped = false;
+  		google.maps.event.addDomListener(app.map, 'tilesloaded', function(){
+    		if(!wrapped) {
+    			wrapped = true;
+        		$("div.gmnoprint").last().parent().wrap("<div id='new-zoom-position'/>");
+    		}
+		});
 	},
 
 	/* CONTEXT Handler */
@@ -231,13 +248,26 @@ var app = {
 	triggerEvents: function() {
 		$(this.content_image).on("load", this.loadImageEvent);
 		$(this.close_description).click(this.closeDescription);
-		$("#more-information").click(this.moreInformationEvent);
+		//$("#more-information").click(this.moreInformationEvent);
+		$("#more-info-2").click(this.moreInformationEvent);
 		$("#small-info").click(this.smallMoreInfoEvent);
 		//$("#faux-map").click(this.fauxMapEvent);
 		$("#main-menu #share").click(this.shareButton);
+		$("#content-menu #share").click(this.shareDescriptionButton);
+		$("#select-map").click(function () {
+			$("#download-options").fadeToggle();
+		});
+	},
+
+	shareDescriptionButton: function () {
+		$("#media-sharing").hide();
+		$("#download-options").hide();
+		$("#media-sharing-2").fadeToggle();
 	},
 
 	shareButton: function() {
+		$("#media-sharing-2").hide();
+		$("#download-options").hide();
 		$("#media-sharing").fadeToggle();
 	},
 
@@ -256,15 +286,21 @@ var app = {
 
 	moreInformationEvent: function () {
 		$("#main-menu").removeClass('show-for-large-up');
-		$("#main-menu").fadeOut();
+		$("#more-info-2").removeClass('show-for-large-up');
 		$("#language-menu").removeClass('show-for-large-up');
-		$("#language-menu").fadeOut();
+
+		$("#more-info-2").fadeOut(600)
+		$("#main-menu").fadeOut(600);
+		$("#language-menu").fadeOut(600);
+
 		if ($("#main-logo").hasClass('show-for-medium-up')) {
 			$("#main-logo").removeClass('show-for-medium-up');
 		}
+
 		$("#media-sharing").hide();
 		$("#main-logo").hide();
-		$("#description").fadeIn();
+		$("#description").fadeIn(900);
+
 	},
 
 	loadImageEvent: function() {
@@ -274,6 +310,7 @@ var app = {
 		$("#image-wrapper").fadeIn();
 		$("#faux-map").show();
 		$("#description").fadeIn();
+		$("#content-image").addClass("show-for-large");
 	},
 
 	smallMoreInfoEvent: function() {		
@@ -289,11 +326,15 @@ var app = {
 	},
 
 	closeDescription: function() {
+		$("#media-sharing-2").hide();
 		$("#description").fadeOut();
 		$("#main-menu").addClass('show-for-large-up');
-		$("#main-menu").fadeIn();
+		$("#more-info-2").addClass('show-for-large-up');
 		$("#language-menu").addClass('show-for-large-up');
-		$("#language-menu").fadeIn();
+		$("#main-menu").fadeIn(800);
+		$("#more-info-2").fadeIn(800);
+		$("#language-menu").fadeIn(800);
+		
 		if (!$("#main-logo").hasClass("show-for-medium-up")) {
 			$("#main-logo").addClass('show-for-medium-up');
 		}

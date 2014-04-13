@@ -44,23 +44,42 @@
         </div>-->
 
         <div class="large-16 medium-14 columns" id="left"></div>
-            <div id="main-menu" class="show-for-large-up page-map">
+          <div id="main-menu" class="show-for-large-up page-map">
+              <div class="large-6 columns" id="select-map" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
+              <img src="/static/trans.gif"></img>
+              </div>
 
-              <!--<div class="large-4 columns" id="select-map" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
-              <img src="static/trans.gif"></img>
-              </div>-->
-
-              <div class="large-4 columns" id="share" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
-                <img src="static/trans.gif"></img>
+              <div class="large-6 columns" id="share" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
+                <img src="/static/trans.gif"></img>
               </div>
               
-              <a href="/static/full-hd/Amsterdam.jpg" download="Amsterdam.jpg" title="Amsterdam"><div class="large-4 columns" id="download" style="border-right:1px solid; border-color:#dfe0dd;">
+              <a href="/static/full-hd/Amsterdam.jpg" download="Amsterdam.jpg" title="Amsterdam"><div class="large-6 columns" id="download" style="">
               <img src="static/trans.gif"></img>
               </div></a>
-
-              <div class="large-12 columns" id="more-information"><div class="large-3 columns" id="info-icon"><img src="static/Information@2x.png"></img></div><div class="large-15 columns"><div id="info-text">Meer informatie</div></div>
-              </div>
           </div><!-- main-menu -->
+          
+          <div id="more-info-2" class="show-for-large-up page-map">
+            <div class="row" style="height:100%; padding:0px; margin:0px;">
+              <div class="large-5 columns" id="info-icon-2">
+                <img src="/static/info.png"/>
+              </div>
+              <div class="large-15 columns" style="height:100%;margin: 0px;padding: 0px; margin-top:17px; font-size:11px;" id="info-text">
+                Meer informatie
+              </div>
+            </div>
+          </div><!-- more-info -->
+
+          <div id="download-options">
+            <a href="/"><div class="large-20 columns" id="title">
+              <div><span>Bekijk andere Atlassen</span></div>
+            </div></a>
+            <a href="/europe/"><div class="large-20 columns" id="europe">
+              <div><span>Europa</span></div>
+            </div></a>
+            <a href="/world/"><div class="large-20 columns" id="world">
+              <div><span>De Wereld</span></div>
+            </div></a>
+        </div><!-- map-options -->
           
           <div id="language-menu" class="show-for-large-up page-map">
               <div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
@@ -70,18 +89,34 @@
               EN</div>
               </div></a>
           </div><!-- language-menu -->
+
+
           <div id="media-sharing">
             <div class="large-20 columns" id="title">
               <div><span>Deze map delen</span></div>
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
+              <div><img src="/static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="static/twitter.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/twitter.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
+
+        <div id="media-sharing-2">
+            <div class="large-20 columns" id="title">
+              <div><span>Deze map delen</span></div>
+            </div>
+            <div class="large-20 columns" id="facebook">
+
+              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
+            </div>
+            <div class="large-20 columns" id="twitter">
+              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+            </div>
+        </div> <!-- media sharing -->
+
         <div class="medium-20 small-20 columns page-map" id="description"> 
           <div id="description-title">
             <h1>HSM Straet View</h1>
@@ -112,17 +147,17 @@
               </div></a>
               <div id="content-menu" class="large-9 columns">
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
-                  <img src="static/trans.gif"></img>
+                  <img src="/static/trans.gif"></img>
                 </div>
                 <div class="large-10 columns no-padding" id="download" style="border-left:1px solid; border-color:#4c4443">
-                  <img src="static/trans.gif"></img>
+                  <img src="/static/trans.gif"></img>
                 </div>
               </div>
           </div>
 
           <div id="close-description">
             <div id="close-container" class="no-padding">
-              <img src="static/trans.gif"></img>
+              <img src="/static/trans.gif"></img>
             </div>
           </div>
           <div id="description-logo" class="show-for-medium-up"></div>
@@ -131,7 +166,7 @@
         <div id="faux-map" class="page-map">
         </div>
         <div id="small-info" class="show-for-medium-down no-padding page-map">
-          <img src="static/trans.gif"></img>
+          <img src="/static/trans.gif"></img>
         </div>
         <div id="main-logo" class="show-for-medium-up page-map"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
