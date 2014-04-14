@@ -57,6 +57,12 @@ var app = {
 		  		extension = ".jpg";
 		  	}
 
+		  	if (type == "europe" && zoom > 2) {
+		  		extension = ".png";
+		  	} else if (type == "europe" && zoom < 3) {
+		  		extension = ".jpg";
+		  	}
+
 		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + extension;
 		  },
 		  tileSize: new google.maps.Size(256, 256),
