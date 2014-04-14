@@ -70,9 +70,9 @@
           </div><!-- more-info -->
 
           <div id="download-options">
-            <a href="/"><div class="large-20 columns" id="title">
+            <div class="large-20 columns" id="title">
               <div><span>Bekijk andere Atlassen</span></div>
-            </div></a>
+            </div>
             <a href="/"><div class="large-20 columns" id="europe">
               <div><span>Amsterdam</span></div>
             </div></a>
@@ -189,7 +189,7 @@
         </div>
         <div id="main-logo" class="show-for-medium-up page-map"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
-        <div id="madness"></div>
+     
       </div>  
       
     <!-- JavaScript at the bottom -->
@@ -216,30 +216,12 @@
 
         // Trigger events
         app.triggerEvents();
-        app.map.setCenter(new google.maps.LatLng(60.59775635343057, 1.1865234375));
 
       } else {
         $("#map-canvas").html("Network disconnected.");
       }
     });
     </script>
-    <script type="text/javascript">
-    $("#madness").draggable(
-    {
-        stop: function(event, ui) {
-
-          // Show dropped position.
-          var Stoppos = $(this).position();
-          console.log("x = "+Stoppos.left);
-          console.log("x = "+Stoppos.top);
-          
-          console.log($(document.elementFromPoint(Stoppos.left-8, Stoppos.top-16)));
-          console.log(Stoppos); 
-
-          $("#madness").hide();
-          $(document.elementFromPoint(Stoppos.left+8, (Stoppos.top+16))).trigger('click');
-        }
-    });
-    </script>
+    
   </body>
 </html>

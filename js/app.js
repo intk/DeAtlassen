@@ -8,6 +8,12 @@ var app = {
 	detailsLocation: null,
 	markers: [],
 
+	centers: {
+		'world': new google.maps.LatLng(28.013801376379213, -1.9775390625),
+		'europe': new google.maps.LatLng(28.013801376379213, -1.9775390625),
+		'amsterdam': new google.maps.LatLng(14.626108798875158, -3.3837890625)
+	},
+
 	initMap: function(options) {
 		var self = this;
 
@@ -19,18 +25,18 @@ var app = {
 
 		var extension = options.tiles_extension;
 
-		var minZoom = 3;
+		var minZoom = 1;
 		var maxZoom = 5;
 		var type = options.map_type;
 		
 		if (type == "world") {
-			minZoom = 1
+			minZoom = 2
 			maxZoom = 4;
 		} else if (type == "europe") {
-			minZoom = 1;
+			minZoom = 2;
 			maxZoom = 5;
 		} else if (type == "amsterdam") {
-			minZoom = 1;
+			minZoom = 2;
 			maxZoom = 5;
 		}
 
@@ -107,10 +113,9 @@ var app = {
 
 		var deatlassenMapType = new google.maps.ImageMapType(deatlassenOptions);
 
-		var center = new google.maps.LatLng(77.47079605592884, 2.2412109375);
   		var mapOptions = {
-    		center: center,
-    		zoom: 3,
+    		center: this.centers[type],
+    		zoom: 2,
     		zoomControl: true,
 
     		zoomControlOptions: {
@@ -134,6 +139,7 @@ var app = {
         		$("div.gmnoprint").last().parent().wrap("<div id='new-zoom-position'/>");
         		if (type == "amsterdam") {
         			$("div.gmnoprint").last().css("margin-top", "25px");
+        			$("#wrappingmadness").show();
         			$("#madness").show();
         		}
     		}	
@@ -322,6 +328,14 @@ var app = {
 			window.location.href = options.url;
 			var center = app.map.getCenter();
 			$.cookie("deatlassen", JSON.stringify({"center":{"lat":center.lat(), "lng":center.lng()}, "zoom":app.map.getZoom()}))
+		});
+
+		google.maps.event.addListener(marker, 'mouseover', function() {
+			marker.setIcon("/static/pin-map-hover.png");	
+		});
+
+		google.maps.event.addListener(marker, 'mouseout', function() {
+			marker.setIcon("/static/pin-map.png");	
 		});
 
 		/*google.maps.event.addListener(marker, 'mouseover', function() {

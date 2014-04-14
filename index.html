@@ -192,8 +192,8 @@
         </div>
         <div id="main-logo" class="show-for-medium-up page-map"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
-        <div id="wrappingmadness" class="show-for-large-up"></div>
-        <div id="madness" class="show-for-large-up"></div>
+        <div id="wrappingmadness"></div>
+        <div id="madness"></div>
       </div>  
       
     <!-- JavaScript at the bottom -->
@@ -204,9 +204,28 @@
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
+
+    $("#madness").mouseenter(function() {
+      $("#madness").css("width", "23px");
+      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -211px -102px");
+
+    });
+    $("#madness").mouseleave(function() {
+      $("#madness").css("width", "19px");
+      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
+    });
+
+    $("#madness").click(function () {
+          $("#madness").css("width", "22");
+          $("#madness").css("height", "32");
+          $("#madness").css("background", "url('/static/Man.png')");
+    });
+
+
     $("#madness").draggable(
     {
         start: function(event, ui) {
+          $("#madness").unbind('mouseenter mouseleave');
           $("#madness").css("width", "22");
           $("#madness").css("height", "32");
           $("#madness").css("background", "url('/static/Man.png')");
@@ -226,17 +245,25 @@
           $("#madness").hide();
           $(document.elementFromPoint(Stoppos.left+11, (Stoppos.top+16))).trigger('click');
 
-          $("#madness").css("top", "107px");
-          $("#madness").css("left", "80px");
-          $("#madness").css("width", "18px");
-          $("#madness").css("height", "32px");
-          $("#madness").css("background", "url('/static/1.png')");
+          $("#madness").mouseenter(function() {
+      $("#madness").css("width", "23px");
+      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -211px -102px");
+
+    });
+    $("#madness").mouseleave(function() {
+      $("#madness").css("width", "19px");
+      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
+    });
+
+          $("#madness").css("top", "105px");
+          $("#madness").css("left", "79px");
+          $("#madness").css("width", "19px");
+          $("#madness").css("height", "37px");
+          $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px;");
           $("#madness").show();
           $("#madness").addClass("show-for-large-up");
         }
     });
-
-
     </script>
   </body>
 </html>

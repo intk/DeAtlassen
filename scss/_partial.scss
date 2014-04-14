@@ -329,7 +329,6 @@ body {
 
 #language-menu #nl:hover {
 	background-color: rgba(255, 255, 255, 1.0000);
-	cursor: pointer;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;  
     -moz-border-top-left-radius: 4px;
@@ -340,20 +339,16 @@ body {
 
 #language-menu #en:hover {
 	background-color: rgba(255, 255, 255, 1.0000);
-	cursor: pointer;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
     -moz-border-top-right-radius: 4px;
 	-moz-border-bottom-right-radius: 4px; 
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
-
-
 }
 
 #language-menu .lg-selected[id="nl"] {
 	background-color: rgba(255, 255, 255, 0.90);
-	cursor: pointer;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;  
     -moz-border-top-left-radius: 4px;
@@ -364,7 +359,6 @@ body {
 
 #language-menu .lg-selected[id="en"] {
 	background-color: rgba(255, 255, 255, 0.90);
-	cursor: pointer;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
     -moz-border-top-right-radius: 4px;
@@ -1374,11 +1368,16 @@ body {
 
 #madness {
 	position: absolute;
-	top: 107px;
-	left: 80px;
-	width: 18px;
-	height: 32px;
-	background: url("/static/1.png");
+	display:none;
+	top: 105px;
+	left: 79px;
+	width: 19px;
+	height: 37px;
+	background: url("/static/google_maps_sprite_api_002.png") -15px -102px;
+}
+
+#madness:hover {
+	cursor: pointer;
 }
 
 .container-cenas {
@@ -1421,10 +1420,11 @@ body {
 
 #wrappingmadness {
 	position: absolute;
-	top: 107px;
-	left: 80px;
-	width: 18px;
-	height: 32px;
-	background: url("/static/2.png");
+	display: none;
+	top: 105px;
+	left: 79px;
+	width: 20px;
+	height: 37px;
+	background: url("/static/google_maps_sprite_api_002.png") -64px -102px;
 }
 

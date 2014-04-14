@@ -28,7 +28,7 @@ $(document).ready(function() {
 			$.removeCookie("deatlassen");
 		} else {
 			console.log("No cookie");
-			app.hackAmsterdamBounds();
+			//app.hackAmsterdamBounds();
 		}
 		
 		// Trigger events
