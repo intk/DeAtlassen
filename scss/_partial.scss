@@ -1374,12 +1374,11 @@ body {
 
 #madness {
 	position: absolute;
-	display: none;
 	top: 107px;
-	left: 81px;
-	width: 16px;
+	left: 80px;
+	width: 18px;
 	height: 32px;
-	background: url("/static/pegman.png");
+	background: url("/static/1.png");
 }
 
 .container-cenas {
@@ -1418,5 +1417,14 @@ body {
 
 .poem p {
 	margin-top: 30px;
+}
+
+#wrappingmadness {
+	position: absolute;
+	top: 107px;
+	left: 80px;
+	width: 18px;
+	height: 32px;
+	background: url("/static/2.png");
 }
 

@@ -192,6 +192,7 @@
         </div>
         <div id="main-logo" class="show-for-medium-up page-map"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
+        <div id="wrappingmadness" class="show-for-large-up"></div>
         <div id="madness" class="show-for-large-up"></div>
       </div>  
       
@@ -205,6 +206,12 @@
     <script type="text/javascript">
     $("#madness").draggable(
     {
+        start: function(event, ui) {
+          $("#madness").css("width", "22");
+          $("#madness").css("height", "32");
+          $("#madness").css("background", "url('/static/Man.png')");
+
+        },
         stop: function(event, ui) {
 
           // Show dropped position.
@@ -215,10 +222,21 @@
           console.log($(document.elementFromPoint(Stoppos.left-8, Stoppos.top-16)));
           console.log(Stoppos); 
 
+          $("#madness").removeClass("show-for-large-up");
           $("#madness").hide();
-          $(document.elementFromPoint(Stoppos.left+8, (Stoppos.top+16))).trigger('click');
+          $(document.elementFromPoint(Stoppos.left+11, (Stoppos.top+16))).trigger('click');
+
+          $("#madness").css("top", "107px");
+          $("#madness").css("left", "80px");
+          $("#madness").css("width", "18px");
+          $("#madness").css("height", "32px");
+          $("#madness").css("background", "url('/static/1.png')");
+          $("#madness").show();
+          $("#madness").addClass("show-for-large-up");
         }
     });
+
+
     </script>
   </body>
 </html>
