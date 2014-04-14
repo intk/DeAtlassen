@@ -132,8 +132,10 @@ var app = {
     		if(!wrapped) {
     			wrapped = true;
         		$("div.gmnoprint").last().parent().wrap("<div id='new-zoom-position'/>");
-        		$("div.gmnoprint").last().css("margin-top", "25px");
-        		$("#madness").show();
+        		if (type == "amsterdam") {
+        			$("div.gmnoprint").last().css("margin-top", "25px");
+        			$("#madness").show();
+        		}
     		}	
 		});
 	},
