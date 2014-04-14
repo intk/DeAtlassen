@@ -467,8 +467,8 @@ var app = {
 		$("#main-menu").fadeOut(600);
 		$("#language-menu").fadeOut(600);
 
-		if ($("#main-logo").hasClass('show-for-medium-up')) {
-			$("#main-logo").removeClass('show-for-medium-up');
+		if ($("#main-logo").hasClass('show-for-small-up')) {
+			$("#main-logo").removeClass('show-for-small-up');
 		}
 
 		$("#download-options").removeClass("show-for-large-up");
@@ -493,11 +493,11 @@ var app = {
 	},
 
 	smallMoreInfoEvent: function() {		
-		if ($("#main-logo").hasClass('show-for-medium-up')) {
-			$("#main-logo").removeClass('show-for-medium-up');
+		if ($("#main-logo").hasClass('show-for-small-up')) {
+			$("#main-logo").removeClass('show-for-small-up');
 			$("#main-logo").hide();
 		} else {
-			$("#main-logo").addClass('show-for-medium-up');
+			$("#main-logo").addClass('show-for-small-up');
 		}
 		$("#small-info").hide();
 		$("#small-info").removeClass('show-for-medium-down');
@@ -515,8 +515,8 @@ var app = {
 		$("#more-info-2").fadeIn(800);
 		$("#language-menu").fadeIn(800);
 		
-		if (!$("#main-logo").hasClass("show-for-medium-up")) {
-			$("#main-logo").addClass('show-for-medium-up');
+		if (!$("#main-logo").hasClass("show-for-small-up")) {
+			$("#main-logo").addClass('show-for-small-up');
 		}
 		$("#main-logo").show();
 		$("#small-info").addClass('show-for-medium-down');
