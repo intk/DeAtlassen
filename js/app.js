@@ -51,6 +51,10 @@ var app = {
 		  		return self.blankPath;
 		  	}
 
+		  	if (type == "world" && zoom > 2) {
+		  		extension = ".png";
+		  	}
+
 		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + extension;
 		  },
 		  tileSize: new google.maps.Size(256, 256),
