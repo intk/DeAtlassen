@@ -36,21 +36,55 @@ var app = {
 
 		var deatlassenOptions = {
 		  getTileUrl: function(coord, zoom) {
-		  	if (!self.validateLimit(coord,zoom)) {
+		  	var x,y;
+
+		  	coords = self.validateLimit(coord, zoom);
+		  	
+
+		  	if (coords == null) {
 		  		return self.blankPath;
-		  	}
-		  	if (zoom == 3 && coord.y == 7) {
-		  		return self.blankPath;
+		  	} 
+
+		  	x = coords.x;
+		  	y = coords.y;
+
+		  	/* BLANK WRAP */
+		  	if (type == "amsterdam") {
+		  		if (zoom == 3 && coord.y == 7) {
+		  			return self.blankPath;
+		  		}
+			  	
+			  	if (zoom == 4 && coord.y > 13) {
+			  		return self.blankPath;
+			  	}
+
+			  	if (zoom == 5 && coord.y > 27) {
+			  		return self.blankPath;
+			  	}
+		  	} else if (type == "europe") {
+		  		if (zoom == 3 && coord.y == 7) {
+		  			return self.blankPath;
+		  		}
+			  	
+			  	if (zoom == 4 && coord.y > 12) {
+			  		return self.blankPath;
+			  	}
+
+			  	if (zoom == 5 && coord.y > 24) {
+			  		return self.blankPath;
+			  	}
+
+		  	} else if (type == "world") {
+		  		if (zoom == 3 && coord.y == 7) {
+		  			return self.blankPath;
+		  		}
+			  	
+			  	if (zoom == 4 && coord.y > 13) {
+			  		return self.blankPath;
+			  	}
 		  	}
 
-		  	if (zoom == 4 && coord.y > 13) {
-		  		return self.blankPath;
-		  	}
-
-		  	if (zoom == 5 && coord.y > 27) {
-		  		return self.blankPath;
-		  	}
-
+		  	/* EXTENSIONS */
 		  	if (type == "world" && zoom > 2) {
 		  		extension = ".png";
 		  	} else if (type == "world" && zoom < 3) {
@@ -63,9 +97,7 @@ var app = {
 		  		extension = ".jpg";
 		  	}
 
-		  	console.log("extension = "+extension);
-
-		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + extension;
+		   	return self.tiles + '/' + (zoom) + '/tile-' + x + '-' + y + extension;
 		  },
 		  tileSize: new google.maps.Size(256, 256),
 		  maxZoom: maxZoom,
@@ -158,11 +190,24 @@ var app = {
 	},
 
 	validateLimit: function(coord, zoom) {
-		var limit = Math.pow(2, zoom) - 1;
-		if (coord.x > -1 && coord.x <= (limit) && coord.y > -1 && coord.y <= (limit)) {
-			return true
-		} else {
-			return false
+		
+		var y = coord.y;
+		var x = coord.x;
+
+		var tileRange = 1 << zoom;
+
+		if (coord.y < 0 || coord.y >= tileRange) {
+    		return null;
+  		}
+
+  		var x;
+  		if (coord.x < 0 || coord.x >= tileRange) {
+    		x = (x % tileRange + tileRange) % tileRange;
+  		}
+
+		return {
+			x: x,
+			y: y
 		}
 	},
 
