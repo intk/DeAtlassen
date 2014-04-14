@@ -19,10 +19,19 @@ var app = {
 
 		var extension = options.tiles_extension;
 
+		var minZoom = 3;
 		var maxZoom = 5;
 		var type = options.map_type;
+		
 		if (type == "world") {
+			minZoom = 1
 			maxZoom = 4;
+		} else if (type = "europe") {
+			minZoom = 1;
+			maxZoom = 5;
+		} else if (type = "amsterdam") {
+			minZoom = 1;
+			maxZoom = 5;
 		}
 
 		var deatlassenOptions = {
@@ -46,7 +55,7 @@ var app = {
 		  },
 		  tileSize: new google.maps.Size(256, 256),
 		  maxZoom: maxZoom,
-		  minZoom: 3,
+		  minZoom: minZoom,
 		  name: 'De-Atlassen'
 		};
 
