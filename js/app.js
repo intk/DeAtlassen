@@ -26,10 +26,10 @@ var app = {
 		if (type == "world") {
 			minZoom = 1
 			maxZoom = 4;
-		} else if (type = "europe") {
+		} else if (type == "europe") {
 			minZoom = 1;
 			maxZoom = 5;
-		} else if (type = "amsterdam") {
+		} else if (type == "amsterdam") {
 			minZoom = 1;
 			maxZoom = 5;
 		}
@@ -62,6 +62,8 @@ var app = {
 		  	} else if (type == "europe" && zoom < 3) {
 		  		extension = ".jpg";
 		  	}
+
+		  	console.log("extension = "+extension);
 
 		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + extension;
 		  },
