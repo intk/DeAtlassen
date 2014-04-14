@@ -3,14 +3,21 @@
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="De-Atlassen">
+    <meta name="description" content="De-Atlassen"/>
+
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://de-atlassen.intk.com/">
+    <meta name="twitter:title" content="De-Atlassen">
+    <meta name="twitter:description" content="De-Atlassen">
+    <meta name="twitter:image" content="http://de-atlassen.intk.com/static/fb-main-world.png">
 
     <!-- Facebook meta tags -->
-    <meta property="og:title" content="De-Atlassen Lants Magesyn Gezien Vanuit Het Oosten Op de Voorgrond het kattenburg"/>
-    <meta property="og:description" content="De-Atlassen Lants Magesyn Gezien Vanuit Het Oosten Op de Voorgrond het kattenburg"/>
-    <meta property="og:url" content="http://de-atlassen.intk.com/en/t-lants-magesyn-gezien-vanuit-het-oosten-op-de-voorgrond-het-kattenburg/"/>
-    <meta property="og:image" content="http://de-atlassen.intk.com/en/t-lants-magesyn-gezien-vanuit-het-oosten-op-de-voorgrond-het-kattenburg/main.jpg"/>
-    
+    <meta property="og:title" content="De-Atlassen"/>
+    <meta property="og:description" content="De-Atlasen"/>
+    <meta property="og:url" content="http://de-atlassen.intk.com/"/>
+    <meta property="og:image" content="http://de-atlassen.intk.com/static/fb-main-world.jpg"/>
+
     <title>De-atlassen</title>
     
     <!-- CSS at the top -->
@@ -28,21 +35,16 @@
     </script>
   </head>
   <body>
-  <div id="wrapper">
-          <div id="div1">
-            <div id="center">
-              
-            </div>
-        </div>
-        </div>
 
-      <div id="map-canvas" class="fullWidth page-details"></div>
+      <div id="map-canvas" class="fullWidth"></div>
 
       <div id="content" class="row fullWidth">
-        
+        <!--<div class="row fullWidth page-map" id="image-wrapper">
+          <img src="" id="content-image"></img>
+        </div>-->
 
-        <div id="left" class="large-16 columns"></div>
-          <div id="main-menu" class="page-details">
+        <div class="large-16 medium-14 columns" id="left"></div>
+            <div id="main-menu" class="show-for-large-up page-map">
               <div class="large-6 columns" id="select-map" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
               <img src="/static/trans.gif"></img>
               </div>
@@ -51,12 +53,12 @@
                 <img src="/static/trans.gif"></img>
               </div>
               
-              <div class="large-6 columns" id="download">
+             <div class="large-6 columns" id="download" style="">
               <img src="/static/trans.gif"></img>
               </div>
           </div><!-- main-menu -->
           
-          <div id="more-info-2" class="page-details" style="width:130px;right:78px;">
+          <div id="more-info-2" class="show-for-large-up page-map" style="width:130px;right:78px;">
             <div class="row" style="height:100%; padding:0px; margin:0px;">
               <div class="large-5 columns" id="info-icon-2">
                 <img src="/static/info.png"/>
@@ -69,13 +71,13 @@
 
           <div id="download-options">
             <a href="/"><div class="large-20 columns" id="title">
+              <div><span>Bekijk andere Atlassen</span></div>
+            </div></a>
+            <a href="/"><div class="large-20 columns" id="europe">
               <div><span>Amsterdam</span></div>
             </div></a>
-            <a href="/europe/"><div class="large-20 columns" id="europe">
-              <div><span>Europe</span></div>
-            </div></a>
             <a href="/world/"><div class="large-20 columns" id="world">
-              <div><span>World</span></div>
+              <div><span>De Wereld</span></div>
             </div></a>
         </div><!-- map-options -->
 
@@ -83,64 +85,76 @@
             <div class="large-20 columns" id="title">
               <div><span>Download map</span></div>
             </div>
-            <a href="/static/full-hd/Lants_Magesyn.jpg" download="Lants_Magesyn.jpg" title="Lants_Magesyn"><div class="large-20 columns" id="download-details">
-              <div class="row" style="height:100%;padding:0px; margin:0px;"><div class="large-6 columns" id="download-icon"><img src="/static/Download@2x.png"/></div><div class="large-14 columns" id="download-size"><span class="dl">Download</span> <br> <span class="map-size">(1.3MB)</span></div></div>
+             <a href="/static/full-hd/Europe.jpg" download="Europe.jpg" title="Europe"><div class="large-20 columns" id="download-details">
+              <div class="row" style="height:100%;padding:0px; margin:0px;"><div class="large-6 columns" id="download-icon"><img src="/static/Download@2x.png"/></div><div class="large-14 columns" id="download-size"><span class="dl">Download</span> <br> <span class="map-size">(14.3MB)</span></div></div>
             </div></a>
         </div><!-- download-options -->
-
-          <div id="language-menu" class="page-details">
-              <a href="/nl/t-lants-magesyn-gezien-vanuit-het-oosten-op-de-voorgrond-het-kattenburg/"><div class="large-10 columns no-padding lg-not-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
-              <div class="lg-format">NL</div>
+          
+          <div id="language-menu" class="show-for-large-up page-map">
+              <div class="large-10 columns no-padding lg-not-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
+              <a href="/europe/"><div class="lg-format">NL</div>
               </div></a>
               <div class="large-10 columns no-padding lg-selected" id="en"><div class="lg-format">
               EN</div>
               </div>
           </div><!-- language-menu -->
+
+
           <div id="media-sharing">
             <div class="large-20 columns" id="title">
               <div><span>Share</span></div>
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="/static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/en/t-lants-magesyn-gezien-vanuit-het-oosten-op-de-voorgrond-het-kattenburg/" target="_blank">Facebook</a></span></div>
+              <div><img src="/static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/en/europe/" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="/static/twitter.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/en/t-lants-magesyn-gezien-vanuit-het-oosten-op-de-voorgrond-het-kattenburg/" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/twitter.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/en/europe/" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
 
-         <div id="media-sharing-2">
+        <div id="media-sharing-2">
             <div class="large-20 columns" id="title">
               <div><span>Share</span></div>
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/t-lants-magesyn-gezien-vanuit-het-oosten-op-de-voorgrond-het-kattenburg/" target="_blank">Facebook</a></span></div>
+              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/en/europe/" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/en/europe/" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
+        
 
-        <div class="large-4 medium-20 small-20 columns page-details" id="description"> 
+        <div class="medium-20 small-20 columns page-map" id="description"> 
           <div id="description-title">
-            <h1>t’Lants Magesyn_gezien vanuit het oosten, op de voorgrond het Kattenburgerplein</h1>
+            <h1>HSM Straet View</h1>
           </div>
           <div id="description-content">
             <div id="description-text">
-            
             <small>
-              It doesn't seem like much has changed in the last 350 years: There's still a bridge leading to the 
+              Here you can see the map of Amsterdam that the famous cartographer Joan Blaeu made in 1649.
+            </small>
+            
+            <p>
+              <small>
+              We've added "Streete View" to this map so that you can also look at
 
-Zeemagazijn and there's an East Indiaman docked at Oosterdok.
+street scenes from Golden-Age Amsterdam.
 
-The Admiralty had good reasons to build ’s Lands Zeemagazijn. First of all, they wanted to keep 
+Drag the little figure to a marker on the map to see a print or etching of 
 
-all the war supplies in readiness at a single location. Another consideration was 'the high costs of 
+that location made by a seventeenth-century contemporary of Blaeu.
+              </small>
+            </p>
+            <p>
+              <small>
+              You can see more highlights from the works of famous cartographers like 
 
-renting warehouses and cellars,' where 'all this ship equipment and war supplies' were originally 
+Mercator and Blaeu in the Atlases exhibit in Het Scheepvaartmuseum in 
 
-kept. The costs of the construction would be recovered within five years.
+Amsterdam.
               </small>
             </p>
             </div>
@@ -148,7 +162,7 @@ kept. The costs of the construction would be recovered within five years.
           </div>
           <div id="description-menus" class="show-for-large-up">
               <div id="languages">
-                <a href="/en/t-lants-magesyn-gezien-vanuit-het-oosten-op-de-voorgrond-het-kattenburg/"><div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div></a>
+                <a href="/europe/"><div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div></a>
               
                 <div class="large-10 columns no-padding" id="en" style="border-left:1px solid; border-color:#4c4443"><div class="lg-format">EN</div></div>
               </div>
@@ -156,11 +170,9 @@ kept. The costs of the construction would be recovered within five years.
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
                   <img src="/static/trans.gif"></img>
                 </div>
-
-                <a href="/static/full-hd/Lants_Magesyn.jpg" download="Lants_Magesyn.jpg" title="Lants_Magesyn">
                 <div class="large-10 columns no-padding" id="download" style="border-left:1px solid; border-color:#4c4443">
                   <img src="/static/trans.gif"></img>
-                </div></a>
+                </div>
               </div>
           </div>
 
@@ -172,65 +184,67 @@ kept. The costs of the construction would be recovered within five years.
           <div id="description-logo" class="show-for-medium-up"></div>
         </div>
 
-        <a href="/en/">
-        <div id="faux-map">
-          <img src="mini-map@2x.png"></img>
-        </div></a>
-
-        <div id="small-info" class="no-padding page-details">
+        <div id="faux-map" class="page-map">
+        </div>
+        <div id="small-info" class="show-for-medium-down no-padding page-map">
           <img src="/static/trans.gif"></img>
         </div>
-        <div id="main-logo" class="page-details"></div>
+        <div id="main-logo" class="show-for-medium-up page-map"></div>
         <div id="small-logo" class="show-for-small hide-for-large"></div>
-        <div id="loading-animation">
-          <!--<img src="/static/loader.gif" id="loader"/>-->
-        </div>
-      </div>
-
+        <div id="madness"></div>
+        <!--<div id="new-zoom-position"></div>-->
+      </div>  
+      
     <!-- JavaScript at the bottom -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/bower_components/jqueryui/ui/minified/jquery-ui.min.js"></script>
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
     <script src="/js/app.js"></script>
-    <script>
+     <script>
       $(document).ready(function() {
       // INIT Front-end framework
       $(document).foundation();
 
-      /*$("#image-wrapper").find('img').each(function(){
-        var imgClass = (this.width/this.height > 1) ? 'tall' : 'wide';
-        $(this).addClass(imgClass);
-      });*/
-
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "/images/tiles",
+          map_type: "europe",
+          tilesPath: "/images/europe",
           pinPath: "/static/pin-map.png",
           blankPath: "/static/blank.png",
           position: '',
-          detailsLocation: {
-
-          }
+          tiles_extension: ".png"
         });
-        
-        app.hackAmsterdamBounds();
 
         // Trigger events
         app.triggerEvents();
-
-        //app.getMarkers(false);
-        // Markers
-        app.addMarkers('en');
-        // Show markers
-        app.showMarkers();
-
-        $("#div1").css('background-image', "url('/nl/t-lants-magesyn-gezien-vanuit-het-oosten-op-de-voorgrond-het-kattenburg/main.jpg')");
-
+        app.map.setCenter(new google.maps.LatLng(60.59775635343057, 1.1865234375));
 
       } else {
         $("#map-canvas").html("Network disconnected.");
       }
     });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $("#madness").draggable(
+    {
+        stop: function(event, ui) {
+
+          // Show dropped position.
+          var Stoppos = $(this).position();
+          console.log("x = "+Stoppos.left);
+          console.log("x = "+Stoppos.top);
+          
+          console.log($(document.elementFromPoint(Stoppos.left-8, Stoppos.top-16)));
+          console.log(Stoppos); 
+
+          $("#madness").hide();
+          $(document.elementFromPoint(Stoppos.left+8, (Stoppos.top+16))).trigger('click');
+        }
+    });
+  });
     </script>
   </body>
 </html>
