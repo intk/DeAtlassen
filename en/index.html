@@ -232,7 +232,7 @@ Amsterdam.
           if (typeof(google) != 'undefined') {
             // INIT Google Maps features
             app.initMap({
-              map_type: "Amsterdam",
+              map_type: "amsterdam",
               tilesPath: "/images/jpg",
               pinPath: "/static/pin-map.png",
               blankPath: "/static/blank.png",
@@ -253,7 +253,7 @@ Amsterdam.
               $.removeCookie("deatlassen");
             } else {
               console.log("No cookie");
-              app.hackAmsterdamBounds();
+              //app.hackAmsterdamBounds();
             }
 
             // Trigger events
