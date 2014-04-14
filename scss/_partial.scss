@@ -148,14 +148,15 @@ body {
 }
 
 .page-details[id="description"] {
+
 	position:absolute;
 	top:0px;
     right:0px;
-  	padding:45px;
+  	padding:0px;
 	color:white;
     background-image: none;
     height: 100%;
-    background-color:rgba(59, 55, 51, 0.95);
+    background-color:rgba(76, 68, 67, 1);
 }
 
 .page-map[id="description"] {
@@ -163,11 +164,11 @@ body {
 	display: none;
 	top:0px;
     right:0px;
-  	padding:45px;
+  	padding:0px;
 	color:white;
     background-image: none; 
     height: 100%;
-    background-color:rgba(59, 55, 51, 0.95);
+    background-color:#4c4443;
 }
 
 #left {
@@ -1037,6 +1038,12 @@ body {
 	}
 }
 
+/*@media only screen and (min-width: 40.063em) {
+	#description {
+		width: 330px;
+	}
+}*/
+
 #loading-animation {
 	position: absolute;
 	top: calc(50% - 22px);
@@ -1367,9 +1374,49 @@ body {
 
 #madness {
 	position: absolute;
+	display: none;
 	top: 107px;
 	left: 81px;
 	width: 16px;
 	height: 32px;
 	background: url("/static/pegman.png");
 }
+
+.container-cenas {
+	width:100%; 
+	position:relative; 
+	margin:0px auto 0px auto; 
+	text-align:left;
+}
+
+.poem {
+	font-family: museo;
+	width: 100%;
+	color:white;
+	text-align:left;
+	height: 418px;
+	padding-left:45px;
+	padding-right:45px;
+	padding-top:35px;
+	overflow: auto;
+	line-height: 1.4;
+}
+.fade_top {
+	position: absolute;
+	height: 80px;
+	width:100%;
+	top:0; left:0;
+	background:url(/static/Gradient-2.png);
+}
+.fade_bottom {
+	position: absolute;
+	height: 80px;
+	width:100%;
+	bottom:0; left:0;
+	background:url(/static/Gradient.png);
+}
+
+.poem p {
+	margin-top: 30px;
+}
+

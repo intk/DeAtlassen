@@ -13,6 +13,8 @@ $(document).ready(function() {
 			tiles_extension: ".jpg"
 		});
 
+		
+
 		var cookie = $.cookie("deatlassen");
 		if (cookie != null) {
 			var data = JSON.parse(cookie);
