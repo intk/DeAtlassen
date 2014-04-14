@@ -195,6 +195,8 @@ Amsterdam.
       
     <!-- JavaScript at the bottom -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/bower_components/jqueryui/ui/minified/jquery-ui.min.js"></script>
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
     <script src="/js/app.js"></script>
     <script>
@@ -243,6 +245,24 @@ Amsterdam.
             $("#map-canvas").html("Network disconnected.");
           }
       });
+    </script>
+    <script type="text/javascript">
+    $("#madness").draggable(
+    {
+        stop: function(event, ui) {
+
+          // Show dropped position.
+          var Stoppos = $(this).position();
+          console.log("x = "+Stoppos.left);
+          console.log("x = "+Stoppos.top);
+          
+          console.log($(document.elementFromPoint(Stoppos.left-8, Stoppos.top-16)));
+          console.log(Stoppos); 
+
+          $("#madness").hide();
+          $(document.elementFromPoint(Stoppos.left+8, (Stoppos.top+16))).trigger('click');
+        }
+    });
     </script>
     </body>
 </html>
