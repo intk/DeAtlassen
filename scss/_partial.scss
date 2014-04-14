@@ -776,18 +776,21 @@ body {
 	right: 180px;
 	width: 130px;
 	height: 120px;
-	background-color: rgba(236, 235, 231, 1.0000);
+	background-color: rgba(245, 245, 245, 1.0000);
 	border:0px solid;
+
 	-webkit-border-radius: 4px;  
     -moz-border-radius: 4px;  
 	border-radius: 4px;
+	
+
 	box-shadow: 0px 1px 3px 0 rgba(0,0,0,.2);
 	-webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,.2);
 	border: none;
 }
 
 #media-sharing div {
-	height: 33.3%;
+	height: 33.34%;
 	font-size: 13px;
 }
 
@@ -796,7 +799,7 @@ body {
 	-webkit-border-top-left-radius: 4px;  
     -moz-border-top-left-radius: 4px;  
 	border-top-left-radius: 4px;
-	-webkit-border-top-rigt-radius: 4px;  
+	-webkit-border-top-right-radius: 4px;  
     -moz-border-top-right-radius: 4px;  
 	border-top-right-radius: 4px;
 	border-bottom: 1px solid;
@@ -869,6 +872,7 @@ body {
 	border-bottom-left-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
     -moz-border-bottom-right-radius: 4px;  
+    border-bottom-right-radius: 4px;
 }
 #media-sharing #facebook:hover {
 	background: white;
@@ -880,8 +884,10 @@ body {
     -moz-border-bottom-left-radius: 4px;  
 	border-bottom-left-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
-    -moz-border-bottom-right-radius: 4px;  
+    -moz-border-bottom-right-radius: 4px; 
+    border-bottom-right-radius: 4px; 
 }
+
 #media-sharing #facebook {
 	background: rgba(245, 245, 245, 1.0000);
 	border-bottom: 1px solid;
@@ -921,7 +927,7 @@ body {
 }
 
 #media-sharing-2 div {
-	height: 33.3%;
+	height: 33.34%;
 	font-size: 13px;
 	text-shadow: 0px -2px #231e1d;
 }
@@ -931,7 +937,7 @@ body {
 	-webkit-border-top-left-radius: 4px;  
     -moz-border-top-left-radius: 4px;  
 	border-top-left-radius: 4px;
-	-webkit-border-top-rigt-radius: 4px;  
+	-webkit-border-top-right-radius: 4px;  
     -moz-border-top-right-radius: 4px;  
 	border-top-right-radius: 4px;
 	border-bottom: 1px solid;
@@ -1024,6 +1030,7 @@ body {
 	border-bottom-left-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
     -moz-border-bottom-right-radius: 4px;  
+    border-bottom-right-radius: 4px;
 }
 
 @media only screen and (min-width:64.063em) {
@@ -1116,26 +1123,27 @@ body {
 	width: 149px;
 	height: 120px;
 	border:0px solid;
+	background: rgba(245, 245, 245, 1.0000);
 	-webkit-border-radius: 4px;  
     -moz-border-radius: 4px;  
 	border-radius: 4px;
 	box-shadow: 0px 1px 3px 0 rgba(0,0,0,.2);
 	-webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,.2);
+	border: 0px solid;
 	border: none;
 }
 
 #download-options div {
-	height: 33.3%;
+	height: 33.34%;
 	font-size: 11px;
 	padding: 0px;
 }
 
 #download-options #title {
-	border:0px solid;
 	-webkit-border-top-left-radius: 4px;  
     -moz-border-top-left-radius: 4px;  
 	border-top-left-radius: 4px;
-	-webkit-border-top-rigt-radius: 4px;  
+	-webkit-border-top-right-radius: 4px;  
     -moz-border-top-right-radius: 4px;  
 	border-top-right-radius: 4px;
 	border-bottom: 1px solid;
@@ -1155,7 +1163,17 @@ body {
 }
 
 #download-options #world:hover {
-	background: white;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-bottom-left-radius: 4px;  
+	border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;  
+    -moz-border-bottom-right-radius: 4px;  
+	border-bottom-right-radius: 4px;
+	/*border-color: white;*/
+	background-color: white;
+	border-color: transparent;
+	border-style: none;
+	border-width: 0;
 }
 
 #download-options #europe {
@@ -1171,13 +1189,16 @@ body {
 	-webkit-border-bottom-left-radius: 4px;  
     -moz-border-bottom-left-radius: 4px;  
 	border-bottom-left-radius: 4px;
-	-webkit-border-bottom-rigt-radius: 4px;  
+	-webkit-border-bottom-right-radius: 4px;  
     -moz-border-bottom-right-radius: 4px;  
 	border-bottom-right-radius: 4px;
-	border:0px solid;
+	border: 0px solid;
 	background-color: rgba(245, 245, 245, 1.0000);
 	color: #999999;
 	cursor: pointer;
+	border-color: transparent;
+	border-style: none;
+	border-width: 0;
 }
 
 #download-options:after, #download-options:before {
@@ -1200,7 +1221,7 @@ body {
 
 #download-options:before {
 	border-color: rgba(194, 225, 245, 0);
-	border-top-color: rgba(245, 245, 245, 1.0000);
+	border-top-color: none;
 	border-width: 10px;
 	margin-left: -10px;
 }
@@ -1265,7 +1286,7 @@ body {
 	-webkit-border-top-left-radius: 4px;  
     -moz-border-top-left-radius: 4px;  
 	border-top-left-radius: 4px;
-	-webkit-border-top-rigt-radius: 4px;  
+	-webkit-border-top-right-radius: 4px;  
     -moz-border-top-right-radius: 4px;  
 	border-top-right-radius: 4px;
 	border-bottom: 1px solid;
@@ -1305,6 +1326,8 @@ body {
 	margin-left: -10px;
 }
 
+
+
 #download-map #title div {
 	margin-top: 13px;
 	margin-left: 13px;
@@ -1318,6 +1341,7 @@ body {
 	border-bottom-left-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
     -moz-border-bottom-right-radius: 4px;	
+    border-bottom-right-radius: 4px;
     font-size:13px;
 }
 
@@ -1327,7 +1351,8 @@ body {
     -moz-border-bottom-left-radius: 4px;  
 	border-bottom-left-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
-    -moz-border-bottom-right-radius: 4px;	
+    -moz-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;	
 }
 
 #download-map #title span {
@@ -1358,6 +1383,122 @@ body {
 	margin-left: 8px;
 	font-size:11px;
 }
+
+/* DOWNLOAD MAP 2 */
+#download-map-2 {
+	position: absolute;
+	bottom: 96px;
+	display:none;
+	right: 50px;
+	width: 120px;
+	height: 103px;
+	border:0px solid;
+	-webkit-border-radius: 4px;  
+    -moz-border-radius: 4px;  
+	border-radius: 4px;
+	box-shadow: 0px 1px 3px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,.2);
+	border: none;
+}
+
+#download-map-2 div {
+	font-size: 11px;
+	padding: 0px;
+}
+
+#download-map-2 #title {
+	height: 40px;
+	border:0px solid;
+	-webkit-border-top-left-radius: 4px;  
+    -moz-border-top-left-radius: 4px;  
+	border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;  
+    -moz-border-top-right-radius: 4px;  
+	border-top-right-radius: 4px;
+	border-bottom: 1px solid;
+	border-bottom-color: #5e5757;
+	background-color: #231e1d;
+	color: #999999;
+	cursor: default;
+}
+
+#download-map-2 a {
+	text-decoration: none;
+	color: #999999;
+}
+
+#download-map-2:after, #download-map-2:before {
+	top: 100%;
+	left: 78%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#download-map-2:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #2d2827;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+#download-map-2:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #2d2827;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+#download-map-2 #title div {
+	margin-top: 13px;
+	margin-left: 13px;
+}
+
+#download-map-2 #download-details {
+	height: 63px;
+	background: #2d2827;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-bottom-left-radius: 4px;  
+	border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;  
+    -moz-border-bottom-right-radius: 4px;	
+    color: #666160;
+    font-size:13px;
+}
+
+#download-map-2 #download-details:hover {
+	background: #2d2827;
+	-webkit-border-bottom-left-radius: 4px;  
+    -moz-border-bottom-left-radius: 4px;  
+	border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;  
+    -moz-border-bottom-right-radius: 4px;	
+}
+
+#download-map-2 #title span {
+	font-size: 13px;
+}
+
+#download-map-2 #download-icon {
+
+}
+
+#download-map-2 #download-size {
+	font-size: 13px;
+	margin-top: 16px;
+}
+
+#download-map-2 #download-icon img {
+	width: 20px;
+	height: 22px;
+	margin-left:13px;
+	margin-top: 13px;
+}
+
+
 
 #loader {
 	display: hide;

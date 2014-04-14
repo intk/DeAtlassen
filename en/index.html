@@ -181,12 +181,21 @@ Amsterdam.
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
                   <img src="/static/trans.gif"></img>
                 </div>
-                <a href="/static/full-hd/Amsterdam.jpg" download="Amsterdam.jpg" title="Amsterdam">
+                
                 <div class="large-10 columns no-padding" id="download" style="border-left:1px solid; border-color:#4c4443">
                   <img src="/static/trans.gif"></img>
-                </div></a>
+                </div>
               </div>
           </div>
+
+          <div id="download-map-2">
+            <div class="large-20 columns" id="title">
+              <div><span>Download map</span></div>
+            </div>
+            <a href="/static/full-hd/Amsterdam.jpg" download="Amsterdam.jpg" title="Amsterdam"><div class="large-20 columns" id="download-details">
+              <div class="row" style="height:100%;padding:0px; margin:0px;"><div class="large-6 columns" id="download-icon"><img src="/static/Download-dark@2x.png"/></div><div class="large-14 columns" id="download-size"><span class="dl">Download</span> <br> <span class="map-size">(11.5MB)</span></div></div>
+            </div></a>
+        </div><!-- download-options -->
             
           </div><!-- shares -->
 
@@ -202,9 +211,11 @@ Amsterdam.
         <div id="small-info" class="show-for-medium-down no-padding page-map">
           <img src="/static/trans.gif"></img>
         </div>
-        <div id="main-logo" class="show-for-medium-up page-map"></div>
+        <div id="main-logo" class="show-for-small-up page-map"></div>
         <!--<div id="small-logo" class="show-for-small hide-for-large"></div>-->
+        <div id="wrappingmadness"></div>
         <div id="madness"></div>
+
       </div>
       
     <!-- JavaScript at the bottom -->
@@ -262,8 +273,33 @@ Amsterdam.
       });
     </script>
     <script type="text/javascript">
+
+    $("#madness").mouseenter(function() {
+      $("#madness").css("width", "23px");
+      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -211px -102px");
+
+    });
+    $("#madness").mouseleave(function() {
+      $("#madness").css("width", "19px");
+      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
+    });
+
+    $("#madness").click(function () {
+          $("#madness").css("width", "22");
+          $("#madness").css("height", "32");
+          $("#madness").css("background", "url('/static/Man.png')");
+    });
+
+
     $("#madness").draggable(
     {
+        start: function(event, ui) {
+          $("#madness").unbind('mouseenter mouseleave');
+          $("#madness").css("width", "22");
+          $("#madness").css("height", "32");
+          $("#madness").css("background", "url('/static/Man.png')");
+
+        },
         stop: function(event, ui) {
 
           // Show dropped position.
@@ -274,8 +310,27 @@ Amsterdam.
           console.log($(document.elementFromPoint(Stoppos.left-8, Stoppos.top-16)));
           console.log(Stoppos); 
 
+          $("#madness").removeClass("show-for-large-up");
           $("#madness").hide();
-          $(document.elementFromPoint(Stoppos.left+8, (Stoppos.top+16))).trigger('click');
+          $(document.elementFromPoint(Stoppos.left+11, (Stoppos.top+16))).trigger('click');
+
+          $("#madness").mouseenter(function() {
+      $("#madness").css("width", "23px");
+      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -211px -102px");
+
+    });
+    $("#madness").mouseleave(function() {
+      $("#madness").css("width", "19px");
+      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
+    });
+
+          $("#madness").css("top", "105px");
+          $("#madness").css("left", "79px");
+          $("#madness").css("width", "19px");
+          $("#madness").css("height", "37px");
+          $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px;");
+          $("#madness").show();
+          $("#madness").addClass("show-for-large-up");
         }
     });
     </script>
