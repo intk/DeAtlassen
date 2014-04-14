@@ -53,6 +53,8 @@ var app = {
 
 		  	if (type == "world" && zoom > 2) {
 		  		extension = ".png";
+		  	} else if (type == "world" && zoom < 3) {
+		  		extension = ".jpg";
 		  	}
 
 		   	return self.tiles + '/' + (zoom) + '/tile-' + coord.x + '-' + coord.y + extension;
