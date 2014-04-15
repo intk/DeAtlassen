@@ -38,6 +38,8 @@ body {
 	padding:0px;
 }
 
+
+
 #language-menu .lg-not-selected[id="en"] {
 	-moz-box-shadow:    inset 0 0 10px #a4a6a2;
    	-webkit-box-shadow: inset 0 0 10px #a4a6a2;
@@ -65,6 +67,11 @@ body {
 	-webkit-border-bottom-left-radius: 4px;  
    	-moz-border-bottom-left-radius: 4px; 	
 }
+
+#language-menu .lg-not-selected:hover {
+	background: #ffffff;
+}
+
 
 .lg-format {
 	margin:auto;
@@ -205,6 +212,19 @@ body {
 	margin-left: -12.5px;
 	margin-top: 6px;
 }
+
+#close-container img:hover {
+	position: absolute;
+	left:50%;
+	top:50%;
+	width: 25px;
+	height: 25px;
+	background: url('../static/Close-hover@2x.png');
+	background-size: 25px 25px;
+	margin-left: -12.5px;
+	margin-top: 6px;
+}
+
 
 #description-title {
 	margin-top: 135px;
@@ -368,8 +388,8 @@ body {
 	text-shadow: 1px 1px #ffffff;
 }
 
-#language-menu #nl:hover {
-	background-color: rgba(237, 236, 232, 1.0000);
+#language-menu .lg-not-selected[id="nl"]:hover {
+	background-color: white;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;  
     -moz-border-top-left-radius: 4px;
@@ -378,8 +398,8 @@ body {
 	border-bottom-left-radius: 4px;
 }
 
-#language-menu #en:hover {
-	background-color: rgba(237, 236, 232, 1.0000);
+#language-menu .lg-not-selected[id="en"]:hover {
+	background-color: white;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;  
     -moz-border-top-right-radius: 4px;
@@ -418,6 +438,7 @@ body {
 	color: #999999;
 	text-shadow: 1px 1px #ffffff;
 }
+
 
 .page-details[id="main-menu"] {
 	padding: 0px;
