@@ -512,6 +512,10 @@ var app = {
 			$("#main-logo").removeClass('show-for-small-up');
 		}
 
+		if (!$(".page-details #description").hasClass('show-for-large-up')) {
+			$(".page-details #description").addClass('show-for-large-up');
+		}
+
 		$("#download-options").removeClass("show-for-large-up");
 		$("#download-options").hide();
 		$("#media-sharing").removeClass("show-for-large-up");
@@ -569,6 +573,7 @@ var app = {
 		$("#language-menu").fadeIn(800);
 
 		$("#description").fadeOut();
+		$("#description").removeClass("show-for-large-up");
 		
 		if (!$("#main-logo").hasClass("show-for-small-up")) {
 			$("#main-logo").addClass('show-for-small-up');
