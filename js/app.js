@@ -10,7 +10,7 @@ var app = {
 
 	centers: {
 		'world': new google.maps.LatLng(28.013801376379213, -1.9775390625),
-		'europe': new google.maps.LatLng(28.013801376379213, -1.9775390625),
+		'europe': new google.maps.LatLng(35.47856499535589, -13.2275390625),
 		'amsterdam': new google.maps.LatLng(14.626108798875158, -3.3837890625)
 	},
 
@@ -113,8 +113,9 @@ var app = {
 
 		var deatlassenMapType = new google.maps.ImageMapType(deatlassenOptions);
 
+		
   		var mapOptions = {
-    		center: this.centers[type],
+    		center: app.centers[type],
     		zoom: 2,
     		zoomControl: true,
 
@@ -527,6 +528,7 @@ var app = {
 		}
 		$("#small-info").hide();
 		$("#small-info").removeClass('show-for-medium-down');
+		$("#faux-map").hide();
 		$("#description").fadeIn();
 	},
 
@@ -547,6 +549,7 @@ var app = {
 			$("#main-logo").addClass('show-for-small-up');
 		}
 		$("#main-logo").show();
+		$("#faux-map").show();
 		$("#small-info").addClass('show-for-medium-down');
 		$("#small-info").fadeIn();
 	}

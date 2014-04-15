@@ -104,26 +104,26 @@
             <div class="large-20 columns" id="title">
               <div><span>Deze map delen</span></div>
             </div>
-            <div class="large-20 columns" id="facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/europe/" target="_blank"><div class="large-20 columns" id="facebook">
 
-              <div><img src="/static/facebook.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/europe/" target="_blank">Facebook</a></span></div>
-            </div>
-            <div class="large-20 columns" id="twitter">
-              <div><img src="/static/twitter.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/europe/" target="_blank">Twitter</a></span></div>
-            </div>
+              <div><img src="/static/facebook.png"></img><span>Facebook</span></div>
+            </div></a>
+            <a href="https://twitter.com/share?url=http://de-atlassen.intk.com/europe/" target="_blank"><div class="large-20 columns" id="twitter">
+              <div><img src="/static/twitter.png"></img><span>Twitter</span></div>
+            </div></a>
         </div> <!-- media sharing -->
 
         <div id="media-sharing-2">
-            <div class="large-20 columns" id="title">
+           <div class="large-20 columns" id="title">
               <div><span>Deze map delen</span></div>
             </div>
-            <div class="large-20 columns" id="facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/europe/" target="_blank"><div class="large-20 columns" id="facebook">
 
-              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/europe/" target="_blank">Facebook</a></span></div>
-            </div>
-            <div class="large-20 columns" id="twitter">
-              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com/europe/" target="_blank">Twitter</a></span></div>
-            </div>
+              <div><img src="/static/Faceboook-dark.png"></img><span>Facebook</span></div>
+            </div></a>
+            <a href="https://twitter.com/share?url=http://de-atlassen.intk.com/europe/" target="_blank"><div class="large-20 columns" id="twitter">
+              <div><img src="/static/Twitter-dark.png"></img><span>Twitter</span></div>
+            </div></a>
         </div> <!-- media sharing -->
         
         <!-- DESCRIPTION -->
@@ -132,7 +132,7 @@
           <div class="large-20 columns" style="height:150px;background:none;">
             
           </div><!-- gap -->
-          <div class="large-20 columns" style="height:100px; background:none;padding-left:45px;padding-right:45px;padding-top:20px; margin:0px;">
+          <div class="large-20 columns" style="height:auto; background:none;padding-left:45px;padding-right:45px;padding-top:20px; margin:0px;">
             <h1>HSM Straet View</h1>
           </div><!-- title -->
           
@@ -158,6 +158,9 @@
            </div><!-- container -->
           </div><!-- div -->
 
+           <div class="large-20 columns" style="position:absolute; padding:0px;bottom:0px;height:110px; background:rgba(76, 68, 67, 1);">
+
+        </div>
           <!-- Shares -->
           <div class="large-20 columns" style="position:absolute; bottom:0px; left: 0px; width: 100%; height:100px; background: none;"></div>
            <div id="description-menus" class="show-for-large-up">
@@ -170,12 +173,20 @@
                 <div class="large-10 columns no-padding" id="share" style="border-right:1px solid; border-color:#151312;">
                   <img src="/static/trans.gif"></img>
                 </div>
-                <a href="/static/full-hd/Europe.jpg" download="Europe.jpg" title="Europe">
+                
                 <div class="large-10 columns no-padding" id="download" style="border-left:1px solid; border-color:#4c4443">
                   <img src="/static/trans.gif"></img>
-                </div></a>
+                </div>
               </div>
           </div>
+
+          <div id="download-map-2">
+            <div class="large-20 columns" id="title">
+              <div><span>Download map</span></div>
+            </div>
+            <a href="/static/full-hd/Europe.jpg" download="Europe.jpg" title="Europe"><div class="large-20 columns" id="download-details">
+              <div class="row" style="height:100%;padding:0px; margin:0px;"><div class="large-6 columns" id="download-icon"><img src="/static/Download-dark@2x.png"/></div><div class="large-14 columns" id="download-size"><span class="dl">Download</span> <br> <span class="map-size">(11.5MB)</span></div></div>
+          </div></a>
             
           </div><!-- shares -->
 
@@ -193,7 +204,7 @@
         <div id="small-info" class="show-for-medium-down no-padding page-map">
           <img src="/static/trans.gif"></img>
         </div>
-        <div id="main-logo" class="show-for-medium-up page-map"></div>
+        <div id="main-logo" class="show-for-small-up page-map"></div>
         <!--<div id="small-logo" class="show-for-small hide-for-large"></div>-->
  
 
@@ -224,7 +235,6 @@
 
         // Trigger events
         app.triggerEvents();
-        app.map.setCenter(new google.maps.LatLng(60.59775635343057, 1.1865234375));
 
       } else {
         $("#map-canvas").html("Network disconnected.");

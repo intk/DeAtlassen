@@ -134,15 +134,23 @@
               <div><img src="/static/Twitter-dark.png"></img><span>Twitter</span></div>
             </div></a>
         </div> <!-- media sharing -->
-        
 
-        <div class="medium-20 small-20 columns page-map" id="description"> 
-          <div id="description-title">
+        <!-- DESCRIPTION -->
+        <div class="medium-20 small-20 columns page-map" id="description" > 
+          <div class="row" style="padding:0px; margin:0px; height:100%; position:relative;">
+          <div class="large-20 columns" style="height:150px;background:none;">
+            
+          </div><!-- gap -->
+          <div class="large-20 columns" style="height:100px; background:none;padding-left:45px;padding-right:45px;padding-top:20px; margin:0px;">
             <h1>HSM Straet View</h1>
-          </div>
-          <div id="description-content">
-            <div id="description-text">
-            <small>
+          </div><!-- title -->
+          
+          <div class="large-20 columns" style="padding:0px;">
+          <div class="container-cenas">
+            <div class="fade_top"></div>
+            <div class="fade_bottom"></div>
+            <div class="poem">
+              <small>
               Here you can see the map of Amsterdam that the famous cartographer Joan Blaeu made in 1649.
             </small>
             
@@ -166,10 +174,17 @@ Mercator and Blaeu in the Atlases exhibit in Het Scheepvaartmuseum in
 Amsterdam.
               </small>
             </small></p>
-            </div>
-            
-          </div>
-          <div id="description-menus" class="show-for-large-up">
+            </div><!-- poem -->
+           </div><!-- container -->
+          </div><!-- div -->
+
+           <div class="large-20 columns" style="position:absolute; padding:0px;bottom:0px;height:110px; background:rgba(76, 68, 67, 1);">
+
+        </div>
+
+          <!-- Shares -->
+          <div class="large-20 columns" style="position:absolute; bottom:0px; left: 0px; width: 100%; height:100px; background: none;"></div>
+         <div id="description-menus" class="show-for-large-up">
               <div id="languages">
                 <a href="/world/"><div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div></a>
               
@@ -185,6 +200,16 @@ Amsterdam.
               </div>
           </div>
 
+          <div id="download-map-2">
+            <div class="large-20 columns" id="title">
+              <div><span>Download map</span></div>
+            </div>
+            <a href="/static/full-hd/World.jpg" download="World.jpg" title="World"><div class="large-20 columns" id="download-details">
+              <div class="row" style="height:100%;padding:0px; margin:0px;"><div class="large-6 columns" id="download-icon"><img src="/static/Download-dark@2x.png"/></div><div class="large-14 columns" id="download-size"><span class="dl">Download</span> <br> <span class="map-size">(11.5MB)</span></div></div>
+            </div></a>
+            
+          </div><!-- shares -->
+
           <div id="close-description">
             <div id="close-container" class="no-padding">
               <img src="/static/trans.gif"></img>
@@ -192,13 +217,15 @@ Amsterdam.
           </div>
           <div id="description-logo" class="show-for-small-up"></div>
         </div>
+        </div><!-- description -->
+        
 
         <div id="faux-map" class="page-map">
         </div>
         <div id="small-info" class="show-for-medium-down no-padding page-map">
           <img src="/static/trans.gif"></img>
         </div>
-        <div id="main-logo" class="show-for-medium-up page-map"></div>
+        <div id="main-logo" class="show-for-small-up page-map"></div>
         <!--<div id="small-logo" class="show-for-small hide-for-large"></div>-->
        
       </div>  
@@ -227,7 +254,7 @@ Amsterdam.
 
         // Trigger events
         app.triggerEvents();
-        app.map.setCenter(new google.maps.LatLng(60.59775635343057, 1.1865234375));
+       
 
       } else {
         $("#map-canvas").html("Network disconnected.");
