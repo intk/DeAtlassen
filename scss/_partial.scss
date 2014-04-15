@@ -157,6 +157,7 @@ body {
     background-image: none;
     height: 100%;
     background-color:rgba(76, 68, 67, 1);
+    z-index: 2;
 }
 
 .page-map[id="description"] {
@@ -169,6 +170,7 @@ body {
     background-image: none; 
     height: 100%;
     background-color:#4c4443;
+    z-index:2;
 }
 
 #left {
@@ -1522,6 +1524,7 @@ body {
 	width: 19px;
 	height: 37px;
 	background: url("/static/google_maps_sprite_api_002.png") -15px -102px;
+	z-index:1;
 }
 
 #madness:hover {
@@ -1574,5 +1577,6 @@ body {
 	width: 20px;
 	height: 37px;
 	background: url("/static/google_maps_sprite_api_002.png") -64px -102px;
+	z-index:1;
 }
 
