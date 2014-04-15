@@ -1593,7 +1593,7 @@ body {
 	width: 100%;
 	color:white;
 	text-align:left;
-	max-height: 465px;
+	max-height: 100%;
 	padding-left:45px;
 	padding-right:45px;
 	padding-top:26px;
@@ -1608,7 +1608,7 @@ body {
 		width: 100%;
 		color:white;
 		text-align:left;
-		max-height: 555px;
+		max-height: 100%;
 		padding-left:45px;
 		padding-right:45px;
 		padding-top:26px;
@@ -1703,4 +1703,10 @@ body {
 	height:calc(100% - 330px);
 }
 
+@media only screen and (max-width:40em) {
+	#desc-content {
+		padding:0px;
+		height:calc(100% - 160px);
+	}
+}
 
