@@ -148,8 +148,7 @@ body {
 }
 
 .page-details[id="description"] {
-
-	position:absolute;
+	position:fixed;
 	top:0px;
     right:0px;
   	padding:0px;
@@ -161,7 +160,7 @@ body {
 }
 
 .page-map[id="description"] {
-	position:absolute;
+	position:fixed;
 	display: none;
 	top:0px;
     right:0px;
@@ -227,7 +226,7 @@ body {
 	position:absolute;
 	cursor: pointer;
 	bottom: 50px;
-	left: 50px;
+	left: 6%;
 	width: 126px;
 	height: 126px;
 }
@@ -263,6 +262,31 @@ body {
 	background-size: 100px 145px;
 }
 
+@media only screen and (max-width:40em) {
+	.page-details[id="main-logo"] {
+		position: absolute;
+		display: none;
+		top:-3px;
+		right: 6%;
+		height: 104px;
+		width: 71px;
+		background-image: url("../static/logo@2x.png");
+		background-size: 71px 104px;
+	}
+}
+
+@media only screen and (max-width:40em) {
+	.page-map[id="main-logo"] {
+		position: absolute;
+		top:-3px;
+		right: 6%;
+		height: 104px;
+		width: 71px;
+		background-image: url("../static/logo@2x.png");
+		background-size: 71px 104px;
+	}
+}
+
 #description-logo {
 	position: absolute;
 	display: none;
@@ -273,6 +297,21 @@ body {
 	background-image: url("../static/logo@2x.png");
 	background-size: 100px 145px;
 }
+
+@media only screen and (max-width:40em) {
+	#description-logo {
+		position: absolute;
+		display: none;
+		top: -2px;
+		left: 45px;
+		height: 104px;
+		width: 71px;
+		background-image: url("../static/logo@2x.png");
+		background-size: 71px 104px;
+	}
+}
+
+
 
 #small-logo {
 	position: absolute;
@@ -727,14 +766,10 @@ body {
 	cursor: pointer;
 	bottom: 50px;
 	right: 6%;
-	width: 40px;
-	height: 40px;
-	background-color: rgba(236, 235, 231, 0.95);
-	border:1px solid;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;  
-    -moz-border-radius: 4px;  
-	border-color: rgba(205, 206, 202, 1.0000);
+	width: 34px;
+	height: 34px;
+	background: url("/static/More-information-mobile.png");
+	background-size: 34px 34px;
 }
 
 
@@ -744,22 +779,16 @@ body {
 	display: none;	
 	bottom: 50px;
 	right: 6%;
-	width: 40px;
-	height: 40px;
-	background-color: rgba(239, 239, 236, 1.0000);
-	border:1px solid;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;  
-    -moz-border-radius: 4px;  
-	border-color: rgba(205, 206, 202, 1.0000);
+	width: 34px;
+	height: 34px;
+	background: url("/static/More-information-mobile.png");
+	background-size: 34px 34px;
 }
 
 
-#small-info:hover {
-	background-color: white;
-}
 
-#small-info img {
+
+/*#small-info img {
 	position: absolute;
 	left:50%;
 	top:50%;
@@ -769,7 +798,7 @@ body {
 	background-size: 20px 22px;
 	margin-left: -10px;
 	margin-top: -10px;
-}
+}*/
 
 #media-sharing {
 	position: absolute;
@@ -1543,7 +1572,7 @@ body {
 	width: 100%;
 	color:white;
 	text-align:left;
-	height: 418px;
+	height: 100%;
 	padding-left:45px;
 	padding-right:45px;
 	padding-top:26px;
@@ -1580,3 +1609,24 @@ body {
 	z-index:1;
 }
 
+#zoom-in-small {
+	position: absolute;
+	cursor: pointer;
+	bottom: 89px;
+	left: 6%;
+	width: 34px;
+	height: 34px;
+	background: url("/static/Zoom-mobile.png");
+	background-size: 34px 34px;
+}
+
+#zoom-out-small {
+	position: absolute;
+	cursor: pointer;
+	bottom: 50px;
+	left: 6%;
+	width: 34px;
+	height: 34px;
+	background: url("/static/Zoom-out-mobile.png");
+	background-size: 34px 34px;
+}

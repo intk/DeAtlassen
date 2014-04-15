@@ -7,6 +7,8 @@ var app = {
 	bounds: null,
 	detailsLocation: null,
 	markers: [],
+	minZoom: 2,
+	maxZoom: 5,
 
 	centers: {
 		'world': new google.maps.LatLng(28.013801376379213, -1.9775390625),
@@ -25,19 +27,18 @@ var app = {
 
 		var extension = options.tiles_extension;
 
-		var minZoom = 1;
-		var maxZoom = 5;
+	
 		var type = options.map_type;
 		
 		if (type == "world") {
-			minZoom = 2
-			maxZoom = 4;
+			this.minZoom = 2
+			this.maxZoom = 4;
 		} else if (type == "europe") {
-			minZoom = 2;
-			maxZoom = 5;
+			this.minZoom = 2;
+			this.maxZoom = 5;
 		} else if (type == "amsterdam") {
-			minZoom = 2;
-			maxZoom = 5;
+			this.minZoom = 2;
+			this.maxZoom = 5;
 		}
 
 		var deatlassenOptions = {
@@ -106,8 +107,8 @@ var app = {
 		   	return self.tiles + '/' + (zoom) + '/tile-' + x + '-' + y + extension;
 		  },
 		  tileSize: new google.maps.Size(256, 256),
-		  maxZoom: maxZoom,
-		  minZoom: minZoom,
+		  maxZoom: app.maxZoom,
+		  minZoom: app.minZoom,
 		  name: 'De-Atlassen'
 		};
 
@@ -137,7 +138,7 @@ var app = {
   		google.maps.event.addDomListener(app.map, 'tilesloaded', function(){
     		if(!wrapped) {
     			wrapped = true;
-        		$("div.gmnoprint").last().parent().wrap("<div id='new-zoom-position'/>");
+        		$("div.gmnoprint").last().parent().wrap("<div id='new-zoom-position' class='hide-for-touch'/>");
         		if (type == "amsterdam") {
         			$("div.gmnoprint").last().css("margin-top", "25px");
         			$("#wrappingmadness").show();
@@ -428,6 +429,19 @@ var app = {
 				$("#download-map-2").fadeOut();
 				$("#download-map-2").removeClass("show-for-large-up");
 			}
+		});
+
+		$("#zoom-in-small").click(function() {
+			var z = app.map.getZoom();
+			if (z < app.maxZoom) {
+				app.map.setZoom(z+1);
+			} 
+		});
+		$("#zoom-out-small").click(function() {
+			var z = app.map.getZoom();
+			if (z > app.minZoom) {
+				app.map.setZoom(z-1);
+			} 
 		});
 	},
 
