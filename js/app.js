@@ -519,7 +519,9 @@ var app = {
 		$("#content-image").addClass("show-for-large-up");
 	},
 
-	smallMoreInfoEvent: function() {		
+	smallMoreInfoEvent: function() {
+		
+
 		if ($("#main-logo").hasClass('show-for-small-up')) {
 			$("#main-logo").removeClass('show-for-small-up');
 			$("#main-logo").hide();
@@ -533,17 +535,23 @@ var app = {
 	},
 
 	closeDescription: function() {
+		if ($("#faux-map").hasClass("show-for-medium-up")) {
+			$("#faux-map").removeClass("show-for-medium-up");
+		}
+		
 		$("#download-map-2").removeClass("show-for-large-up");
 		$("#download-map-2").hide();
 		$("#media-sharing-2").removeClass("show-for-large-up");
 		$("#media-sharing-2").hide();
-		$("#description").fadeOut();
+		
 		$("#main-menu").addClass('show-for-large-up');
 		$("#more-info-2").addClass('show-for-large-up');
 		$("#language-menu").addClass('show-for-large-up');
 		$("#main-menu").fadeIn(800);
 		$("#more-info-2").fadeIn(800);
 		$("#language-menu").fadeIn(800);
+
+		$("#description").fadeOut();
 		
 		if (!$("#main-logo").hasClass("show-for-small-up")) {
 			$("#main-logo").addClass('show-for-small-up');
