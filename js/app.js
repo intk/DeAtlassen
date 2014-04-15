@@ -148,6 +148,13 @@ var app = {
         		}
     		}	
 		});
+
+		google.maps.event.addListener(app.map, 'click', function() {
+			app.hideAllMedia();
+		});
+		$("#div1").click(function() {
+			app.hideAllMedia();
+		})
 	},
 
 	/* CONTEXT Handler */
@@ -364,6 +371,19 @@ var app = {
 	refreshMarkers: function(show) {
 		this.deleteMarkers();
 		this.getMarkers(show);
+	},
+
+	hideAllMedia: function() {
+		$("#media-sharing-2").removeClass("show-for-large-up");
+		$("#media-sharing-2").hide();
+		$("#media-sharing").removeClass("show-for-large-up");
+		$("#media-sharing").hide();
+		$("#download-map").removeClass("show-for-large-up");
+		$("#download-map").hide();
+		$("#download-options").removeClass("show-for-large-up");
+		$("#download-options").hide();
+		$("#download-map-2").removeClass("show-for-large-up");
+		$("#download-map-2").hide();
 	},
 
 	/* EVENTS */
