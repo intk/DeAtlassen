@@ -141,8 +141,10 @@ var app = {
         		$("div.gmnoprint").last().parent().wrap("<div id='new-zoom-position' class='hide-for-touch'/>");
         		if (type == "amsterdam") {
         			$("div.gmnoprint").last().css("margin-top", "25px");
-        			$("#wrappingmadness").show();
+        			$("#wrappingmadness").addClass("hide-for-touch")
+        			$("#madness").addClass("hide-for-touch");
         			$("#madness").show();
+        			$("#wrappingmadness").show();
         		}
     		}	
 		});

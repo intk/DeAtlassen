@@ -136,7 +136,7 @@
             <h1>HSM Straet View</h1>
           </div><!-- title -->
           
-          <div class="large-20 columns" style="padding:0px;">
+          <div class="large-20 columns" style="padding:0px;height:calc(100% - 400px);">
           <div class="container-cenas">
             <div class="fade_top"></div>
             <div class="fade_bottom"></div>
@@ -151,10 +151,17 @@
             </div><!-- poem -->
            </div><!-- container -->
           </div><!-- div -->
-
-        <div class="large-20 columns hide-for-touch" style="position:absolute; padding:0px;bottom:0px;height:110px; background:rgba(76, 68, 67, 1);">
-
+        
+        <!-- New description bottom divs -->
+        <div class="large-20 columns hide-for-touch hide-for-small"
+        id="gradient-bottom-fixed">
         </div>
+        
+        <div class="large-20 columns hide-for-touch" id="over-bottom-div">
+        </div>
+
+         <div class="large-20 columns show-for-touch" id="gradient-bottom-touch">
+        </div><!-- Description bottom divs -->
 
           <!-- Shares -->
           <div class="large-20 columns" style="position:absolute; bottom:0px; left: 0px; width: 100%; height:100px; background: none;"></div>
@@ -230,15 +237,19 @@
       $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
     });
 
-    $("#madness").click(function () {
+    /*$("#madness").click(function () {
           $("#madness").css("width", "22");
           $("#madness").css("height", "32");
           $("#madness").css("background", "url('/static/Man.png')");
-    });
+    });*/
 
 
     $("#madness").draggable(
     {
+        cursorAt: {
+          left: 9,
+          top: 18
+        },
         start: function(event, ui) {
           $("#madness").unbind('mouseenter mouseleave');
           $("#madness").css("width", "22");
@@ -246,37 +257,33 @@
           $("#madness").css("background", "url('/static/Man.png')");
 
         },
+
         stop: function(event, ui) {
 
           // Show dropped position.
           var Stoppos = $(this).position();
-          console.log("x = "+Stoppos.left);
-          console.log("x = "+Stoppos.top);
-          
-          console.log($(document.elementFromPoint(Stoppos.left-8, Stoppos.top-16)));
-          console.log(Stoppos); 
 
-          $("#madness").removeClass("show-for-large-up");
+          $("#madness").removeClass("hide-for-touch");
           $("#madness").hide();
           $(document.elementFromPoint(Stoppos.left+11, (Stoppos.top+16))).trigger('click');
-
-          $("#madness").mouseenter(function() {
-      $("#madness").css("width", "23px");
-      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -211px -102px");
-
-    });
-    $("#madness").mouseleave(function() {
-      $("#madness").css("width", "19px");
-      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
-    });
 
           $("#madness").css("top", "105px");
           $("#madness").css("left", "79px");
           $("#madness").css("width", "19px");
           $("#madness").css("height", "37px");
           $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px;");
+          $("#madness").css("background-image", "url('/static/google_maps_sprite_api_002.png') -15px -102px;");
           $("#madness").show();
-          $("#madness").addClass("show-for-large-up");
+          $("#madness").addClass("hide-for-touch");
+
+          $("#madness").mouseenter(function() {
+            $("#madness").css("width", "23px");
+            $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -211px -102px");
+          });
+          $("#madness").mouseleave(function() {
+            $("#madness").css("width", "19px");
+            $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
+          });
         }
     });
     </script>
