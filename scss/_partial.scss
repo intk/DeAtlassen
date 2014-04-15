@@ -1700,13 +1700,13 @@ body {
 
 #desc-content {
 	padding:0px !important;
-	height:calc(100% - 330px);
+	height:calc(100% - 360px);
 }
 
 @media only screen and (max-width:40em) {
 	#desc-content {
 		padding:0px;
-		height:calc(100% - 160px);
+		height:calc(100% - 140px);
 	}
 }
 
