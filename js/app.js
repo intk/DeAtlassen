@@ -534,7 +534,8 @@ var app = {
 	},
 
 	smallMoreInfoEvent: function() {
-		
+		$("#description").fadeIn();
+		$("#description").removeClass("show-for-large-up");
 
 		if ($("#main-logo").hasClass('show-for-small-up')) {
 			$("#main-logo").removeClass('show-for-small-up');
@@ -549,8 +550,8 @@ var app = {
 	},
 
 	closeDescription: function() {
-		if ($("#faux-map").hasClass("show-for-medium-up")) {
-			$("#faux-map").removeClass("show-for-medium-up");
+		if ($("#faux-map").hasClass("show-for-small-up")) {
+			$("#faux-map").removeClass("show-for-small-up");
 		}
 		
 		$("#download-map-2").removeClass("show-for-large-up");
