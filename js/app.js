@@ -152,9 +152,13 @@ var app = {
 		google.maps.event.addListener(app.map, 'click', function() {
 			app.hideAllMedia();
 		});
+		
 		$("#div1").click(function() {
 			app.hideAllMedia();
-		})
+		});
+		$(".poem").click(function() {
+			app.hideAllMedia();
+		});
 	},
 
 	/* CONTEXT Handler */
