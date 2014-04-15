@@ -124,10 +124,10 @@
             </div>
             <div class="large-20 columns" id="facebook">
 
-              <div><img src="/static/Faceboook-dark.png"></img><span><a href="https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/" target="_blank">Facebook</a></span></div>
+              <div><img src="/static/Faceboook-dark.png"></img><span><a href="javascript:app.sharer('https://www.facebook.com/sharer/sharer.php?u=http://de-atlassen.intk.com/')" target="_blank">Facebook</a></span></div>
             </div>
             <div class="large-20 columns" id="twitter">
-              <div><img src="/static/Twitter-dark.png"></img><span><a href="https://twitter.com/share?url=http://de-atlassen.intk.com" target="_blank">Twitter</a></span></div>
+              <div><img src="/static/Twitter-dark.png"></img><span><a href="javascript:app.sharer('https://twitter.com/share?url=http://de-atlassen.intk.com')" target="_blank">Twitter</a></span></div>
             </div>
         </div> <!-- media sharing -->
 
@@ -252,8 +252,8 @@
     $("#madness").draggable(
     {
         cursorAt: {
-          left: 9,
-          top: 18
+          left: 2,
+          top: 15
         },
         start: function(event, ui) {
           $("#madness").unbind('mouseenter mouseleave');
