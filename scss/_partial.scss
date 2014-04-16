@@ -1698,13 +1698,25 @@ body {
 	border-color: #2e2928;
 }
 
-#desc-content {
+#desc-content-1 {
+	padding:0px !important;
+	height:calc(100% - 330px);
+}
+
+#desc-content-2 {
 	padding:0px !important;
 	height:calc(100% - 360px);
 }
 
 @media only screen and (max-width:40em) {
-	#desc-content {
+	#desc-content-1 {
+		padding:0px;
+		height:calc(100% - 140px);
+	}
+}
+
+@media only screen and (max-width:40em) {
+	#desc-content-2 {
 		padding:0px;
 		height:calc(100% - 140px);
 	}
