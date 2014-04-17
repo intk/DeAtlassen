@@ -9,6 +9,10 @@ var app = {
 	markers: [],
 	minZoom: 2,
 	maxZoom: 5,
+	zoomin: null,
+	zoomout: null,
+	canZoomOut: true,
+	canZoomIn: false,
 
 	centers: {
 		'world': new google.maps.LatLng(28.013801376379213, -1.9775390625),
@@ -27,18 +31,27 @@ var app = {
 
 		var extension = options.tiles_extension;
 
-	
 		var type = options.map_type;
 		
+		var self = this;
+
 		if (type == "world") {
-			this.minZoom = 2
+			this.canZoomOut = false;
+			this.minZoom = 2;
 			this.maxZoom = 4;
+			
+
 		} else if (type == "europe") {
+			this.canZoomOut = true;
 			this.minZoom = 2;
 			this.maxZoom = 5;
+			
+			
 		} else if (type == "amsterdam") {
+			this.canZoomOut = true;
 			this.minZoom = 2;
 			this.maxZoom = 5;
+			
 		}
 
 		var deatlassenOptions = {
@@ -46,7 +59,6 @@ var app = {
 		  	var x,y;
 
 		  	coords = self.validateLimit(coord, zoom);
-		  	
 
 		  	if (coords == null) {
 		  		return self.blankPath;
@@ -145,12 +157,59 @@ var app = {
         			$("#madness").addClass("hide-for-touch");
         			$("#madness").show();
         			$("#wrappingmadness").show();
-        		}
+        			self.zoomin = $("div.gmnoprint div[title='Zoom in']");
+					self.zoomout = $("div.gmnoprint div[title='Zoom out']");
+					self.zoomout.click(function() {
+						//console.log("click!!");
+						//console.log(app.map.getZoom());
+						//console.log(app.minZoom);
+						console.log(app.canZoomOut);
+						if (app.canZoomOut == true) {
+							//window.location.href = "/europe/";
+						}
+					});
+					self.zoomin.click(function() {
+						console.log("zoom in!!");
+						app.canZoomOut = false;
+					})
+        		} else if (type == "europe") {
+					self.zoomin.click(function() {
+						if (app.map.getZoom() == self.maxZoom) {
+							window.location.href = "/";
+						}
+					});
+					self.zoomout.click(function() {
+						if (app.map.getZoom() == self.minZoom) {
+							window.location.href = "/world/";
+						}
+					});
+				} else if (type == "amsterdam") {
+					self.zoomout.click(function() {
+						console.log("click!!");
+						if (app.map.getZoom() == self.minZoom) {
+							window.location.href = "/europe/";
+						}
+					});
+				}
     		}	
 		});
 
+  		
 		google.maps.event.addListener(app.map, 'click', function() {
 			app.hideAllMedia();
+		});
+
+
+		google.maps.event.addListener(app.map, 'zoom_changed', function() {
+			//console.log(app.map.getZoom());
+			if (app.map.getZoom() == app.minZoom) {
+
+				app.canZoomOut = true;
+			}
+
+			if (app.map.getZoom() == app.maxZoom) {
+				app.canZoomIn = true;
+			}
 		});
 
 		$("#div1").click(function() {
