@@ -169,6 +169,24 @@ var app = {
         window.open(url, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width='+winWidth+',height='+winHeight);
 	},
 
+	tsharer: function(url, lg) {
+		var winWidth = 520;
+		var winHeight = 350;
+		var winTop = (screen.height / 2) - (winHeight / 2);
+        var winLeft = (screen.width / 2) - (winWidth / 2);
+
+        var nl = "Bekijk online het 17e eeuwse Amsterdam met ‘Straet View’ van Het Scheepvaartmuseum en download unieke oude kaarten @schpvrtmsm #DeAtlassen";
+        var en = "View online 17th century maps of Amsterdam with 'Straete View’ of the @schpvrtmsm, and download unique maps for free! #DeAtlassen";
+
+        if (lg == "nl") {
+        	turl = url + "&text=" + encodeURIComponent(nl);
+        } else {
+        	turl = url + "&text=" + encodeURIComponent(en);
+        }
+ 
+        window.open(turl, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width='+winWidth+',height='+winHeight);
+	},
+
 	/* CONTEXT Handler */
 
 	mainContext: function(show) {
