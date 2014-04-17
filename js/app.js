@@ -400,6 +400,14 @@ var app = {
 
 	/* EVENTS */
 	triggerEvents: function() {
+		$("#main-logo").click(function() {
+			window.location.href = "http://www.hetscheepvaartmuseum.nl";
+		});
+
+		$("#description-logo").click(function() {
+			window.location.href = "http://www.hetscheepvaartmuseum.nl";
+		});
+
 		$(this.content_image).on("load", this.loadImageEvent);
 		$(this.close_description).click(this.closeDescription);
 		//$("#more-information").click(this.moreInformationEvent);

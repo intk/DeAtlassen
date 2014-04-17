@@ -262,6 +262,7 @@ body {
 
 .page-details[id="main-logo"] {
 	position: absolute;
+	cursor: pointer;
 	display: none;
 	top:-3px;
 	right: 6%;
@@ -274,6 +275,7 @@ body {
 
 .page-map[id="main-logo"] {
 	position: absolute;
+	cursor: pointer;
 	top:-3px;
 	right: 6%;
 	height: 145px;
@@ -285,6 +287,7 @@ body {
 @media only screen and (max-width:40em) {
 	.page-details[id="main-logo"] {
 		position: absolute;
+		cursor:pointer;
 		display: none;
 		top:-3px;
 		right: 6%;
@@ -298,6 +301,7 @@ body {
 @media only screen and (max-width:40em) {
 	.page-map[id="main-logo"] {
 		position: absolute;
+		cursor:pointer;
 		top:-3px;
 		right: 6%;
 		height: 104px;
@@ -309,6 +313,7 @@ body {
 
 #description-logo {
 	position: absolute;
+	cursor: pointer;
 	display: none;
 	top: -2px;
 	left: 45px;
@@ -333,7 +338,7 @@ body {
 
 
 
-#small-logo {
+/*#small-logo {
 	position: absolute;
 	top: -3px;
 	left: 45px;
@@ -341,7 +346,7 @@ body {
 	width: 100px;
 	background-image: url("../static/logo@2x.png");
 	background-size: 100px 145px;
-}
+}*/
 
 .page-details[id="language-menu"] {
 	position:absolute;
@@ -983,6 +988,8 @@ body {
 	border: none;
 }
 
+
+
 #media-sharing-2 a {
 	text-decoration: none;
 	color: #5e5757;
@@ -1100,6 +1107,8 @@ body {
 		width: 330px;
 	}
 }
+
+
 
 /*@media only screen and (min-width: 40.063em) {
 	#description {
@@ -1725,4 +1734,17 @@ body {
 #languages .lg-selected:hover {
 	background: black;
 }
+
+.page-details[id="media-sharing-2"] {
+	width: 163px !important;
+}
+
+.page-details[id="media-sharing"] {
+	width: 163px !important;
+}
+
+.page-details[id="media-sharing"]:after, .page-details[id="media-sharing"]:before {
+	left:37% !important;
+}
+
 
