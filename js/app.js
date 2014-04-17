@@ -389,7 +389,7 @@ var app = {
         this.addMarker({
           lat: 35.782170703266075, 
           lng: 43.06640625, 
-          title: 'Stadt Huys',
+          title: 'LantsZee-Magazyn en Scheeps Timmerwerf_zicht op de werven aan het Oosterdok',
           url: '/'+language+'/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/'
         }); 
 
@@ -417,14 +417,14 @@ var app = {
         this.addMarker({
           lat: -13.325484885597936, 
           lng: -64.4677734375, 
-          title: 'een-ander-gesicht-van-t-landts-magazyn-vanuit-het-westen-gezien',
+          title: 'Een ander gesicht van ’t Landts Magazyn_ vanuit het westen gezien',
           url: '/'+language+'/een-ander-gesicht-van-t-landts-magazyn-vanuit-het-westen-gezien/'
         }); 
 
         this.addMarker({
           lat: 14.647368383896632, 
           lng: 3.2958984375, 
-          title: 'de-waegh',
+          title: 'De Waegh',
           url: '/'+language+'/de-waegh/'
         });
 	},

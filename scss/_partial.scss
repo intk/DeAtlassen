@@ -1722,6 +1722,11 @@ body {
 	height:calc(100% - 340px);
 }
 
+#desc-content-4 {
+	padding:0px !important;
+	height:calc(100% - 384px);
+}
+
 @media only screen and (max-width:40em) {
 	#desc-content-1 {
 		padding:0px;
@@ -1738,6 +1743,13 @@ body {
 
 @media only screen and (max-width:40em) {
 	#desc-content-3 {
+		padding:0px;
+		height:calc(100% - 140px);
+	}
+}
+
+@media only screen and (max-width:40em) {
+	#desc-content-4 {
 		padding:0px;
 		height:calc(100% - 140px);
 	}

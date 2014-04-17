@@ -130,11 +130,11 @@
           <div class="large-20 columns" style="height:150px;background:none;">
             
           </div><!-- gap -->
-          <div class="large-20 columns" style="height:100px; background:none;padding-left:45px;padding-right:45px;padding-top:0px; margin:0px;">
-            <h1>LLantsZee-Magazyn en Scheeps Timmerwerf_zicht op de werven aan het Oosterdok</h1>
+          <div class="large-20 columns" style="height:124px; background:none;padding-left:45px;padding-right:45px;padding-top:0px; margin:0px;">
+            <h1>LantsZee-Magazyn en Scheeps Timmerwerf_zicht op de werven aan het Oosterdok</h1>
           </div><!-- title -->
           
-          <div class="large-20 columns" id="desc-content-2" style="padding:0px;">
+          <div class="large-20 columns" id="desc-content-4" style="padding:0px;">
          
             <div class="fade_top"></div>
             <div class="fade_bottom"></div>
@@ -229,6 +229,7 @@
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
+          map_type = "amsterdam",
           tilesPath: "/images/tiles",
           pinPath: "/static/pin-map.png",
           blankPath: "/static/blank.png",
@@ -236,7 +237,8 @@
           detailsLocation: {
             lat: 35.782170703266075, 
             lng: 43.06640625
-          }
+          },
+          tiles_extension: ".jpg"
         });
         
         app.hackAmsterdamBounds();
