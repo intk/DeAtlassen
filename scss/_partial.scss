@@ -1049,7 +1049,7 @@ body {
 
 #media-sharing-2 #facebook a {
 	text-decoration: none;
-	color: #5e5757;
+	color: #3B5998;
 }
 #media-sharing-2 #facebook {
 	border-bottom: 1px solid;
@@ -1057,7 +1057,7 @@ body {
 }
 #media-sharing-2 #twitter a {
 	text-decoration: none;
-	color: #5e5757;
+	color: #4099ff;
 }
 
 #media-sharing-2 #facebook div img {
@@ -1072,7 +1072,7 @@ body {
 
 #media-sharing-2 #twitter div {
 	margin-top: 15px;
-	color: #5e5757;
+	color: #4099ff;
 }
 
 #media-sharing-2 #twitter div img {
@@ -1773,6 +1773,11 @@ body {
 
 .big[id="download-map-2"]:after, .big[id="download-map-2"]:before {
 	left: 85% !important;
+}
+
+.poem a {
+	text-decoration: underline;
+	color: white;
 }
 
 
