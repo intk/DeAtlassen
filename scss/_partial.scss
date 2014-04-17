@@ -21,10 +21,6 @@ body {
     width: 7px;
 }
 
-::-webkit-scrollbar-track {
-  visibility: hidden; /* doesn't seem to work */
-}
-
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
     background: rgba(0,0,0,0.5);
