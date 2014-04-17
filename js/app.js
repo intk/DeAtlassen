@@ -299,6 +299,9 @@ var app = {
 		var latLng = new google.maps.LatLng(center.lat, center.lng);
 		app.map.setCenter(latLng);
 		app.map.setZoom(options.zoom);
+		if (app.minZoom < options.zoom) {
+			app.canZoomOut = false;
+		}
 	},
 
 	hackAmsterdamBounds: function() {
