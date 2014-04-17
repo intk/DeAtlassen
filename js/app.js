@@ -260,7 +260,7 @@ var app = {
 
         var nl = "Bekijk het 17e eeuwse Amsterdam met ‘Straet View’ van @schpvrtmsm en download unieke gratis kaarten  #DeAtlassen";
         var en = "View 17th century maps of Amsterdam, with 'Streete View' of @schpvrtmsm and download unique free maps! #DeAtlassen";
-        
+
         if (lg == "nl") {
         	turl = url + "&text=" + encodeURIComponent(nl);
         } else {
@@ -389,8 +389,8 @@ var app = {
         this.addMarker({
           lat: 35.782170703266075, 
           lng: 43.06640625, 
-          title: 'LantsZee-Magazyn en Scheeps Timmerwerf_zicht op de werven aan het Oosterdok',
-          url: '/'+language+'/lants-zeemagazyn-en-scheeps-timmerwerf-zicht-op-de-werven-aan-het-oosterdokt-stadt-huys-van-vooren-aen-te-sien/'
+          title: 'Stadt Huys',
+          url: '/'+language+'/stadt-huys/'
         }); 
 
         this.addMarker({
@@ -417,8 +417,8 @@ var app = {
         this.addMarker({
           lat: -13.325484885597936, 
           lng: -64.4677734375, 
-          title: 'Een ander gesicht van ’t Landts Magazyn_ vanuit het westen gezien',
-          url: '/'+language+'/een-ander-gesicht-van-t-landts-magazyn-vanuit-het-westen-gezien/'
+          title: 'LantsZee-Magazyn en Scheeps Timmerwerf_zicht op de werven aan het Oosterdok',
+          url: '/'+language+'/lantszee-magazyn-en-scheeps-timmerwerf_zicht-op-de-werven-aan-het-oosterdok/'
         }); 
 
         this.addMarker({
