@@ -1335,7 +1335,7 @@ body {
 	bottom: 110px;
 	display:none;
 	right: 138px;
-	width: 120px;
+	width: 130px;
 	height: 103px;
 	border:0px solid;
 	-webkit-border-radius: 4px;  
@@ -1374,7 +1374,7 @@ body {
 
 #download-map:after, #download-map:before {
 	top: 100%;
-	left: 22%;
+	left: 24%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -1461,7 +1461,7 @@ body {
 	bottom: 96px;
 	display:none;
 	right: 50px;
-	width: 120px;
+	width: 130px;
 	height: 103px;
 	border:0px solid;
 	-webkit-border-radius: 4px;  
@@ -1500,7 +1500,7 @@ body {
 
 #download-map-2:after, #download-map-2:before {
 	top: 100%;
-	left: 78%;
+	left: 80%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -1746,5 +1746,24 @@ body {
 .page-details[id="media-sharing"]:after, .page-details[id="media-sharing"]:before {
 	left:37% !important;
 }
+
+.big[id="download-map"] {
+	width: 172px !important;
+}
+
+.big[id="download-map-2"] {
+	width: 172px !important;
+}
+
+.big[id="download-map"]:after, .big[id="download-map"]:before {
+	left: 45% !important;
+}
+
+.big[id="download-map-2"]:after, .big[id="download-map-2"]:before {
+	left: 85% !important;
+}
+
+
+
 
 
