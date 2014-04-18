@@ -132,7 +132,7 @@
         </div> <!-- media sharing -->
 
         <!-- DESCRIPTION -->
-        <div class="medium-20 small-20 columns page-map" id="description" > 
+        <div class="small-20 columns page-map" id="description"> 
           <div class="row" style="padding:0px; margin:0px; height:100%; position:relative;">
           <div class="large-20 columns" style="height:150px;background:none;">
             
@@ -144,7 +144,7 @@
           <div class="large-20 columns" id="desc-content-4" style="padding:0px;">
             <div class="fade_top"></div>
             <div class="fade_bottom"></div>
-            <div class="poem">
+            <div class="poem" id="poem_text">
               <small>
               Hiernaast zie je de kaart die de beroemde cartograaf Joan Blaeu in 1649 van Amsterdam maakte.</small>
               <p><small>
@@ -157,19 +157,19 @@
           </div><!-- div -->
         
         <!-- New description bottom divs -->
-        <div class="large-20 columns hide-for-touch hide-for-small"
+        <div class="large-20 columns show-for-small-up"
         id="gradient-bottom-fixed">
         </div>
         
-        <div class="large-20 columns hide-for-touch" id="over-bottom-div">
+        <div class="large-20 columns show-for-small-up" id="over-bottom-div">
         </div>
 
-         <div class="large-20 columns show-for-touch" id="gradient-bottom-touch">
-        </div><!-- Description bottom divs -->
+         <!--<div class="large-20 columns show-for-touch" id="gradient-bottom-touch">
+        </div>-->
 
           <!-- Shares -->
           <div class="large-20 columns" style="position:absolute; bottom:0px; left: 0px; width: 100%; height:100px; background: none;"></div>
-          <div id="description-menus" class="show-for-large-up">
+          <div id="description-menus" class="show-for-small-up">
               <div id="languages">
                 <div class="large-10 columns no-padding" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div>
               
@@ -216,14 +216,15 @@
         <!--<div id="small-logo" class="show-for-small hide-for-large"></div>-->
         <div id="wrappingmadness"></div>
         <div id="madness"></div>
-        <div id="zoom-in-small" class="show-for-touch"></div>
-        <div id="zoom-out-small" class="show-for-touch"></div>
+        <div id="zoom-in-small" class="show-for-small"></div>
+        <div id="zoom-out-small" class="show-for-small"></div>
       </div>  
       
     <!-- JavaScript at the bottom -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="/bower_components/jqueryui/ui/minified/jquery-ui.min.js"></script>
+    <script src="/static/iscroll-4/iscroll.js"></script>
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>

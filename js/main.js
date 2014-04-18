@@ -41,6 +41,8 @@ $(document).ready(function() {
 		// Show markers
 		app.showMarkers();
 
+		//var scroll = new iScroll('poem_text', {snap: true, momentum: false, vScrollbar: true});
+
 	} else {
 		$("#map-canvas").html("Network disconnected.");
 	}

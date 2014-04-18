@@ -352,6 +352,8 @@ body {
 
 
 
+
+
 /*#small-logo {
 	position: absolute;
 	top: -3px;
@@ -1127,6 +1129,12 @@ body {
 	}
 }
 
+@media only screen and (min-width:40.063em) {
+	#description {
+		width: 330px;
+	}
+}
+
 
 
 /*@media only screen and (min-width: 40.063em) {
@@ -1640,7 +1648,7 @@ body {
 		padding-left:45px;
 		padding-right:45px;
 		padding-top:26px;
-		overflow: auto;
+		overflow-y: scroll;
 		line-height: 1.4;
 		cursor:auto;
 	}
@@ -1746,7 +1754,7 @@ body {
 	height:calc(100% - 384px);
 }
 
-@media only screen and (max-width:40em) {
+/*@media only screen and (max-width:40em) {
 	#desc-content-1 {
 		padding:0px;
 		height:calc(100% - 140px);
@@ -1772,7 +1780,7 @@ body {
 		padding:0px;
 		height:calc(100% - 140px);
 	}
-}
+}*/
 
 #languages .lg-selected:hover {
 	background: black;
