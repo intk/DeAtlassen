@@ -709,6 +709,14 @@ body {
 	border-bottom-right-radius: 4px;
 }
 
+#languages #nl {
+	width: 50px;
+}
+
+#languages #en {
+	width: 50px;
+}
+
 #content-menu {
 	padding: 0px;
 	position: absolute;
@@ -752,6 +760,11 @@ body {
 
 #content-menu #share {
 	position: relative;
+	width: 50px;
+}
+
+#content-menu #download {
+	width: 50px;
 }
 
 #info-icon-2 {
@@ -1132,11 +1145,11 @@ body {
 	}
 }
 
-/*@media only screen and (min-width:40.063em) {
+@media only screen and (min-width:40.063em) {
 	#description {
 		width: 330px;
 	}
-}*/
+}
 
 
 
@@ -1822,6 +1835,21 @@ body {
 	color: white;
 }
 
+#download-icon {
+	width: 50px;
+}
+
+#download-size {
+	width: 80px;
+}
+
+#info-icon-2 {
+	width: 34px;
+}
+
+#info-text {
+	width: 96px;
+}
 
 
 

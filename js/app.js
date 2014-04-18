@@ -270,7 +270,7 @@ var app = {
 							}
 						}
 					});
-					
+
 					$("#zoom-in-small").click(function() {
 						if (app.map.getZoom() == app.maxZoom) {
 							if (app.firstOnMax) {
@@ -578,15 +578,15 @@ var app = {
 	},
 
 	hideAllMedia: function() {
-		$("#media-sharing-2").removeClass("show-for-large-up");
+		$("#media-sharing-2").removeClass("show-for-medium-up");
 		$("#media-sharing-2").hide();
-		$("#media-sharing").removeClass("show-for-large-up");
+		$("#media-sharing").removeClass("show-for-medium-up");
 		$("#media-sharing").hide();
-		$("#download-map").removeClass("show-for-large-up");
+		$("#download-map").removeClass("show-for-medium-up");
 		$("#download-map").hide();
-		$("#download-options").removeClass("show-for-large-up");
+		$("#download-options").removeClass("show-for-medium-up");
 		$("#download-options").hide();
-		$("#download-map-2").removeClass("show-for-large-up");
+		$("#download-map-2").removeClass("show-for-medium-up");
 		$("#download-map-2").hide();
 	},
 
@@ -610,58 +610,58 @@ var app = {
 		$("#content-menu #share").click(this.shareDescriptionButton);
 		
 		$("#main-menu #download").click(function () {
-			$("#media-sharing-2").removeClass("show-for-large-up");
+			$("#media-sharing-2").removeClass("show-for-medium-up");
 			$("#media-sharing-2").hide();
-			$("#media-sharing").removeClass("show-for-large-up");
+			$("#media-sharing").removeClass("show-for-medium-up");
 			$("#media-sharing").hide();
-			$("#download-options").removeClass("show-for-large-up");
+			$("#download-options").removeClass("show-for-medium-up");
 			$("#download-options").hide();
 
 			if (!$("#download-map").is(":visible")) {
 				$("#download-map").fadeIn();
-				$("#download-map").addClass("show-for-large-up");
+				$("#download-map").addClass("show-for-medium-up");
 				
 			} else {
 				$("#download-map").fadeOut();
-				$("#download-map").removeClass("show-for-large-up");
+				$("#download-map").removeClass("show-for-medium-up");
 			}
 		});
 
 		$("#select-map").click(function () {
-			$("#download-map").removeClass("show-for-large-up");
+			$("#download-map").removeClass("show-for-medium-up");
 			$("#download-map").hide();
-			$("#media-sharing-2").removeClass("show-for-large-up");
+			$("#media-sharing-2").removeClass("show-for-medium-up");
 			$("#media-sharing-2").hide();
-			$("#media-sharing").removeClass("show-for-large-up");
+			$("#media-sharing").removeClass("show-for-medium-up");
 			$("#media-sharing").hide();
 
 			if (!$("#download-options").is(":visible")) {
 				$("#download-options").fadeIn();
-				$("#download-options").addClass("show-for-large-up");
+				$("#download-options").addClass("show-for-medium-up");
 				
 			} else {
 				$("#download-options").fadeOut();
-				$("#download-options").removeClass("show-for-large-up");
+				$("#download-options").removeClass("show-for-medium-up");
 			}
 		});
 
 		$("#content-menu #download").click(function (){
-			$("#download-options").removeClass("show-for-large-up");
+			$("#download-options").removeClass("show-for-medium-up");
 			$("#download-options").hide();
-			$("#download-map").removeClass("show-for-large-up");
+			$("#download-map").removeClass("show-for-medium-up");
 			$("#download-map").hide();
-			$("#media-sharing-2").removeClass("show-for-large-up");
+			$("#media-sharing-2").removeClass("show-for-medium-up");
 			$("#media-sharing-2").hide();
-			$("#media-sharing").removeClass("show-for-large-up");
+			$("#media-sharing").removeClass("show-for-medium-up");
 			$("#media-sharing").hide();
 
 			if (!$("#download-map-2").is(":visible")) {
 				$("#download-map-2").fadeIn();
-				$("#download-map-2").addClass("show-for-large-up");
+				$("#download-map-2").addClass("show-for-medium-up");
 				
 			} else {
 				$("#download-map-2").fadeOut();
-				$("#download-map-2").removeClass("show-for-large-up");
+				$("#download-map-2").removeClass("show-for-medium-up");
 			}
 		});
 
@@ -680,42 +680,42 @@ var app = {
 	},
 
 	shareDescriptionButton: function () {
-		$("#download-map-2").removeClass("show-for-large-up");
+		$("#download-map-2").removeClass("show-for-medium-up");
 		$("#download-map-2").hide();
-		$("#download-map").removeClass("show-for-large-up");
+		$("#download-map").removeClass("show-for-medium-up");
 		$("#download-map").hide();
-		$("#media-sharing").removeClass("show-for-large-up");
+		$("#media-sharing").removeClass("show-for-medium-up");
 		$("#media-sharing").hide();
-		$("#download-options").removeClass("show-for-large-up");
+		$("#download-options").removeClass("show-for-medium-up");
 		$("#download-options").hide();
 		if (!$("#media-sharing-2").is(":visible")) {
 			$("#media-sharing-2").fadeIn();
-			$("#media-sharing-2").addClass("show-for-large-up");
+			$("#media-sharing-2").addClass("show-for-medium-up");
 			
 		} else {
 			$("#media-sharing-2").fadeOut();
-			$("#media-sharing-2").removeClass("show-for-large-up");
+			$("#media-sharing-2").removeClass("show-for-medium-up");
 			
 		}
 	},
 
 	shareButton: function() {
-		$("#download-map-2").removeClass("show-for-large-up");
+		$("#download-map-2").removeClass("show-for-medium-up");
 		$("#download-map-2").hide();
-		$("#download-map").removeClass("show-for-large-up");
+		$("#download-map").removeClass("show-for-medium-up");
 		$("#download-map").hide();
-		$("#media-sharing-2").removeClass("show-for-large-up");
+		$("#media-sharing-2").removeClass("show-for-medium-up");
 		$("#media-sharing").hide();
-		$("#download-options").removeClass("show-for-large-up");
+		$("#download-options").removeClass("show-for-medium-up");
 		$("#download-options").hide();
 		
 		if (!$("#media-sharing").is(":visible")) {
 			$("#media-sharing").fadeIn();
-			$("#media-sharing").addClass("show-for-large-up");
+			$("#media-sharing").addClass("show-for-medium-up");
 			
 		} else {
 			$("#media-sharing").fadeOut();
-			$("#media-sharing").removeClass("show-for-large-up");	
+			$("#media-sharing").removeClass("show-for-medium-up");	
 		}
 	},
 
@@ -733,9 +733,9 @@ var app = {
 	},
 
 	moreInformationEvent: function () {
-		$("#main-menu").removeClass('show-for-large-up');
-		$("#more-info-2").removeClass('show-for-large-up');
-		$("#language-menu").removeClass('show-for-large-up');
+		$("#main-menu").removeClass('show-for-medium-up');
+		$("#more-info-2").removeClass('show-for-medium-up');
+		$("#language-menu").removeClass('show-for-medium-up');
 		$("#more-info-2").fadeOut(600);
 		$("#main-menu").fadeOut(600);
 		$("#language-menu").fadeOut(600);
@@ -744,17 +744,17 @@ var app = {
 			$("#main-logo").removeClass('show-for-small-up');
 		}
 
-		if (!$(".page-details #description").hasClass('show-for-large-up')) {
-			$(".page-details #description").addClass('show-for-large-up');
+		if (!$(".page-details #description").hasClass('show-for-medium-up')) {
+			$(".page-details #description").addClass('show-for-medium-up');
 		}
 
-		$("#download-options").removeClass("show-for-large-up");
+		$("#download-options").removeClass("show-for-medium-up");
 		$("#download-options").hide();
-		$("#media-sharing").removeClass("show-for-large-up");
+		$("#media-sharing").removeClass("show-for-medium-up");
 		$("#media-sharing").hide();
-		$("#download-map").removeClass("show-for-large-up");
+		$("#download-map").removeClass("show-for-medium-up");
 		$("#download-map").hide();
-		$("#download-map-2").removeClass("show-for-large-up");
+		$("#download-map-2").removeClass("show-for-medium-up");
 		$("#download-map-2").hide();
 		$("#main-logo").hide();
 		$("#description").fadeIn(800);
@@ -768,12 +768,12 @@ var app = {
 		$("#image-wrapper").fadeIn();
 		$("#faux-map").show();
 		$("#description").fadeIn();
-		$("#content-image").addClass("show-for-large-up");
+		$("#content-image").addClass("show-for-medium-up");
 	},
 
 	smallMoreInfoEvent: function() {
 		$("#description").fadeIn();
-		$("#description").removeClass("show-for-large-up");
+		$("#description").removeClass("show-for-medium-up");
 
 		if ($("#main-logo").hasClass('show-for-small-up')) {
 			$("#main-logo").removeClass('show-for-small-up');
@@ -792,20 +792,20 @@ var app = {
 			$("#faux-map").removeClass("show-for-small-up");
 		}
 		
-		$("#download-map-2").removeClass("show-for-large-up");
+		$("#download-map-2").removeClass("show-for-medium-up");
 		$("#download-map-2").hide();
-		$("#media-sharing-2").removeClass("show-for-large-up");
+		$("#media-sharing-2").removeClass("show-for-medium-up");
 		$("#media-sharing-2").hide();
 		
-		$("#main-menu").addClass('show-for-large-up');
-		$("#more-info-2").addClass('show-for-large-up');
-		$("#language-menu").addClass('show-for-large-up');
+		$("#main-menu").addClass('show-for-medium-up');
+		$("#more-info-2").addClass('show-for-medium-up');
+		$("#language-menu").addClass('show-for-medium-up');
 		$("#main-menu").fadeIn(800);
 		$("#more-info-2").fadeIn(800);
 		$("#language-menu").fadeIn(800);
 
 		$("#description").fadeOut();
-		$("#description").removeClass("show-for-large-up");
+		$("#description").removeClass("show-for-medium-up");
 		
 		if (!$("#main-logo").hasClass("show-for-small-up")) {
 			$("#main-logo").addClass('show-for-small-up');
