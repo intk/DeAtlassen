@@ -169,7 +169,25 @@ var app = {
         			$("#madness").show();
         			$("#wrappingmadness").show();
         			
-					
+					$("#zoom-in-small").click(function() {
+						app.firstOnMin = true;
+						app.canZoomOut = false;
+					});
+
+					$("#zoom-out-small").click(function() {
+						if (app.canZoomOut) {
+							window.location.href = "/europe/";
+						}
+						//console.log(app.firstOnMin);
+						if (app.map.getZoom() == app.minZoom) {
+							if (app.firstOnMin) {
+								app.firstOnMin = false;
+							} else {
+								window.location.href = "/europe/";
+							}
+						}
+					});
+
 					self.zoomout.click(function() {
 						if (app.canZoomOut) {
 							window.location.href = "/europe/";
@@ -190,6 +208,32 @@ var app = {
 					})
 
         		} else if (type == "europe") {
+        			$("#zoom-in-small").click(function() {
+						app.canZoomOut = false;
+						app.firstOnMin = true;
+						if (app.map.getZoom() == app.maxZoom) {
+							if (app.firstOnMax) {
+								app.firstOnMax = false;
+							} else {
+								window.location.href = "/";
+							}
+						}
+					});
+
+					$("#zoom-out-small").click(function() {
+						if (app.canZoomOut) {
+							window.location.href = "/world/";
+						}
+						console.log(app.firstOnMin);
+						if (app.map.getZoom() == app.minZoom) {
+							if (app.firstOnMin) {
+								app.firstOnMin = false;
+							} else {
+								window.location.href = "/world/";
+							}
+						}
+					});
+
 					self.zoomin.click(function() {
 						app.canZoomOut = false;
 						app.firstOnMin = true;
@@ -218,6 +262,16 @@ var app = {
 				} else if (type == "world") {
 					self.zoomin.click(function() {
 						
+						if (app.map.getZoom() == app.maxZoom) {
+							if (app.firstOnMax) {
+								app.firstOnMax = false;
+							} else {
+								window.location.href = "/europe/";
+							}
+						}
+					});
+					
+					$("#zoom-in-small").click(function() {
 						if (app.map.getZoom() == app.maxZoom) {
 							if (app.firstOnMax) {
 								app.firstOnMax = false;
