@@ -15,6 +15,7 @@ var app = {
 	canZoomIn: false,
 	firstOnMax: true,
 	firstOnMin: true,
+	defaultZoom: 2,
 
 	centers: {
 		'world': new google.maps.LatLng(28.013801376379213, -1.9775390625),
@@ -50,7 +51,8 @@ var app = {
 			
 			
 		} else if (type == "amsterdam") {
-			this.canZoomOut = true;
+			this.canZoomOut = false;
+			this.defaultZoom = 3;
 			this.minZoom = 2;
 			this.maxZoom = 5;
 			
@@ -131,7 +133,7 @@ var app = {
 		
   		var mapOptions = {
     		center: app.centers[type],
-    		zoom: 2,
+    		zoom: self.defaultZoom,
     		zoomControl: true,
 
     		zoomControlOptions: {
