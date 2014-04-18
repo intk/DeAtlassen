@@ -431,8 +431,8 @@ var app = {
         }); 
 
         this.addMarker({
-          lat: -11.092165893501988, 
-          lng: 74.267578125, 
+          lat: -31.9921875,
+		  lng: 1.098565496040652,
           title: 'Het West Indisch Huys',
           url: '/'+language+'/west-indisch-huys/'
         }); 
