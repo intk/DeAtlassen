@@ -454,7 +454,7 @@ var app = {
         this.addMarker({
           lat: -13.325484885597936, 
           lng: -64.4677734375, 
-          title: 'LantsZee-Magazyn en Scheeps Timmerwerf_zicht op de werven aan het Oosterdok',
+          title: "’s Lants Zee-magazyn en Scheeps Timmerwerf",
           url: '/'+language+'/lantszee-magazyn-en-scheeps-timmerwerf_zicht-op-de-werven-aan-het-oosterdok/'
         }); 
 
