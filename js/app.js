@@ -354,6 +354,36 @@ var app = {
 		this.map.fitBounds(this.bounds);
 	},
 
+	addWorldMarker: function() {
+		if (language == "nl") {
+			var	url = "/world/"; 
+		} else {
+			var url = "/en/world/"
+		}
+
+		this.addMarker({
+          lat: 23.37890625,
+		  lng: 50.680797145321655,
+          title: 'World',
+          url: url
+        });
+	},
+
+	addEuropeMarker: function(language) {
+		if (language == "nl") {
+			var	url = "/europe/"; 
+		} else {
+			var url = "/en/europe/"
+		}
+
+		this.addMarker({
+          lat: -17.05078125,
+		  lng: 29.573457073017593,
+          title: 'Europe',
+          url: url
+        });
+	},
+
 	/* Markers handling functions */
 	addMarkers: function(language) {
 		
