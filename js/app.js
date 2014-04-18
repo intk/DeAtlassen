@@ -359,14 +359,16 @@ var app = {
 	addWorldMarker: function(language) {
 		if (language == "nl") {
 			var	url = "/europe/"; 
+			var title = "Europa";
 		} else {
-			var url = "/en/europe/"
+			var url = "/en/europe/";
+			var title = "Europe";
 		}
 
 		this.addMarker({
           lat: 50.45750402042058, 
           lng: 23.203125,
-          title: 'Europe',
+          title: title,
           url: url
         });
 	},
