@@ -299,11 +299,11 @@ Scheepvaartmuseum, the National Maritime Museum, in Amsterdam.
       $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
     });
 
-    $("#madness").click(function () {
+    /*$("#madness").click(function () {
           $("#madness").css("width", "22");
           $("#madness").css("height", "32");
           $("#madness").css("background", "url('/static/Man.png')");
-    });
+    });*/
 
 
     $("#madness").draggable(
@@ -315,37 +315,33 @@ Scheepvaartmuseum, the National Maritime Museum, in Amsterdam.
           $("#madness").css("background", "url('/static/Man.png')");
 
         },
+
         stop: function(event, ui) {
 
           // Show dropped position.
           var Stoppos = $(this).position();
-          console.log("x = "+Stoppos.left);
-          console.log("x = "+Stoppos.top);
-          
-          console.log($(document.elementFromPoint(Stoppos.left-8, Stoppos.top-16)));
-          console.log(Stoppos); 
 
-          $("#madness").removeClass("show-for-large-up");
+          $("#madness").removeClass("hide-for-touch");
           $("#madness").hide();
           $(document.elementFromPoint(Stoppos.left+11, (Stoppos.top+16))).trigger('click');
-
-          $("#madness").mouseenter(function() {
-      $("#madness").css("width", "23px");
-      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -211px -102px");
-
-    });
-    $("#madness").mouseleave(function() {
-      $("#madness").css("width", "19px");
-      $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
-    });
 
           $("#madness").css("top", "105px");
           $("#madness").css("left", "79px");
           $("#madness").css("width", "19px");
           $("#madness").css("height", "37px");
           $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px;");
+          $("#madness").css("background-image", "url('/static/google_maps_sprite_api_002.png') -15px -102px;");
           $("#madness").show();
-          $("#madness").addClass("show-for-large-up");
+          $("#madness").addClass("hide-for-touch");
+
+          $("#madness").mouseenter(function() {
+            $("#madness").css("width", "23px");
+            $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -211px -102px");
+          });
+          $("#madness").mouseleave(function() {
+            $("#madness").css("width", "19px");
+            $("#madness").css("background", "url('/static/google_maps_sprite_api_002.png') -15px -102px");
+          });
         }
     });
     </script>
