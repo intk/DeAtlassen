@@ -354,22 +354,7 @@ var app = {
 		this.map.fitBounds(this.bounds);
 	},
 
-	addWorldMarker: function() {
-		if (language == "nl") {
-			var	url = "/world/"; 
-		} else {
-			var url = "/en/world/"
-		}
-
-		this.addMarker({
-          lat: 23.37890625,
-		  lng: 50.680797145321655,
-          title: 'World',
-          url: url
-        });
-	},
-
-	addEuropeMarker: function(language) {
+	addWorldMarker: function(language) {
 		if (language == "nl") {
 			var	url = "/europe/"; 
 		} else {
@@ -377,9 +362,24 @@ var app = {
 		}
 
 		this.addMarker({
-          lat: -17.05078125,
-		  lng: 29.573457073017593,
+          lat: 50.45750402042058, 
+          lng: 23.203125,
           title: 'Europe',
+          url: url
+        });
+	},
+
+	addEuropeMarker: function(language) {
+		if (language == "nl") {
+			var	url = "/"; 
+		} else {
+			var url = "/en/"
+		}
+
+		this.addMarker({
+          lat: 29.80251790576445,
+		  lng: -18.80859375,
+          title: 'Amsterdam',
           url: url
         });
 	},
