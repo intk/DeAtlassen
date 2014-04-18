@@ -426,14 +426,14 @@ var app = {
         this.addMarker({
           lat: 35.782170703266075, 
           lng: 43.06640625, 
-          title: 'Stadt Huys',
+          title: "t'Stadt Huys",
           url: '/'+language+'/stadt-huys/'
         }); 
 
         this.addMarker({
           lat: -11.092165893501988, 
           lng: 74.267578125, 
-          title: 'West Indisch Huys',
+          title: 'Het West Indisch Huys',
           url: '/'+language+'/west-indisch-huys/'
         }); 
 
