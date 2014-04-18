@@ -419,7 +419,7 @@ var app = {
         this.addMarker({
           lat: -11.480024648555816, 
           lng: 30.3662109375, 
-          title: 'Nieuwe Brugh',
+          title: 'De Nieuwe Brugh',
           url: '/'+language+'/nieuwe-brugh/'
         });  
 
