@@ -63,7 +63,7 @@
               <div class="large-5 columns" id="info-icon-2">
                 <img src="/static/info.png"/>
               </div>
-              <div class="large-15 columns" id="info-text">
+              <div class="large-15 columns en" id="info-text">
                 More information
               </div>
             </div>
@@ -91,7 +91,7 @@
         </div><!-- download-options -->
 
 
-          <div id="language-menu" class="show-for-large-up page-map">
+          <div id="language-menu" class="show-for-medium-up page-map">
               <a href="/"><div class="large-10 columns no-padding lg-not-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
               <div class="lg-format">NL</div>
               </div></a>
@@ -112,8 +112,6 @@
             </div></a>
         </div> <!-- media sharing -->
 
-        
-
 
 <!-- DESCRIPTION -->
         <div class="small-20 columns page-map" id="description" > 
@@ -127,9 +125,7 @@
           
           <div class="large-20 columns" id="desc-content-4">
           
-            <div class="fade_top"></div>
-            <div class="fade_bottom"></div>
-            <div class="poem">
+            <div class="poem" id="poem_text">
               <small>
               This is the map of Amsterdam made by the famous cartographer Joan 
 
@@ -156,10 +152,13 @@ Mercator and Blaeu are on view in the <a href="http://www.hetscheepvaartmuseum.n
 Scheepvaartmuseum, the National Maritime Museum, in Amsterdam.
               
             </small></p>
-            </div><!-- poem -->
-           
-          </div><!-- div -->
 
+            </div><!-- poem -->
+            <div class="fade_top"></div>
+</div><!-- div -->
+            
+            <div class="fade_bottom"></div>
+            
             <!-- New description bottom divs -->
         <div class="large-20 columns show-for-small-up"
         id="gradient-bottom-fixed">
@@ -226,6 +225,21 @@ Scheepvaartmuseum, the National Maritime Museum, in Amsterdam.
         <div id="small-info" class="show-for-small no-padding page-map">
           <img src="/static/trans.gif"></img>
         </div>
+        
+        <div id="small-maps" class="show-for-small"></div>
+
+         <div id="download-options-2">
+            <div class="large-20 columns" id="title">
+              <div><span>Explore other maps</span></div>
+            </div>
+            <a href="/en/europe/"><div class="large-20 columns" id="europe">
+              <div><span>Europe</span></div>
+            </div></a>
+            <a href="/en/world/"><div class="large-20 columns" id="world">
+              <div><span>World</span></div>
+            </div></a>
+        </div><!-- map-options -->
+
         <div id="main-logo" class="show-for-small-up page-map"></div>
         <!--<div id="small-logo" class="show-for-small hide-for-large"></div>-->
         <div id="wrappingmadness"></div>
@@ -240,9 +254,11 @@ Scheepvaartmuseum, the National Maritime Museum, in Amsterdam.
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="/bower_components/jqueryui/ui/minified/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/bower_components/iscroll/build/iscroll.js"></script>
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
     <script src="/js/app.js"></script>
     <script>
+        
         $(document).ready(function() {
           // INIT Front-end framework
           $(document).foundation();
@@ -283,14 +299,17 @@ Scheepvaartmuseum, the National Maritime Museum, in Amsterdam.
             
             // Show markers
             app.showMarkers();
-
+            /*var scroll = new IScroll(document.getElementById('desc-content-4'), {
+              scrollY: true,
+              tap: true
+            });*/ 
 
           } else {
             $("#map-canvas").html("Network disconnected.");
           }
       });
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript"> 
 
     $("#madness").mouseenter(function() {
       $("#madness").css("width", "23px");

@@ -44,7 +44,7 @@
         </div>-->
 
         <div class="large-16 medium-14 columns" id="left"></div>
-            <div id="main-menu" class="show-for-large-up page-map">
+            <div id="main-menu" class="show-for-medium-up page-map">
               <div class="large-6 columns" id="select-map" style="border-right:1px solid; border-color:rgba(212, 213, 209, 1.0000);">
               <img src="/static/trans.gif"></img>
               </div>
@@ -58,12 +58,12 @@
               </div>
           </div><!-- main-menu -->
           
-          <div id="more-info-2" class="show-for-large-up page-map" style="width:130px;right:76px;">
+          <div id="more-info-2" class="show-for-medium-up page-map" style="width:130px;right:76px;">
             <div class="row" style="height:100%; padding:0px; margin:0px;">
               <div class="large-5 columns" id="info-icon-2">
                 <img src="/static/info.png"/>
               </div>
-              <div class="large-15 columns" id="info-text">
+              <div class="large-15 columns en" id="info-text">
                 More information
               </div>
             </div>
@@ -90,7 +90,7 @@
             </div></a>
         </div><!-- download-options -->
           
-          <div id="language-menu" class="show-for-large-up page-map">
+          <div id="language-menu" class="show-for-medium-up page-map">
               <a href="/europe/"><div class="large-10 columns no-padding lg-not-selected" id="nl" style="border-right:1px solid; border-color:#dfe0dd;">
               <div class="lg-format">NL</div>
               </div></a>
@@ -138,8 +138,7 @@
           
           <div class="large-20 columns" id="desc-content-4" style="padding:0px;">
           
-            <div class="fade_top"></div>
-            <div class="fade_bottom"></div>
+            
             <div class="poem">
               <small>
               This is the map of Europe made by the famous cartographer Blaeu in
@@ -175,22 +174,21 @@ Scheepvaartmuseum, the National Maritime Museum, in Amsterdam.
               </small>
             </small></p>
             </div><!-- poem -->
-           
+           <div class="fade_top"></div>
           </div><!-- div -->
 
-            <!-- New description bottom divs -->
-        <div class="large-20 columns hide-for-touch hide-for-small"
+            <div class="fade_bottom"></div>
+             <!-- New description bottom divs -->
+        <div class="large-20 columns show-for-small-up"
         id="gradient-bottom-fixed">
         </div>
         
-        <div class="large-20 columns hide-for-touch" id="over-bottom-div">
+        <div class="large-20 columns show-for-small-up" id="over-bottom-div">
         </div>
 
-         <div class="large-20 columns show-for-touch" id="gradient-bottom-touch">
-        </div><!-- Description bottom divs -->
           <!-- Shares -->
           <div class="large-20 columns" style="position:absolute; bottom:0px; left: 0px; width: 100%; height:100px; background: none;"></div>
-          <div id="description-menus" class="show-for-large-up">
+          <div id="description-menus" class="show-for-small-up">
               <div id="languages">
                 <a href="/europe/"><div class="large-10 columns no-padding lg-selected" id="nl" style="border-right:1px solid; border-color:#151312;"><div class="lg-format">NL</div></div></a>
               
@@ -228,15 +226,30 @@ Scheepvaartmuseum, the National Maritime Museum, in Amsterdam.
 
         <div id="faux-map" class="page-map">
         </div>
-        <div id="small-info" class="show-for-medium-down no-padding page-map">
+        <div id="small-info" class="show-for-small no-padding page-map">
           <img src="/static/trans.gif"></img>
         </div>
+
+        <div id="small-maps" class="show-for-small"></div>
+
+        <div id="download-options-2">
+            <div class="large-20 columns" id="title">
+              <div><span>Explore other maps</span></div>
+            </div>
+            <a href="/en/"><div class="large-20 columns" id="europe">
+              <div><span>Amsterdam</span></div>
+            </div></a>
+            <a href="/en/world/"><div class="large-20 columns" id="world">
+              <div><span>World</span></div>
+            </div></a>
+        </div><!-- map-options -->
+
         <div id="main-logo" class="show-for-small-up page-map"></div>
         <!--<div id="small-logo" class="show-for-small hide-for-large"></div>-->
      
         <!--<div id="new-zoom-position"></div>-->
-        <div id="zoom-in-small" class="show-for-touch"></div>
-        <div id="zoom-out-small" class="show-for-touch"></div>
+        <div id="zoom-in-small" class="show-for-medium-down"></div>
+        <div id="zoom-out-small" class="show-for-medium-down"></div>
       </div>  
       
     <!-- JavaScript at the bottom -->
