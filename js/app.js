@@ -794,6 +794,8 @@ var app = {
 		}
 		$("#small-info").hide();
 		$("#small-info").removeClass('show-for-small');
+		$("#small-maps").hide();
+		$("#small-maps").removeClass('show-for-small');
 		$("#faux-map").hide();
 		$("#description").fadeIn();
 	},
@@ -824,7 +826,9 @@ var app = {
 		$("#main-logo").show();
 		$("#faux-map").show();
 		$("#small-info").addClass('show-for-small');
-		$("#small-info").fadeIn();
+		$("#small-info").fadeIn(300);
+		$("#small-maps").addClass('show-for-small');
+		$("#small-maps").fadeIn(300);
 	}
 }
 

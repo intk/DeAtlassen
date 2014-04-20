@@ -1877,10 +1877,8 @@ body {
 	right: calc(6% + 40px);
 	width: 34px;
 	height: 34px;
-	background-color: #fcfbf8;
-	border-radius: 2px;
-	border: 1px solid;
-	border-color: #8e8e8e;
+	background: url("/static/small-maps.png");
+	background-size: 34px 34px;
 }
 
 #download-options-2 {
