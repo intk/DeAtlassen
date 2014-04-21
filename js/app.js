@@ -588,6 +588,7 @@ var app = {
 		$("#download-options").hide();
 		$("#download-map-2").removeClass("show-for-small-up");
 		$("#download-map-2").hide();
+		$("#download-options-2").hide();
 	},
 
 	/* EVENTS */
