@@ -242,14 +242,15 @@ verbeurt hebben’.</em>
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "/images/tiles",
+          tilesPath: "/images/jpg",
           pinPath: "/static/pin-map.png",
           blankPath: "/static/blank.png",
           position: '',
           detailsLocation: {
             lat: 35.782170703266075, 
             lng: 43.06640625
-          }
+          },
+          tiles_extension: ".jpg"
         });
         
         app.hackAmsterdamBounds();

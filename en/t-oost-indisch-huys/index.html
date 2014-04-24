@@ -242,14 +242,15 @@ courtyard.
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "/images/tiles",
+          tilesPath: "/images/jpg",
           pinPath: "/static/pin-map.png",
           blankPath: "/static/blank.png",
           position: '',
           detailsLocation: {
             lat: 31.728167146023935, 
             lng: 4.5263671875
-          }
+          },
+          tiles_extension: ".jpg"
         });
         
         app.hackAmsterdamBounds();

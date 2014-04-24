@@ -236,14 +236,15 @@ Westerkerk churches at the same time, to serve as places of worship for those di
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "/images/tiles",
+          tilesPath: "/images/jpg",
           pinPath: "/static/pin-map.png",
           blankPath: "/static/blank.png",
           position: '',
           detailsLocation: {
             lat: 7.623886853120036,
             lng: 93.427734375      
-          }
+          },
+          tiles_extension: ".jpg"
         });
         
         app.hackAmsterdamBounds();

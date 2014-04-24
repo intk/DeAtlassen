@@ -237,14 +237,15 @@ The first stone was laid in 1603 by Mayor Bikker's son. De Keyser himself was bu
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "/images/tiles",
+          tilesPath: "/images/jpg",
           pinPath: "/static/pin-map.png",
           blankPath: "/static/blank.png",
           position: '',
           detailsLocation: {
             lat: 33.54139466898275,
             lng: -7.470703125
-          }
+          },
+          tiles_extension: ".jpg"
         });
 
         // Trigger events

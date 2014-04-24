@@ -239,14 +239,15 @@ romp, en een houten spits, de vorm die hij nu nog heeft.
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "../../images/tiles",
+          tilesPath: "../../images/jpg",
           pinPath: "../../static/pin-map.png",
           blankPath: "../../static/blank.png",
           position: '',
           detailsLocation: {
           lat: 9.579084335882534,
           lng: -22.32421875
-          }
+          },
+          tiles_extension: ".jpg"
         });
         
         app.hackAmsterdamBounds();

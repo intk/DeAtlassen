@@ -244,14 +244,15 @@ York City).
       if (typeof(google) != 'undefined') {
         // INIT Google Maps features
         app.initMap({
-          tilesPath: "/images/tiles",
+          tilesPath: "/images/jpg",
           pinPath: "/static/pin-map.png",
           blankPath: "/static/blank.png",
           position: '',
           detailsLocation: {
             lat: -11.092165893501988, 
             lng: 74.267578125
-          }
+          },
+          tiles_extension: ".jpg"
         });
         
         app.hackAmsterdamBounds();
