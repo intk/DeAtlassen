@@ -2024,24 +2024,24 @@ body {
 	}
 
 	#description h1 {
-		font-size: 1.255rem;
+		font-size: 1.000rem;
 	}
 
 	#desc-content-1 {
 		padding:0px !important;
-		height:calc(100% - 245px) !important;
+		height:calc(100% - 225px) !important;
 	}
 
 	#desc-content-2 {
-		height:calc(100% - 275px) !important;
+		height:calc(100% - 201px) !important;
 	}
 
 	#desc-content-3 {
-		height:calc(100% - 255px) !important;
+		height:calc(100% - 225px) !important;
 	}
 
 	#desc-content-4 {
-		height: calc(100% - 299px) !important;
+		height: calc(100% - 225px) !important;
 	}
 
 	#gradient-bottom-fixed {
@@ -2066,6 +2066,11 @@ body {
 
 	#download-map-2 {
 		bottom: 75px !important;
+	}
+
+	#main-title {
+		height: 50px !important;
+		padding-top: 0px !important;
 	}
 }
 
