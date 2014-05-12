@@ -2013,4 +2013,59 @@ body {
 }*/
 
 
+/* Responsive for small smartphones */
+@media only screen and (max-width:40em) {
+	.gap {
+		height: 100px !important;
+	}
+
+	.poem p:first-child {
+		margin: 0px !important;
+	}
+
+	#description h1 {
+		font-size: 1.255rem;
+	}
+
+	#desc-content-1 {
+		padding:0px !important;
+		height:calc(100% - 245px) !important;
+	}
+
+	#desc-content-2 {
+		height:calc(100% - 275px) !important;
+	}
+
+	#desc-content-3 {
+		height:calc(100% - 255px) !important;
+	}
+
+	#desc-content-4 {
+		height: calc(100% - 299px) !important;
+	}
+
+	#gradient-bottom-fixed {
+		bottom: 75px !important;
+	}
+
+	#over-bottom-div {
+		height: 75px !important;
+	}
+
+	#languages {
+		bottom: 18px !important;
+	}
+
+	#content-menu {
+		bottom: 18px !important;
+	}
+
+	#media-sharing-2 {
+		bottom: 75px !important;
+	}
+
+	#download-map-2 {
+		bottom: 75px !important;
+	}
+}
 
