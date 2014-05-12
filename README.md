@@ -24,5 +24,6 @@ And you're set!
 ## Directory Structure
 
   * `scss/_settings.scss`: Foundation configuration settings go in here
+  * 'scss/_partial.scss': Custom styles goes here
   * `scss/app.scss`: Application styles go here
 
