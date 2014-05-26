@@ -46,5 +46,7 @@ $(document).ready(function() {
 	} else {
 		$("#map-canvas").html("Network disconnected.");
 	}
-
+	var h = $(window).height();
+	var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
+	$("#desc-content-4").attr("style", "height:"+total+"px !important");
 });
