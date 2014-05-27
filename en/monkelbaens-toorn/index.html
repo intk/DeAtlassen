@@ -269,6 +269,20 @@ the tower was given an octagonal brick façade and a wooden spire. It still has 
        var h = $(window).height();
       var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
       $("#desc-content-1").attr("style", "height:"+total+"px !important");
+
+      window.addEventListener("orientationchange", function() {
+      // Announce the new orientation number
+      var h = $(window).height();
+    var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
+    $("#desc-content-1").attr("style", "height:"+total+"px !important");
+    }, false);
+
+  window.addEventListener("resize", function() {
+    // Get screen size (inner/outerWidth, inner/outerHeight)
+    var h = $(window).height();
+    var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
+    $("#desc-content-1").attr("style", "height:"+total+"px !important");
+  }, false);
     });
     </script>
   </body>

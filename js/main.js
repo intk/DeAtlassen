@@ -55,8 +55,7 @@ $(document).ready(function() {
   		var h = $(window).height();
 		var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
 		$("#desc-content-4").attr("style", "height:"+total+"px !important");
-  		alert(window.orientation);
-	}, false);
+  	}, false);
 
 	window.addEventListener("resize", function() {
 		// Get screen size (inner/outerWidth, inner/outerHeight)
@@ -64,4 +63,5 @@ $(document).ready(function() {
 		var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
 		$("#desc-content-4").attr("style", "height:"+total+"px !important");
 	}, false);
+	
 });
