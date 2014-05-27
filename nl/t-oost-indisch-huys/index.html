@@ -273,6 +273,9 @@ XVII vergaderden er, op de binnenplaats kon het scheepsvolk aanmonsteren.
       } else {
         $("#map-canvas").html("Network disconnected.");
       }
+       var h = $(window).height();
+      var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
+      $("#desc-content-1").attr("style", "height:"+total+"px !important");
     });
     </script>
   </body>

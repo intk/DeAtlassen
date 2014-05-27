@@ -15,6 +15,8 @@
     
     <!-- CSS at the top -->
     <link rel="stylesheet" href="../../css/app.css" />
+    <link rel="stylesheet" href="/css/mobile.css"/>
+    
     <script src="../../bower_components/modernizr/modernizr.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
@@ -258,6 +260,9 @@
       } else {
         $("#map-canvas").html("Network disconnected.");
       }
+       var h = $(window).height();
+      var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
+      $("#desc-content-3").attr("style", "height:"+total+"px !important");
     });
     </script>
   </body>

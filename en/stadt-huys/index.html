@@ -265,6 +265,9 @@ criminals and next to the prison cells, where 'those were brought who had forfei
       } else {
         $("#map-canvas").html("Network disconnected.");
       }
+       var h = $(window).height();
+      var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
+      $("#desc-content-1").attr("style", "height:"+total+"px !important");
     });
     </script>
   </body>
