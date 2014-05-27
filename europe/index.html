@@ -267,20 +267,20 @@
         $("#map-canvas").html("Network disconnected.");
       }
        var h = $(window).height();
-      var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
+      var total = h - (parseInt($("#over-bottom-div").css("height")) + parseInt($(".gap").css("height")) + parseInt($("#main-title").css("height")));
       $("#desc-content-4").attr("style", "height:"+total+"px !important");
 
       window.addEventListener("orientationchange", function() {
       // Announce the new orientation number
       var h = $(window).height();
-    var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
+    var total = h - (parseInt($("#over-bottom-div").css("height")) + parseInt($(".gap").css("height")) + parseInt($("#main-title").css("height")));
     $("#desc-content-4").attr("style", "height:"+total+"px !important");
     }, false);
 
   window.addEventListener("resize", function() {
     // Get screen size (inner/outerWidth, inner/outerHeight)
     var h = $(window).height();
-    var total = h - $("#over-bottom-div").height() - $(".gap").height() - $("#main-title").height();
+    var total = h - (parseInt($("#over-bottom-div").css("height")) + parseInt($(".gap").css("height")) + parseInt($("#main-title").css("height")));
     $("#desc-content-4").attr("style", "height:"+total+"px !important");
   }, false);
     });
