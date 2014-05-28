@@ -54,12 +54,14 @@ $(document).ready(function() {
 	window.addEventListener("orientationchange", function() {
   		// Announce the new orientation number
   		if (window.innerWidth > window.innerHeight) {
-  			$(".gap").css("height", "53px");
+  			$(".gap").attr("style", "height:53px !important;");
+  			$("#main-title").attr("style", "height: 35px !important;");
   			$("#description-logo").css("width", "36px");
   			$("#description-logo").css("height", "52px");
   			$("#description-logo").css("background-size", "36px 52px");
   		} else {
-  			$(".gap").css("height", "104px");
+  			$(".gap").attr("style", "height:104px !important;");
+  			$("#main-title").attr("style", "height: 50px !important;");
   			$("#description-logo").css("width", "71px");
   			$("#description-logo").css("height", "104px");
   			$("#description-logo").css("background-size", "71px 104px");
@@ -74,11 +76,13 @@ $(document).ready(function() {
 		// Get screen size (inner/outerWidth, inner/outerHeight)
 		if (window.innerWidth > window.innerHeight) {
   			$(".gap").css("height", "53px");
+  			$("#main-title").attr("style", "height: 35px !important;");
   			$("#description-logo").css("width", "36px");
   			$("#description-logo").css("height", "52px");
   			$("#description-logo").css("background-size", "36px 52px");
   		} else {
   			$(".gap").css("height", "104px");
+  			$("#main-title").attr("style", "height: 50px !important;");
   			$("#description-logo").css("width", "71px");
   			$("#description-logo").css("height", "104px");
   			$("#description-logo").css("background-size", "71px 104px");
