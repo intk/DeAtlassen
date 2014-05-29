@@ -54,6 +54,7 @@ $(document).ready(function() {
 	window.addEventListener("orientationchange", function() {
   		// Announce the new orientation number
   		if (window.innerWidth > window.innerHeight) {
+  			alert("bigger");
   			$(".gap").attr("style", "53px !important;");
   			$("#main-title").css("height", "35");
   			$("#description-logo").css("width", "36px");
