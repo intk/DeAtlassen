@@ -54,18 +54,19 @@ $(document).ready(function() {
 	window.addEventListener("orientationchange", function() {
   		// Announce the new orientation number
   		if (window.innerWidth > window.innerHeight) {
-  			alert("bigger");
-  			$(".gap").attr("style", "53px !important;");
+  			$(".gap").attr("style", "height: 53px !important;");
   			$("#main-title").css("height", "35");
   			$("#description-logo").css("width", "36px");
   			$("#description-logo").css("height", "52px");
   			$("#description-logo").css("background-size", "36px 52px");
+  			$(".gap").attr("style", "height: 53px !important;");
   		} else {
-  			$(".gap").attr("style", "104px !important;");
+  			$(".gap").attr("style", "height: 104px !important;");
   			$("#main-title").css("height", "50");
   			$("#description-logo").css("width", "71px");
   			$("#description-logo").css("height", "104px");
   			$("#description-logo").css("background-size", "71px 104px");
+  			$(".gap").attr("style", "height: 104px !important;");
   		}
 
   		var h = $(window).height();
@@ -76,17 +77,19 @@ $(document).ready(function() {
 	window.addEventListener("resize", function() {
 		// Get screen size (inner/outerWidth, inner/outerHeight)
 		if (window.innerWidth > window.innerHeight) {
-  			$(".gap").attr("style", "53px !important;");
+  			$(".gap").attr("style", "height: 53px !important;");
   			$("#main-title").css("height", "35");
   			$("#description-logo").css("width", "36px");
   			$("#description-logo").css("height", "52px");
   			$("#description-logo").css("background-size", "36px 52px");
+  			$(".gap").attr("style", "height: 53px !important;");
   		} else {
-  			$(".gap").attr("style", "104px !important;");
+  			$(".gap").attr("style", "height: 104px !important;");
   			$("#main-title").css("height", "50");
   			$("#description-logo").css("width", "71px");
   			$("#description-logo").css("height", "104px");
   			$("#description-logo").css("background-size", "71px 104px");
+  			$(".gap").attr("style", "height: 104px !important;");
   		}
 		var h = $(window).height();
 		var total = h - (parseInt($("#over-bottom-div").css("height")) + parseInt($(".gap").css("height")) + parseInt($("#main-title").css("height")));
